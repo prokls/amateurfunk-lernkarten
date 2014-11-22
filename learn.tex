@@ -1,0 +1,416 @@
+\documentclass[avery5371,fronts,grid,frame,a4paper]{flashcards}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+%\newcommand{\cardpaper}{a4paper}
+%\newcommand{\cardpapermode}{portrait}
+\renewcommand{\cardrows}{4}
+\renewcommand{\cardcolumns}{2}
+\cardfrontstyle[\large\slshape]{headings}
+\cardbackstyle{empty}
+
+\newcommand\question[2]{  \begin{flashcard}[{\chap} -- #1]{#2}
+%    #2
+  \end{flashcard}
+}
+\newcommand\class[1]{{\footnotesize [Klassen: #1]}}
+
+\begin{document}
+% Stand 15. November 2014
+% http://www.bmvit.gv.at/bmvit/telekommunikation/funk/funkdienste/downloads/amateur_fragen.pdf
+
+% Rechtliches
+
+\def\chap{Rechtliches \class{1,3,4}}
+
+\question{01}{Welche gesetzlichen Bestimmungen sind für den Amateurfunk maßgeblich?}
+\question{02}{Was ist die ITU?}
+\question{03}{Welche Zwecke verfolgt der internationale Fernmeldevertrag?}
+\question{04}{Welche Aufgaben hat das Radiocommunication Bureau? Was ist die CEPT und welche Bedeutung hat sie?}
+\question{06}{Was ist die VO Funk (Radio Regulations) und was regelt sie?}
+\question{07}{Definieren Sie den Begriff ,,Funkanlage'' im Sinne des TKG.}
+\question{08}{Erläutern Sie den Unterschied zwischen einem Telekommunikationsdienst und dem Amateurfunkdienst?}
+\question{09}{Wann erlischt eine Bewilligung? Was kann passieren, wenn Sie ohne oder ohne entsprechende Amateurfunkbewilligung Amateurfunk betreiben?}
+\question{11}{Welche Funkanlagen sind bewilligungspflichtig, welche Art der Bewilligungen gibt es?}
+\question{12}{Sie ändern den Standort Ihrer Funkanlage – was haben Sie zu tun?}
+\question{13}{Was versteht man unter dem Aufsichtsrecht der Fernmeldebehörden über Telekommunikationsanlagen?}
+\question{14}{Ein Organ der Fernmeldebehörde will ihre Funkanlage überprüfen, was haben Sie zu tun? Welche Geheimhaltungspflichten treffen Sie als Funkamateur?}
+\question{16}{Was kann die Fernmeldebehörde machen, falls Sie einen anderen Funkdienst stören?}
+\question{17}{Welche Gebühren müssen als Funkamateur entrichtet werden?}
+\question{18}{Definieren Sie den Begriff ,,Amateurfunkdienst''?}
+\question{19}{Definieren Sie den Begriff ,,Funkamateure''? Definieren Sie den Begriff ,,Amateurfunkstelle''?}
+\question{21}{Definieren Sie den Begriff ,,Stationsverantwortlicher''?}
+\question{22}{Definieren Sie den Begriff ,,Klubfunkstelle''?}
+\question{23}{Definieren Sie den Begriff ,,Bakensender''?}
+\question{24}{Definieren Sie den Begriff ,,Relaisfunkstelle''? Darf Amateurfunk von Nichtamateuren abgehört werden?}
+\question{26}{Voraussetzungen zur Erlangung einer Amateurfunkbewilligung?}
+\question{27}{Wie und wo ist ein Antrag auf Erteilung einer Amateurfunkbewilligung zu stellen?}
+\question{28}{Rufzeichen und Sonderrufzeichen?}
+\question{29}{Wozu berechtigt eine Amateurfunkbewilligung?}
+\question{30}{Unter welchen Voraussetzungen dürfen Aussendungen durchgeführt werden?}
+\question{31}{Wie ist der Amateurfunkverkehr abzuwickeln?}
+\question{32}{Definieren Sie den Begriff Not- und Katastrophenfunkverkehr?}
+\question{33}{Wo können Sie erfahren, unter welchen technischen Parametern (Sendeart, Leistungsstufe, Einschränkungen, etc.) Sie mit Ihrer Lizenzklasse in welchem Frequenzband Amateurfunk betreiben dürfen?}
+\question{34}{Was ist ein und wozu gibt es ein Funktagebuch?}
+\question{35}{In welchem Umfang ist Mitbenutzung einer Amateurfunkstelle möglich?}
+\question{36}{Wer ist für Amtshandlungen nach dem Amateurfunkgesetz zuständig?}
+\question{37}{Nennen Sie einige Verwaltungsstrafbestimmungen in Bezug auf den Amateurfunk?}
+\question{38}{Was ist eine CEPT-Lizenz? \\ (oder CEPT-Novizen-Lizenz)}
+\question{39}{Was darf ein ausländischer CEPT-Lizenz Inhaber oder CEPT-Novizen-Lizenz in Österreich ohne eigene österreichische Bewilligung?}
+\question{40}{Was bedeutet der Begriff Reziprozität und nennen Sie ein Beispiel?}
+\question{41}{Nennen Sie die Bewilligungsklassen und wozu berechtigen diese?}
+\question{42}{Welche Leistungsstufen kennen Sie und nennen Sie deren Merkmale?}
+\question{43}{Unter welchen Voraussetzungen kann eine Amateurfunkbewilligung für die Leistungsstufe C erteilt werden?}
+\question{44}{Unter welchen Voraussetzungen kann eine Amateurfunkbewilligung für die Leistungsstufe D erteilt werden?}
+\question{45}{Was bedeutet der Status eines Funkdienstes (Primär, Primär/Exklusiv(Pex), Sekundär, ISM)?}
+\question{46}{Ist die Verwendung der Betriebsart Telegraphie an eine bestimmte Voraussetzungen gebunden?}
+\question{47}{Wann wird eine schädliche Störung als solche behandelt?}
+\question{48}{Was gilt für einen Amateurfunkbetrieb auf Schiffen und in Flugzeugen?}
+\question{49}{Welche Aussendungen dürfen von einer Amateurfunkstelle empfangen werden?}
+\question{50}{Was darf der Nachrichteninhalt einer Amateurfunkaussendung sein?}
+\question{51}{Gibt es eine Möglichkeit, dass ein Funkamateur, der die Prüfungskategorie 3 erfolgreich abgelegt hat, auf anderen Frequenzen als dem 2m / 70cm-Band Funkverkehr haben darf?}
+\question{52}{Wer darf eine Relaisfunkstelle errichten / betreiben / benutzen und wie ist deren Rufzeichen auszusenden?}
+\question{53}{Was haben Sie zu tun, wenn Sie Funkverkehr mit einer nicht bewilligten Amateurfunkstelle haben und mit wem dürfen Sie keinen Amateurfunkverkehr haben?}
+\question{54}{Welche besonderen Aufgaben hat die ITU in Bezug auf Funkdienste und welche Ausschüsse sind dafür zuständig?}
+\question{55}{Was bedeutet missbräuchliche Verwendung von Funkanlagen?}
+\question{56}{Was hat der Inhaber einer Amateurfunkstelle zu tun, wenn er nicht bei dieser Stelle anwesend ist?}
+\question{57}{Welche Bestimmungen sind beim Betrieb einer Amateurfunkstelle im Ausland zu beachten?}
+\question{58}{Unter welchen Voraussetzungen darf der Inhaber einer Amateurfunkbewilligung der Bewilligungsklasse 3 im Ausland Amateurfunkbetrieb durchführen?}
+\question{59}{Wozu berechtigt eine Amateurfunkbewilligung der Klasse 4?}
+\question{60}{Aufgrund welcher internationalen Regelung dürfen Funkamateure aus bestimmten Ländern auch ohne individuelle Gastzulassung vorübergehend in Österreich Amateurfunk ausüben?}
+\question{61}{Unter welchen Voraussetzungen ist die Verbindung von Amateurfunkstellen mittels Internettechnologie zulässig?}
+
+
+\def\chap{Betrieb und Fertigkeiten \class{1,4}}
+
+\question{01}{Wie eröffnen Sie einen Funkverkehr in Phonie, wie in Telegraphie?}
+\question{02}{Was ist das gebräuchliche Minimum einer Amateurfunkverbindung?}
+\question{03}{Welche Bedeutung haben die Q-Gruppen im allgemeinen?
+  \begin{center}
+    QRM \quad QSO \quad QSY \quad QSL \quad QRP \quad QTR
+  \end{center}
+}
+\question{03}{Welche Bedeutung haben die Q-Gruppen im allgemeinen?
+  \begin{center}
+    QRS \quad QRX \quad QRO \quad QRV \quad QSP \quad QRG
+  \end{center}
+}
+\question{03}{Welche Bedeutung haben die Q-Gruppen im allgemeinen?
+  \begin{center}
+    QRT \quad QRU \quad QRN \quad QRB \quad QTH \quad QSB
+  \end{center}
+}
+
+%\begin{itemize}
+%  \item QRM ich werde gestört (Fremdstörungen),
+%  \item QSO ich habe Verbindung mit \dots (im Amateurgebrauch auch Bezeichnung für eine Funkverbindung)
+%  \item QSY wechseln Sie auf die Frequenz \dots kHz (im Amateurgebrauch statt einer Frequenz oft das Amateurband),
+%  \item QSL ich werde Ihnen eine Empfangsbestätigung geben (im Amateurgebrauch allgemeiner Hinweis, dass eine Meldung verstanden wurde u n d Bezeichnung für die ,,Funkbestätigungskarte/QSL-Karte'')
+%  \item QRP vermindern Sie die Sendeleistung (im Amateurgebrauch auch Hinweis, dass mit geringer Sendeleistung gearbeitet wird)
+%  \item QTR es ist \dots Uhr GMT (UTC)
+%  \item QRS geben Sie langsamer (eventuell gefolgt von der erwünschten Anzahl Worte pro Minute =WPM),
+%  \item QRX ich werde Sie um \dots Uhr auf \dots kHz wieder rufen (im Amateurgebrauch als allgemeiner Hinweis, dass man später gerufen wird, derzeit aber warten soll),
+%  \item QRO erhöhen Sie Ihre Sendeleistung
+%  \item QRV ich bin betriebsbereit
+%  \item QSP ich werde an \dots weiterübermitteln,
+%  \item QRG Ihre genaue Frequenz ist \dots kHz
+%  \item QRT stellen Sie die Aussendung(en) ein (im Amateurgebrauch auch für ,, ich stelle den Funkbetrieb ein!'')
+%  \item QRU ich habe nichts für Sie vorliegen (im Amateurgebrauch die Mitteilung, dass alle Informationen übermittelt wurden; wird am Ende eines QSOs verwendet),
+%  \item QRN ich habe atmosphärische Störungen (1 = keine, 2 = schwach, 3 = mäßige, 4 = starke, 5 = sehr starke),
+%  \item QRB die Entfernung zwischen unseren beiden Stationen ist....km
+%  \item QTH mein Standort ist \dots
+%  \item QSB Ihre Zeichen weisen Fading auf (= die Empfangsfeldstärke schwankt).
+%\end{itemize}
+
+\question{04}{Sie wollen, dass Ihre Gegenstation die Sendeleistung vermindert. Welche Q-Gruppe verwenden Sie?}
+\question{05}{Was bedeuten die Hinweise \\ ,,5 UP'' bzw. ,,10 DOWN''?}
+\question{06}{Sie wollen in einen bestehenden Funkverkehr einsteigen. Wie führen Sie das durch?}
+\question{07}{Welche betrieblichen Auswirkungen haben die besonderen Ausbreitungsbedingungen auf Kurzwelle?}
+\question{08}{Welche betriebliche Auswirkung hat die Bodenwellen-Ausbreitung?}
+\question{09}{Welche betriebliche Auswirkung hat die Raumwellen-Ausbreitung, in welchem Frequenzbereich ist sie von Bedeutung?}
+\question{10}{Welche betriebliche Bedeutung hat die kritische Frequenz?}
+\question{11}{Welche betriebliche Bedeutung haben die Begriffe ,,MUF'' und ,,LUF''?}
+\question{12}{Was versteht man unter Fading auf Kurzwelle, wodurch entsteht Fading und wie reagieren Sie, um den Funkverkehr aufrecht zu erhalten?}
+\question{13}{Ausbreitung von Funkwellen -- Ausbreitungsmerkmale in den verschiedenen Amateurfunk Frequenzbereichen?}
+\question{14}{Welchen Einfluß hat die Ionosphäre auf die Ausbreitung von Funkwellen über 30 MHz?}
+\question{15}{Erklären Sie die Begriffe Fresnelzone, Geländeschnitt}
+\question{16}{Was ist die tote Zone? Was ist ein Skip?}
+\question{17}{Wovon hängt die maximal erzielbare Reichweite auf Kurzwelle ab?}
+\question{18}{Was verstehen Sie unter kurzem Weg? Was unter langem Weg?}
+\question{19}{Was verstehen Sie unter dem Dämmerungseffekt?}
+\question{20}{Was verstehen Sie unter der ,,Grey-Line'', welche Besonderheiten in der Funkausbreitung können auftreten?}
+\question{21}{Beschreiben Sie den Aufbau der lonosphäre und welche betriebliche Konsequenzen ergeben sich daraus?}
+\question{22}{Wie verhalten sich die Ionosphärenschichten im Tagesverlauf bzw. im Jahresverlauf?}
+\question{23}{Welchen Einfluss hat die geographische Breite auf die Kurzwellenausbreitung?}
+\question{24}{Was versteht man unter Sonnenaktivität, unter der Sonnenfleckenrelativzahl, unter dem ,,Solar-Flux''? Welchen Einfluss hat sie auf die Kurzwellenausbreitung?}
+\question{25}{Welchen Zyklen unterliegen die Ausbreitungsbedingungen auf Kurzwelle?}
+\question{26}{Beschreiben Sie das charakteristische Ausbreitungsverhalten in den dem Amateurfunkdienst zugewiesenen Frequenzbändern unter 30 MHz?}
+\question{27}{Was versteht man unter einem Mögel-Dellinger-Effekt und welche betriebliche Auswirkungen hat er?}
+\question{28}{Welche Auswirkungen haben Polarlicht-Erscheinungen auf die Kurzwellenausbreitung?}
+\question{29}{Welche Faktoren können den Funkbetrieb auf Kurzwelle beeinflussen?}
+\question{30}{Wie wirkt sich die Tageszeit auf die Ausbreitung in den Kurzwellenbändern bis 40m aus? (160m/80m-/40m-Band)}
+\question{31}{Was verstehen Sie unter ,,Sporadic E-Verbindungen''?}
+\question{32}{Was verstehen Sie unter ,,Short-Skips''?}
+\question{33}{Was verstehen Sie unter einem Notverkehr, wie wird er angekündigt?}
+\question{34}{Sie empfangen einen Notruf – woran erkennen Sie diesen und wie haben Sie sich zu verhalten?}
+\question{35}{Auf welchen Bändern könnten Sie einen Notruf empfangen?}
+\question{36}{Welche Sendearten sind im Kurzwellenbereich zulässig?}
+\question{37}{Müssen Sie ein Funktagebuch führen und welche Angaben muss es enthalten?}
+\question{38}{Was verstehen Sie im Telegraphiebetrieb unter ,,BK-Verkehr''?}
+\question{39}{Was verstehen Sie unter UTC (GMT) -- Zusammenhang zu Lokalzeit, Sommerzeit}
+\question{40}{Nennen Sie die konkreten Frequenzbereiche, die dem Amateurfunkdienst in den jeweiligen Frequenzbändern zugewiesen sind (5 Beispiele)}
+\question{41}{Wie arbeiten Sie mit ausländischen Amateurfunkstationen zusammen, die einen anderen/erweiterten Bandbereich benutzen? (Beispiele: 40m, 80m)?}
+\question{42}{Was bedeuten die folgenden Abkürzungen: BK, CQ, CW, DE, K?}
+\question{42}{Was bedeuten die folgenden Abkürzungen: PSE, RST, R, N, UR?}
+\question{42}{Was bedeuten die folgenden Abkürzungen: FB, DX, RPT, HW, CL?}
+% BK engl. break (Aufforderung zur Unterbrechung)
+% CQ an alle (Funkstellen)
+% CW engl. continuous wave / Telegraphie
+% DE von
+% K kommen
+% PSE engl. please / bitte
+% RST Rapport (R = engl. Readability / Lesbarkeit; S = engl. Signalstrengh / Lautstärke; T = engl. Tonequality / Signalqualität, nur für CW)
+% R engl. roger / verstanden
+% N engl. no / nein
+% UR engl your / dein, deine
+% FB engl. faible / gut
+% DX Weitverbindung
+% RPT engl. Repeat / wiederholen
+% HW engl. how? / wie?
+% CL engl. close / für ,,ich schließe die Funkstelle''
+\question{43}{Wie wirkt sich Polarisationsfading auf den Kurzwellenbetrieb aus?}
+\question{44}{Was versteht man unter Schwund im Kurzwellenbereich und wie reagieren Sie, um den Funkverkehr aufrecht zu erhalten?}
+\question{45}{Welche Maßnahmen ergreifen Sie, wenn Sie darauf aufmerksam gemacht werden, dass Ihre Aussendung ,,splattert''?}
+\question{46}{Was ist ein ,,Pile-Up'' -- wie verhalten Sie sich richtig?}
+\question{47}{Was verstehen Sie unter den Begriffen {\footnotesize\texttt MAYDAY - SECURITEE - SILENCE MAYDAY - MAYDAY RELAY?}}
+\question{48}{Welche Mess- und Kontrollgeräte sind bei einer Amateurfunkstelle vorgeschrieben?}
+\question{49}{Was ist bei der Abstimmung des Leistungsverstärkers einer Amateurfunkstelle zu beachten?}
+\question{50}{Wie wird ein Funkrufzeichen allgemein bzw. ein Amateurfunkrufzeichen aufgebaut – nach welcher Vorschrift?}
+\question{51}{Buchstabieren Sie folgende Worte bzw. den folgenden Text nach dem internationalen Buchstabieralphabet: \dots}
+\question{52}{Was ist beim Betrieb an den Bandgrenzen zu beachten?}
+\question{53}{Nennen Sie Beispiele österreichischer Amateurfunkrufzeichen mit Zusätzen (zB: am, mm, /1).}
+\question{54}{Nennen Sie die Landeskenner von fünf Nachbarländern und von fünf weiteren Ländern.}
+\question{55}{Was bedeuten die Ziffern im österreichischen Amateurfunkrufzeichen, welche Rufzeichenzusätze sind zulässig?}
+\question{56}{Welche Bestimmungen sind beim Betrieb im 160m-Band zu beachten?}
+\question{57}{Welche Betriebsverfahren werden bei Scatter-Verbindungen verwendet?}
+\question{58}{Welche Betriebsverfahren werden bei Meteorscatter-Verbindungen angewendet?}
+\question{59}{Erklären Sie die Betriebsabwicklung bei Relaisbetrieb.}
+\question{60}{Was versteht man unter ,,EME - Verbindungen''? Welches Betriebsverfahren wird angewendet?}
+\question{61}{Was verstehen Sie unter Packet Radio? Welches Betriebsverfahren wird angewendet?}
+\question{62}{Was verstehen Sie unter den Begriffen Mailbox, Digipeater, Netzknoten und welche betriebliche Besonderheiten sind zu beachten?}
+\question{63}{Erklären Sie die Begriffe Relaisfunkstelle, Transponder, Bakensender und welche betrieblichen Besonderheiten sind zu beachten?}
+\question{64}{Erklären Sie die Betriebsabwicklung bei ATV-Betrieb.}
+\question{65}{Was ist bei Überreichweitenbedingungen zu beachten?}
+\question{66}{Welchen Einfluss hat die Wahl des Standortes für UKW-Ausbreitung?}
+\question{67}{Erklären Sie das Betriebsverfahren SSTV.}
+\question{68}{Nennen Sie Einflüsse, die die Lesbarkeit einer Funkverbindung verschlechtern.}
+\question{69}{Wie beurteilen Sie die Aussendung Ihrer Gegenstelle und wie wird diese Beurteilung der Gegenstelle mitgeteilt?}
+\question{70}{Wie teilen Sie der Gegenstation Ihren Standort mit?}
+\question{71}{Was ist ein ,,Contest''? Wie verhalten Sie sich richtig?}
+\question{72}{Wie gehen Sie bei der Planung einer Amateurfunkverbindung zu einem bestimmten Ort vor?}
+\question{73}{Was ist hinsichtlich der Herstellung oder Veränderung von Amateurfunkgeräten zu beachten?}
+\question{74}{Beschreiben Sie das typische Ausbreitungsverhalten in den Frequenzbändern 6m--2m und 70cm.}
+
+\def\chap{Betrieb und Fertigkeiten \class{3}}
+
+\question{01}{Frequenzbereich des 70cm-Amateurfunkbandes / 2m Bandes?}
+\question{02}{Wie eröffnen Sie einen Sprechfunkverkehr?}
+\question{03}{Wie sind Amateurfunkrufzeichen aufgebaut?}
+\question{04}{Welche Zusätze zu einem Amateurfunkrufzeichen sind zulässig?}
+\question{05}{Nennen Sie mindestens 5 Landeskenner der umliegenden Länder.}
+\question{06}{Wie beurteilen Sie das Signal Ihrer Gegenstation?}
+\question{07}{Was versteht man unter ,,S-Stufe(n)''?}
+\question{08}{Was versteht man unter Not- und Katastrophenfunkverkehr, wie wird er gekennzeichnet?}
+\question{09}{Wie nahe dürfen Sie beim Sendebetrieb an die Bandgrenze herangehen?}
+\question{10}{Welche Sendearten sind mit der Bewilligungsklasse~3 zulässig und mit welcher maximalen Sendeleistung?}
+\question{11}{Was versteht man unter einem Amateurfunkrelais, wozu dient es?}
+\question{12}{Wie wickeln Sie einen Betrieb über ein Amateurfunkrelais ab?}
+\question{13}{Buchstabieren Sie Ihren Vor- und Zunamen nach dem internationalen Buchstabieralphabet.}
+\question{14}{Wie verhalten Sie sich beim Empfang von Signalen mit ,,Doppler - Shift''?}
+\question{15}{Was versteht man unter ,,Frequenzablage'' bei Relaisbetrieb?}
+\question{16}{Nennen Sie drei anormale Ausbreitungsmöglichkeiten im 70 cm-Band oder 2m Band.}
+\question{17}{Welche Betriebsverfahren werden im Satellitenfunkverkehr angewendet?}
+\question{18}{Was verstehen Sie unter ,,Scatter-Verbindung''?}
+\question{19}{Was verstehen Sie unter ,,EME-Verbindung''?}
+\question{20}{Was verstehen Sie unter ,,Meteor-Scatter''?}
+\question{21}{Was verstehen Sie unter ,,Tropo-Scatter''?}
+\question{22}{Was verstehen Sie unter Überreichweiten, was unter dem Funkhorizont?}
+\question{23}{Wodurch werden starke Überreichweiten im 70 cm-Band verursacht?}
+\question{24}{Wie verhalten Sie sich bei Überreichweitenbedingungen, wenn Sie im Relaisbetrieb arbeiten?}
+\question{25}{Wie können Sie sich über die herrschenden Ausbreitungsbedingungen informieren?}
+\question{26}{Welche Faktoren beeinflussen die erzielbare Reichweite im 2m-Band?}
+\question{27}{Erklären Sie die Bedeutung der auch im Sprechfunk verwendeten Q-Gruppen: QSO - QSY - QRL.}
+\question{28}{Erklären Sie die Bedeutung der auch im Sprechfunk verwendeten Q-Gruppen: QRM - QRB - QSB.}
+\question{29}{Erklären Sie die Bedeutung der auch im Sprechfunk verwendeten Q-Gruppen: QRT - QSL.}
+\question{30}{Erklären Sie die Bedeutung der im Sprechfunk verwendeten Abkürzungen \\ 73- 55- 88- CL.}
+\question{31}{Was versteht man unter der Betriebsart ,,Packet-Radio'', welche Betriebsverfahren werden dabei angewendet?}
+\question{32}{Welche Faktoren beeinflussen die erzielbare Reichweite im 70cm-Band?}
+\question{33}{Was verstehen Sie unter ,,Split-Betrieb''?}
+\question{34}{Welche Verfahren werden bei ATV-Betrieb im 70 cm-Band angewendet und welche Besonderheiten sind dabei zu beachten?}
+\question{35}{Wie gehen Sie bei der Planung einer Amateurfunkverbindung zu einem bestimmten Ort vor?}
+\question{36}{Wie teilen Sie der Gegenstation den Standort ihrer Amateurfunkstelle mit?}
+\question{37}{Was ist hinsichtlich der Herstellung oder Veränderung von Geräten für den Amateurfunkverkehr im 2m oder 70 cm-Band zu beachten?}
+\question{38}{Sie haben einen abstimmbaren Leistungsverstärker - wie stimmen Sie ihn ab?}
+
+\def\chap{Technische Grundlagen \class{1}}
+
+\question{01}{Ohmsches und Kirchhoff’sches Gesetz}
+\question{02}{Begriff Leiter, Halbleiter, Nichtleiter}
+\question{03}{Kondensator, Begriff Kapazität, Einheiten - Verhalten bei Gleich- und Wechselspannung}
+\question{04}{Spule, Begriff Induktivität, Einheiten - Verhalten bei Gleich- und Wechselspannung}
+\question{05}{Wärmeverhalten von elektrischen Bauelementen}
+\question{06}{Stromquellen (Kenngrössen)}
+\question{07}{Sinus- und nicht-sinusförmige Signale}
+\question{08}{Was verstehen Sie unter dem Begriff Skin-Effekt?}
+\question{09}{Gleich- und Wechselspannung - Kenngrößen}
+\question{10}{Was verstehen Sie unter dem Begriff Permeabilität?}
+\question{11}{Serien- und Parallelschaltung von $R$, $L$, $C$}
+\question{12}{Was verstehen Sie unter dem Begriff Dielektrikum?}
+\question{13}{Wirk-, Blind- und Scheinleistung bei Wechselstrom.}
+\question{14}{Begriff elektrischer Widerstand (Schein-, Wirk- und Blindwiderstand), Leitwert}
+\question{15}{Berechnen Sie den induktiven Blindwiderstand einer Spule mit $30~\mu H$ bei $7$ MHz (Werte sind variabel)}
+\question{16}{Berechnen Sie den kapazitiven Blindwiderstand eines Kondensators von 500 pF bei 10 MHz (Werte sind variabel)}
+\question{17}{Der Transformator - Prinzip und Anwendung}
+\question{18}{Der Resonanzschwingkreis - Kenngrößen}
+\question{19}{Der Resonanzschwingkreis - Anwendungen in der Funktechnik}
+\question{20}{Berechnen Sie die Resonanzfrequenz eines Schwingkreises mit folgenden Werten: L = 15 H, C = 30 pF (Werte sind variabel)}
+\question{21}{Filter – Arten, Aufbau, Verwendung und Wirkungsweise}
+\question{22}{Was sind Halbleiter?}
+\question{23}{Die Diode - Aufbau, Wirkungsweise und Anwendung}
+\question{24}{Der Transistor - Aufbau, Wirkungsweise und Anwendung}
+\question{25}{Die Elektronenröhre - Aufbau, Wirkungsweise und Anwendung}
+\question{26}{Arten von Gleichrichterschaltungen - Wirkungsweise}
+\question{27}{Stabilisatorschaltungen}
+\question{28}{Hochspannungsnetzteil - Aufbau, Dimensionierung und Schutzmaßnahmen}
+\question{29}{Welche Arten von digitalen Bauteilen kennen Sie? - Wirkungsweise}
+\question{30}{Was sind elektronische Gatter? - Wirkungsweise}
+\question{31}{Messung von Spannung und Strom am Beispiel eines vorgegebenen Stromkreises}
+\question{32}{Erklären Sie die prinzipielle Wirkungsweise eines Griddipmeters, Anwendung und Funktion}
+\question{33}{Erklären Sie die Funktionsweise eines HF-Wattmeters}
+\question{34}{Erklären Sie die Funktionsweise eines Oszillografen (Oszilloskop)}
+\question{35}{Erklären Sie die Funktionsweise eines Spektrumanalysators}
+\question{36}{Begriff Demodulation}
+\question{37}{Zeichnen Sie das Blockschaltbild eines Überlagerungsempfängers}
+\question{38}{Was verstehen Sie unter Spiegelfrequenz und Zwischenfrequenz?}
+\question{39}{Erklären Sie die Kenngrößen eines Empfängers - Empfindlichkeit, intermodulationsfreier Bereich, Eigenrauschen}
+\question{40}{Erklären Sie den Begriff des Rauschens. - Auswirkungen auf den Empfang.}
+\question{41}{Mischer in Empfängern - Funktionsweise und mögliche technische Probleme}
+\question{42}{Nichtlineare Verzerrungen - Ursachen und Auswirkungen}
+\question{43}{Empfängerstörstrahlung - Ursachen und Auswirkungen}
+\question{44}{Mikrofonarten - Wirkungsweise}
+\question{45}{Prinzip, Arten und Kenngrößen der Einseitenbandmodulation}
+\question{46}{Prinzip, Arten und Kenngrößen der Pulsmodulation}
+\question{47}{Erklären Sie die wichtigsten Anwendungen der digitalen Modulationsverfahren}
+\question{48}{Erklären Sie die Begriffe CRC und FEC}
+\question{49}{Prinzip und Kenngrößen der Frequenzmodulation}
+\question{50}{Prinzip und Kenngrößen der Amplitudenmodulation}
+\question{51}{Erklären Sie den Begriff Modulation (analoge und digitale Verfahren)}
+\question{52}{Oszillatoren - Grundprinzip, Arten}
+\question{53}{Erklären Sie den Begriff VCO}
+\question{54}{Erklären Sie den Begriff PLL}
+\question{55}{Erklären Sie den Begriff DSP}
+\question{56}{Erklären Sie die Begriffe sampling, anti aliasing filter, ADC/DAC}
+\question{57}{Merkmale, Komponenten, Baugruppen eines Senders}
+\question{58}{Zweck von Puffer- und Vervielfacherstufen, Aufbau}
+\question{59}{Aufbau einer Senderendstufe, Leistungsauskopplung}
+\question{60}{Anpassung eines Senderausganges an eine symmetrische oder asymmetrische Antennenspeiseleitung}
+\question{61}{Der Antennentuner, Wirkungsweise, 2 typische Beispiele}
+\question{62}{Antennenzuleitungen - Aufbau, Kenngrößen}
+\question{63}{Erklären Sie den Begriff Balun. Aufbau, Verwendung und Wirkungsweise}
+\question{64}{Der Dipol - Aufbau, Kenngrößen und Eigenschaften}
+\question{65}{Die Vertikalantenne - Aufbau, Kenngrößen und Eigenschaften}
+\question{66}{Gekoppelte Antennen - Aufbau, Kenngrößen und Eigenschaften}
+\question{67}{Strahlungsdiagramm einer Antenne}
+\question{68}{Die Yagi-Antenne - Aufbau, Kenngrößen und Eigenschaften}
+\question{69}{Breitbandantennen - Aufbau, Kenngrößen und Eigenschaften}
+\question{70}{Die Parabolantenne - Aufbau, Kenngrößen und Eigenschaften}
+\question{71}{Erklären Sie den Begriff Wellenwiderstand}
+\question{72}{Stehwellen und Wanderwellen, Ursachen und Auswirkungen}
+\question{73}{Strahlungsfeld einer Antenne, Gefahren}
+\question{74}{Aufbau und Kenngrößen eines Koaxialkabels}
+\question{75}{Erklären Sie den Begriff Dezibel am Beispiel der Anwendung in der Antennentechnik}
+\question{76}{Was versteht man unter Richtantennen, Anwendungsmöglichkeiten}
+\question{77}{Welche Kenngrößen von Antennen kennen Sie und wie können sie gemessen werden?}
+\question{78}{Dimensionieren Sie einen Halbwellendipol für f = 3.6 MHz ; V = 0.97 (Werte sind variabel)}
+\question{79}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung: 200 Watt; Dämpfung der Antennenleitung: 6 dB/100m; Kabellänge : 50 m; Gewinn: 10 dB (Werte sind variabel)}
+\question{80}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung 100 Watt; Dämpfung der Antennenleitung 12 dB/100m; Kabellänge 25 m; Rundstrahlantenne mit Gesamtwirkungsgrad von 50 \% (Werte sind variabel)}
+\question{81}{Langdrahtantennen - Aufbau, Kenngrößen und Eigenschaften}
+\question{82}{Zweck von Radials / Erdnetz bei Vertikalantennen - Dimensionierung}
+\question{83}{Blitzschutz für Antennenanlagen}
+\question{84}{Sicherheitsabstände bei Antennen}
+\question{85}{Erklären Sie den Begriff ,,elektromagnetisches Feld''. Kenngrößen?}
+\question{86}{Begriff elektrisches und magnetisches Feld; Abschirmmaßnahmen für das elektrische bzw. das magnetische Feld?}
+\question{87}{Erklären Sie den Begriff ,,EMV'' und dessen Bedeutung im Amateurfunk}
+\question{88}{Erklären Sie den Begriff ,,EMVU'' und dessen Bedeutung im Amateurfunk}
+\question{89}{Erklären Sie den Begriff ,,Trap'', Aufbau und Wirkungsweise}
+\question{90}{Was versteht man unter einem Hohlraumresonator, Anwendung.}
+\question{91}{Funkentstörmaßnahmen im Bereich Stromversorgung der Amateurfunkstelle}
+\question{92}{Funkentstörmaßnahmen bei Beeinflussung durch hochfrequente Ströme und Felder}
+\question{93}{Was sind Tastklicks, wie werden sie vermieden?}
+\question{94}{Erklären Sie die Begriffe: ,,Unerwünschte Aussendungen'', ,,Ausserbandaussendungen'', ,,Nebenaussendungen'' (spurious emissions)}
+\question{95}{Erklären Sie den Begriff: ,,Splatter'' - Ursachen und Auswirkungen}
+\question{96}{Erklären sie den Begriff ,,schädliche Störungen''}
+\question{97}{Prinzipieller Aufbau einer Relaisfunkstelle und einer Bakenfunkstelle}
+\question{98}{Definieren Sie den Begriff ,,Senderleistung''}
+\question{99}{Definieren Sie den Begriff ,,Spitzenleistung''}
+\question{100}{Definieren Sie den Begriff ,,belegte Bandbreite''}
+\question{101}{Definieren Sie den Begriff ,,Interferenz in elektronischen Anlagen''; beschreiben Sie Ursachen und Gegenmassnahmen}
+\question{102}{Erklären Sie die Begriffe ,,Blocking'', ,,Intermodulation''}
+\question{103}{Welche Gefahren bestehen für Personen durch den elektrischen Strom?}
+\question{104}{Was ist beim Betrieb von Hochspannung führenden Geräten zu beachten?}
+\question{105}{Definieren Sie die Gefahren durch Gewitter für die Funkstation und das Bedienpersonal, beschreiben Sie Vorbeugemassnahmen}
+
+\def\chap{Technische Grundlagen \class{3,4}}
+
+\question{01}{In welchem Zusammenhang stehen die Größen Strom – Spannung - Widerstand in einem Stromkreis?}
+\question{02}{Was versteht man unter einem Kurzschluß - wie entsteht er?}
+\question{03}{Nennen Sie Stromquellen}
+\question{04}{Kenngrößen einer Gleichstromquelle. Kenngrößen einer Wechselstromquelle - Gefahrengrenze?}
+\question{06}{Nennen Sie die wichtigsten Eigenschaften von Ohm'schen Widerständen, Induktivitäten und Kapazitäten.}
+\question{07}{Was verstehen Sie unter dem Begriff ,,Fehlanpassung''?}
+\question{08}{Was verstehen Sie unter dem Begriff ,,Transformation''?}
+\question{09}{Prinzipieller Aufbau eines Kommunikationssystems. Erläutern Sie die Wirkungsweise von Mikrophon und Lautsprecher bzw. Kopfhörer.}
+\question{11}{Prinzipieller Aufbau eines Senders}
+\question{12}{Funktionsprinzip des Oszillators}
+\question{13}{Prinzipieller Aufbau eines Empfängers}
+\question{14}{Prinzip des Überlagerungsempfängers. Was verstehen Sie unter dem Begriff Zwischenfrequenz?}
+\question{16}{Was verstehen Sie unter dem Begriff Modulation?}
+\question{17}{Kenngrößen der Amplitudenmodulation}
+\question{18}{Kenngrößen der Frequenzmodulation}
+\question{19}{Definieren Sie den Begriff ,,belegte Bandbreite''. Arten und Vorteile der Einseitenbandmodulation?}
+\question{21}{Begriff Dezibel (Werte fragen: zB 3 dB, 6 dB, 10 dB, 30 dB Leistungssteigerung)}
+\question{22}{Was ist eine Diode - Wirkungsweise, Verwendung?}
+\question{23}{Was ist ein Transistor - Wirkungsweise, Verwendung?}
+\question{24}{Was versteht man unter ,,AGC'' und ,,AFC''? Erklären Sie die Empfängerkenngrößen - Empfindlichkeit, Eigenrauschen, Empfangsmischprodukte}
+\question{26}{Was versteht man unter dem S/N - Verhältnis?}
+\question{27}{Erklären Sie die Begriffe ,,digital'' und ,,analog''.}
+\question{28}{Was versteht man unter der Ausgangsleistung, was unter der Verlustleistung?}
+\question{29}{Was versteht man unter der Strahlungsleistung? (Beispiel vorgeben, zB. Sender mit 10 W Ausgangsleistung; Antennenkabel mit 3 dB Dämpfung; Antenne mit 10 dB Gewinn)}
+\question{30}{Begriff Speiseleitung (Antennenzuleitung) - Kenngrößen?}
+\question{31}{Auswirkung(en) des Stehwellenverhältnisses (SWR)?}
+\question{32}{Kenngrößen einer Antenne am Beispiel des Dipols}
+\question{33}{Vertikalantenne - Eigenschaften}
+\question{34}{Die Yagi-Antenne - Aufbau, Eigenschaften, Kenngrößen}
+\question{35}{Dipolkombinationen (Zeilen, Spalten)}
+\question{36}{Die Parabolantenne - Aufbau, Eigenschaften, Kenngrößen}
+\question{37}{Mobilantennen - Aufbau, Eigenschaften, Kenngrößen, Montageort}
+\question{38}{Grundausrüstung einer Amateurfunkstelle für Sprechfunk (Komponenten)}
+\question{39}{Grundausrüstung einer Amateurfunkstelle für Packet Radio}
+\question{40}{Grundausrüstung einer Amateurfunkstelle für ATV-Betrieb}
+\question{41}{Was versteht man unter Betriebserde- was unter Blitzschutzerde?}
+\question{42}{Was versteht man unter BCI, TVI?}
+\question{43}{Maßnahmen gegen BCI, TVI?}
+\question{44}{Was versteht man unter dem ``SQUELCH'' - wozu dient er?}
+\question{45}{Wie bestimmt man die Resonanzfrequenz einer Antenne?}
+\question{46}{Was ist ein SWR-Meter, wo und wie wird es eingesetzt?}
+\question{47}{Was versteht man unter einem ``Antennen-Tuner''?}
+\question{48}{Was versteht man unter ``Dopplershift''?}
+\question{49}{Komponenten einer Amateurfunkstation für Satellitenfunk}
+\question{50}{Abstrahlung und Ausbreitung elektromagnetischer Wellen, Feldstärke?}
+\question{51}{Was versteht man unter Freiraumausbreitung?}
+\question{52}{Welche Einflüsse haben Hindernisse auf die UKW-Ausbreitung?}
+\question{53}{Definieren Sie den Begriff ,,Schädliche Störung''?}
+\question{54}{Definieren Sie den Begriff ,,Senderleistung''?}
+\question{55}{Definieren Sie den Begriff ,,Spitzenleistung''?}
+\question{56}{Definieren Sie den Begriff ,,unerwünschte Aussendung''?}
+
+\end{document}
