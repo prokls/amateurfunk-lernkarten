@@ -3,6 +3,7 @@
 \usepackage[german]{babel}
 \usepackage[bitstream-charter]{mathdesign}
 \usepackage[T1]{fontenc}
+\usepackage{enumitem}
 %\newcommand{\cardpaper}{a4paper}
 %\newcommand{\cardpapermode}{portrait}
 \renewcommand{\cardrows}{4}
@@ -63,7 +64,18 @@ Behörde kann Bewilligungen ändern: \\ zur Sicherheit des TK-Verkehrs, aus tech
 
 \card{16}{Was kann die Fernmeldebehörde machen, falls Sie einen anderen Funkdienst stören?}{Bei Störungen einer TK-Anlage durch eine andere können zweckmäßige Maßnahmen angeordnet und vollzogen werden, die zum Schutz der gestörten	Anlagen notwendig sind. Vermeidung überflüssiger Kosten. \\ Unbefugt errichtete / betriebene TK-Anlagen können ohne Androhung außer Betrieb gesetzt werden. \\ Für sonstige entgegen den Bestimmungen errichtete / betrieben TK-Anlagen gilt das nur zur Sicherung / Wiederherstellung ungestörter Kommunikation.}
 
-\card{17}{Welche Gebühren müssen als Funkamateur entrichtet werden?}{\begin{itemize}\itemsep0pt \item	A ...   100 W ... 1,45 EUR \item	B ...   200 W ... 2,91 EUR \item C ...   400 W ... 4,36 EUR \item	D ... 1000 W ... 6,54 EUR \item Klubfunkstelle ... 6,54 EUR \item	Klubfunkstelle (Vereinsräume, Räume Organisationen im öffentlichen Interesse) zu Unterrichtszwecken ohne strahlender Antenne / Fernwirkung ... 1,45 EUR\end{itemize}}
+\card{17}{Welche Gebühren müssen als Funkamateur entrichtet werden?}{
+  \begin{tabular}{ccc}
+    A & 100~W & 1,45~EUR \\
+    B & 200~W & 2,91~EUR \\
+    C & 400~W & 4,36~EUR \\
+    D & 1000~W & 6,54~EUR
+  \end{tabular}
+  \begin{itemize}
+    \item Klubfunkstelle: 6,54~EUR
+    \item Klubfunkstelle (Vereinsräume, Räume Organisationen im öffentlichen Interesse) zu Unterrichtszwecken ohne strahlender Antenne / Fernwirkung: 1,45~EUR
+  \end{itemize}
+}
 
 \card{18}{Definieren Sie den Begriff ,,Amateurfunkdienst''?}{\begin{itemize}\itemsep0pt \item technisch / experimentell \item	Erd / Weltraumfunkstellen \item	von Funkamateuren für: \begin{itemize}\itemsep0pt \item Ausbildung \item Verkehr untereinander \item Not / Katastrophenfunk \item	technische Studien\end{itemize}\end{itemize}}
 
@@ -81,7 +93,7 @@ Behörde kann Bewilligungen ändern: \\ zur Sicherheit des TK-Verkehrs, aus tech
 
 \card{25}{ Darf Amateurfunk von Nichtamateuren abgehört werden?}{\begin{itemize}\itemsep1pt \item Ja, jeder darf abhören.\end{itemize}}
 
-\card{26}{Voraussetzungen zur Erlangung einer Amateurfunkbewilligung?}{Errichtung/Betrieb AF-Stelle nur mit Bewilligung. Ausnahmen:  Mitbenutzung, Funkempfangsanlage, die nur AF-Frequenzbereiche abdeckt. Bewilligung ist Personen auf Antrag zu erteilen, wenn: 14. Lebensjahr vollendet, Amateurfunkprüfung abgelegt, befreit oder §25. Nichtvollhandlungsfähige: Haftung einer vollhandlungsfähigen Person bez. Gebührenforderung. Bewilligung fürbAF-Verein/Organisation: Stationsverantwortlicher mit Hauptwohnsitz im Inland (handlungsfähig, AF-Prüfung abgelegt, befreit oder §25)}
+\card{26}{Voraussetzungen zur Erlangung einer Amateurfunkbewilligung?}{Errichtung/Betrieb AF-Stelle nur mit Bewilligung. Ausnahmen:  Mitbenutzung, Funkempfangsanlage, die nur AF-Frequenzbereiche abdeckt. Bewilligung ist Personen auf Antrag zu erteilen, wenn: 14. Lebensjahr vollendet, Amateurfunkprüfung abgelegt, befreit oder §25. Nichtvollhandlungsfähige: Haftung einer vollhandlungsfähigen Person bez. Gebührenforderung. Bewilligung für AF-Verein/Organisation: Stationsverantwortlicher mit Hauptwohnsitz im Inland (handlungsfähig, AF-Prüfung abgelegt, befreit oder §25)}
 
 \card{27}{Wie und wo ist ein Antrag auf Erteilung einer Amateurfunkbewilligung zu stellen?}{Schriftlich, Daten des Antragstellers/des Stationsverantwortlichen:\\ Vor- / Zuname, Geburtsdatum, Hauptwohnsitz, Standort und Gebiet der AF-Stelle , Leistungsstufe, Bewilligungsklasse, technisch Merkmale \\ Beizulegen: Amateurfunkprüfungszeugnis, Bescheid ü. Befreiung, §25-Zeugnis, Vorschlag Rufzeichen, kein Anspruch. \\ Entscheidung über Antrag: zuständig. Fernmeldebüro (für Ausländer: FMB f. W/Nö/B)}
 
@@ -123,17 +135,27 @@ werden die dem Amateurfunk zugewiesenen Frequenzbereiche, der Status, die zuläs
 \card{37}{Wer ist für Amtshandlungen nach dem Amateurfunkgesetz zuständig?}{\begin{itemize}\itemsep1pt \item Für die Amtshandlungen zuständig ist das örtliche FMB (entspr. Hauptwohnsitz). \item Bei mehreren FMBs ist einvernehmlich vorgehen. \item Der BMVIT ist zuständig für die Entscheidung über Rechtsmittel gegen Bescheide des FMB, soweit nicht der UVS
 zuständig ist.\end{itemize}}
 
-\card{38}{Nennen Sie einige Verwaltungsstrafbestimmungen in Bezug auf den Amateurfunk?}{\small{•  senden in AF-Frequenzen, aber nicht in der Bewilligungsklasse
-•  Sendearten nicht in der Bewilligungsklasse
-•  höher Sendeleistung/Bandbreite (Ausnahme nicht vorliegend)
-•  nicht persönlich anwesend
-•  Verbindung AF-Stellen/TK-Anlagen (Ausnahme nicht vorlieg.)
-•  vorsätzlich Verkehr mit nicht bewilligter Funkstelle
-•  nicht unmittelbarer Verkehr mit bewilligter Funkstelle
-•  Verkehr mit Funkstellen in Ländern, die Einwand erh. haben
-•  Gestattung von Mitbenutzung durch Personen ohne Prüfung
-•  Mitbenutzung ohne Prüfung
-•  mangelhafte Überwachung der Mitbenutzung (einhalten der Bestimmungen)}}
+\card{38}{Nennen Sie einige Verwaltungsstrafbestimmungen in Bezug auf den Amateurfunk?}{\footnotesize
+\begin{minipage}{0.48\textwidth}
+\begin{itemize}[leftmargin=10pt,itemsep=0pt]
+  \item senden in AF-Frequenzen, aber nicht in der Bewilligungsklasse
+  \item Sendearten nicht in der Bewilligungsklasse
+  \item höher Sendeleistung/Bandbreite (Ausnahme nicht vorliegend)
+  \item nicht persönlich anwesend
+  \item Verbindung AF-Stellen/TK-Anlagen (Ausnahme nicht vorlieg.)
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{itemize}[leftmargin=10pt,itemsep=0pt]
+  \item vorsätzlich Verkehr mit nicht bewilligter Funkstelle
+  \item nicht unmittelbarer Verkehr mit bewilligter Funkstelle
+  \item Verkehr mit Funkstellen in Ländern, die Einwand erh. haben
+  \item Gestattung von Mitbenutzung durch Personen ohne Prüfung
+  \item Mitbenutzung ohne Prüfung
+  \item mangelhafte Überwachung der Mitbenutzung (einhalten der Bestimmungen)
+\end{itemize}
+\end{minipage}
+}
 
 \card{39}{Was ist eine CEPT-Lizenz? \\ (oder CEPT-Novizen-Lizenz)}{\begin{itemize}\itemsep0pt \item senden in Frequenzbereichen, die nicht dem AF-Dienst zugewiesen sind \item wenn im Verkehr mit anderen Funkstellen Ansehen/Sicherheit/Wirtschaftsinteressen gefährdet werden, gegen öffentliche Ordnung/Sittlichkeit verstoßen wird \item wenn Notrufe gestört/nicht beantwortet werden \item wenn ein anderes oder kein Rufzeichen gesendet wird\end{itemize}}
 
@@ -143,7 +165,7 @@ zuständig ist.\end{itemize}}
 \card{41}{Was bedeutet der Begriff Reziprozität und nennen Sie ein Beispiel?}{\begin{itemize}\itemsep1pt \item Eine AF-Bewilligung oder eine Urkunde, die einen Hinweis darauf enthält, dass sie eine CEPT-Lizenz ist. \item Erteilung/Ausstellung: Von der Behörde eines Staates, der die CEPT-Empfehlung T/R61-01 anwendet. \item CEPT-Novice-Lizenz: entsprechend ERC
 REC 05(06)\end{itemize}}
 
-\card{42}{Nennen Sie die Bewilligungsklassen und wozu berechtigen diese?}{ Inhaber einer ausländischen CEPT-Lizenz, älter als 14 Jahre, dürfen 3 Monate ab Einreisetag eine AFU-Stelle errichten und betreiben.}
+\card{42}{Nennen Sie die Bewilligungsklassen und wozu berechtigen diese?}{Inhaber einer ausländischen CEPT-Lizenz, älter als 14 Jahre, dürfen 3 Monate ab Einreisetag eine AFU-Stelle errichten und betreiben.}
 
 \card{43}{Welche Leistungsstufen kennen Sie und nennen Sie deren Merkmale?}{\begin{itemize}\itemsep1pt \item Begriff aus dem Völkerrecht \item Angehörige anderer Staaten werden in
 Österreich so behandelt, wie Österreicher im anderen Staat. \end{itemize}
@@ -151,17 +173,36 @@ Beispiel: \begin{itemize}\itemsep1pt \item Ausländern wird Bewilligung nur dann
 
 \card{44}{Unter welchen Voraussetzungen kann eine Amateurfunkbewilligung für die Leistungsstufe C erteilt werden?}{•  3 Klassen (1, 3 und 4) •  international Klasse 1 (CEPT AFU-Bewilligung), Klasse 4 (CEPT NOVICE-Lizenz), Klasse 3 national •  Klasse 1 darf alle Frequenzbereiche und Sendearten (Einschränkungen beachten) nutzen. •  Klasse 3 darf nur 2m und 70cm und bestimmte Sendearten (Einschränkungen beachten) nutzen. Keine Selbstbauanlagen, nur kommerziell gefertigte, nicht veränderte, Leistungsstufe A •  Klasse 4: 2m und 70cm, 4 KW-Bereiche, sonst wie Klasse 3 •  Mitbenutzung von Klubfunkstellen ist gestattet.}
 
-\card{45}{Unter welchen Voraussetzungen kann eine Amateurfunkbewilligung für die Leistungsstufe D erteilt werden?}{\begin{itemize}\itemsep1pt \item A ... 100 Watt max. \item B ... 200 Watt max \item C ... 400 Watt max \item D ... 1000 Watt max \item Überschreitung der Grenzwerte um 20\% tolerabel.\end{itemize}}
+\card{45}{Unter welchen Voraussetzungen kann eine Amateurfunkbewilligung für die Leistungsstufe D erteilt werden?}{
+  \begin{center}
+    \vspace{5pt}
+    \begin{tabular}{cl}
+      A & 100~Watt max \\
+      B & 200~Watt max \\
+      C & 400~Watt max \\
+      D & 1000~Watt max
+    \end{tabular}
+  \end{center}
+  Überschreitung der Grenzwerte um 20\% tolerabel.
+}
 
 \card{46}{Was bedeutet der Status eines Funkdienstes (Primär, Primär/Exklusiv(Pex), Sekundär, ISM)?}{ wenn am genannten Standort seit mind. 1 Jahr eine AF-Stelle mit „Leistungsstufe B“ störungsfrei betrieben wurde.}
 
 \card{47}{Ist die Verwendung der Betriebsart Telegraphie an eine bestimmte Voraussetzungen gebunden?}{Bewilligung für „Leistungsstufe D“: \begin{itemize}\itemsep1pt \item nur AFU-Vereinen und im öffentlichen Interesse tätigen Organisationen \item kann von Ergebnissen eines Probebetriebs (6 Monate) abhängig gemacht werden\end{itemize}}
 
-\card{48}{Wann wird eine schädliche Störung als solche behandelt?}{\small{• Pex = primärer Funkdienst (exklusiv für Amateurfunk) 
-• P = primärer Funkdienst (Mitbenutzung durch andere FD) \\
-• S = sekundärer Funkdienst (primärer Funkdienst hat Vorrang, sekundäre *) dürfen keine Störungen bei primären verursachen *) können keinen Schutz gegen Störungen von primären
-verlangen *) können Schutz gegen Störungen von sekundären verlangen \\
-• ISM = Hochfrequenzbereich für industrielle, wissenschaftliche, medizinische Anwendung}}
+\card{48}{Wann wird eine schädliche Störung als solche behandelt?}{\small
+  \begin{description}\itemsep0pt
+    \item[Pex] primärer Funkdienst (exklusiv für Amateurfunk)
+    \item[P] primärer Funkdienst (Mitbenutzung durch andere FD)
+    \item[S] sekundärer Funkdienst (primärer Funkdienst hat Vorrang),
+      \begin{itemize}[leftmargin=0pt,itemsep=0pt]
+        \item dürfen keine Störungen bei primären verursachen
+        \item können keinen Schutz gegen Störungen von primären verlangen
+        \item können Schutz gegen Störungen von sekundären verlangen
+      \end{itemize}
+    \item[ISM] Hochfrequenzbereich für industrielle, wissenschaftliche, medizinische Anwendung
+  \end{description}
+}
 
 \card{49}{Was gilt für einen Amateurfunkbetrieb auf Schiffen und in Flugzeugen?}{\begin{itemize}\itemsep1pt \item Nein, Verwendung aller Betriebsarten bei Klasse 1, 4 und Klasse 3 zulässig. \item Einige Länder außerhalb der CEPT verlangen für die Erteilung einer Gastlizenz
 unter 30 MHz eine Telegrafieprüfung.\end{itemize}}
