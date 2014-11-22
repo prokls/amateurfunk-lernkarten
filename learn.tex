@@ -1,4 +1,4 @@
-\documentclass[avery5371,fronts,grid,frame,a4paper]{flashcards}
+\documentclass[avery5371,grid,frame,a4paper]{flashcards}
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}
 %\newcommand{\cardpaper}{a4paper}
@@ -7,10 +7,13 @@
 \renewcommand{\cardcolumns}{2}
 \cardfrontstyle[\large\slshape]{headings}
 \cardbackstyle{empty}
+%\cardbackstyle{plain}
 
-\newcommand\question[2]{  \begin{flashcard}[{\chap} -- #1]{#2}
-%    #2
-  \end{flashcard}
+\newcommand\question[2]{
+  \begin{flashcard}[{\chap} -- #1]{#2}\end{flashcard}
+}
+\newcommand{\card}[3]{
+  \begin{flashcard}[{\chap} -- #1]{#2}#3\end{flashcard}
 }
 \newcommand\class[1]{{\footnotesize [Klassen: #1]}}
 
@@ -22,118 +25,258 @@
 
 \def\chap{Rechtliches \class{1,3,4}}
 
-\question{01}{Welche gesetzlichen Bestimmungen sind für den Amateurfunk maßgeblich?}
-\question{02}{Was ist die ITU?}
-\question{03}{Welche Zwecke verfolgt der internationale Fernmeldevertrag?}
-\question{04}{Welche Aufgaben hat das Radiocommunication Bureau? Was ist die CEPT und welche Bedeutung hat sie?}
-\question{06}{Was ist die VO Funk (Radio Regulations) und was regelt sie?}
-\question{07}{Definieren Sie den Begriff ,,Funkanlage'' im Sinne des TKG.}
-\question{08}{Erläutern Sie den Unterschied zwischen einem Telekommunikationsdienst und dem Amateurfunkdienst?}
-\question{09}{Wann erlischt eine Bewilligung? Was kann passieren, wenn Sie ohne oder ohne entsprechende Amateurfunkbewilligung Amateurfunk betreiben?}
-\question{11}{Welche Funkanlagen sind bewilligungspflichtig, welche Art der Bewilligungen gibt es?}
-\question{12}{Sie ändern den Standort Ihrer Funkanlage – was haben Sie zu tun?}
-\question{13}{Was versteht man unter dem Aufsichtsrecht der Fernmeldebehörden über Telekommunikationsanlagen?}
-\question{14}{Ein Organ der Fernmeldebehörde will ihre Funkanlage überprüfen, was haben Sie zu tun? Welche Geheimhaltungspflichten treffen Sie als Funkamateur?}
-\question{16}{Was kann die Fernmeldebehörde machen, falls Sie einen anderen Funkdienst stören?}
-\question{17}{Welche Gebühren müssen als Funkamateur entrichtet werden?}
-\question{18}{Definieren Sie den Begriff ,,Amateurfunkdienst''?}
-\question{19}{Definieren Sie den Begriff ,,Funkamateure''? Definieren Sie den Begriff ,,Amateurfunkstelle''?}
-\question{21}{Definieren Sie den Begriff ,,Stationsverantwortlicher''?}
-\question{22}{Definieren Sie den Begriff ,,Klubfunkstelle''?}
-\question{23}{Definieren Sie den Begriff ,,Bakensender''?}
-\question{24}{Definieren Sie den Begriff ,,Relaisfunkstelle''? Darf Amateurfunk von Nichtamateuren abgehört werden?}
-\question{26}{Voraussetzungen zur Erlangung einer Amateurfunkbewilligung?}
-\question{27}{Wie und wo ist ein Antrag auf Erteilung einer Amateurfunkbewilligung zu stellen?}
-\question{28}{Rufzeichen und Sonderrufzeichen?}
-\question{29}{Wozu berechtigt eine Amateurfunkbewilligung?}
-\question{30}{Unter welchen Voraussetzungen dürfen Aussendungen durchgeführt werden?}
-\question{31}{Wie ist der Amateurfunkverkehr abzuwickeln?}
-\question{32}{Definieren Sie den Begriff Not- und Katastrophenfunkverkehr?}
-\question{33}{Wo können Sie erfahren, unter welchen technischen Parametern (Sendeart, Leistungsstufe, Einschränkungen, etc.) Sie mit Ihrer Lizenzklasse in welchem Frequenzband Amateurfunk betreiben dürfen?}
-\question{34}{Was ist ein und wozu gibt es ein Funktagebuch?}
-\question{35}{In welchem Umfang ist Mitbenutzung einer Amateurfunkstelle möglich?}
-\question{36}{Wer ist für Amtshandlungen nach dem Amateurfunkgesetz zuständig?}
-\question{37}{Nennen Sie einige Verwaltungsstrafbestimmungen in Bezug auf den Amateurfunk?}
-\question{38}{Was ist eine CEPT-Lizenz? \\ (oder CEPT-Novizen-Lizenz)}
-\question{39}{Was darf ein ausländischer CEPT-Lizenz Inhaber oder CEPT-Novizen-Lizenz in Österreich ohne eigene österreichische Bewilligung?}
-\question{40}{Was bedeutet der Begriff Reziprozität und nennen Sie ein Beispiel?}
-\question{41}{Nennen Sie die Bewilligungsklassen und wozu berechtigen diese?}
-\question{42}{Welche Leistungsstufen kennen Sie und nennen Sie deren Merkmale?}
-\question{43}{Unter welchen Voraussetzungen kann eine Amateurfunkbewilligung für die Leistungsstufe C erteilt werden?}
-\question{44}{Unter welchen Voraussetzungen kann eine Amateurfunkbewilligung für die Leistungsstufe D erteilt werden?}
-\question{45}{Was bedeutet der Status eines Funkdienstes (Primär, Primär/Exklusiv(Pex), Sekundär, ISM)?}
-\question{46}{Ist die Verwendung der Betriebsart Telegraphie an eine bestimmte Voraussetzungen gebunden?}
-\question{47}{Wann wird eine schädliche Störung als solche behandelt?}
-\question{48}{Was gilt für einen Amateurfunkbetrieb auf Schiffen und in Flugzeugen?}
-\question{49}{Welche Aussendungen dürfen von einer Amateurfunkstelle empfangen werden?}
-\question{50}{Was darf der Nachrichteninhalt einer Amateurfunkaussendung sein?}
-\question{51}{Gibt es eine Möglichkeit, dass ein Funkamateur, der die Prüfungskategorie 3 erfolgreich abgelegt hat, auf anderen Frequenzen als dem 2m / 70cm-Band Funkverkehr haben darf?}
-\question{52}{Wer darf eine Relaisfunkstelle errichten / betreiben / benutzen und wie ist deren Rufzeichen auszusenden?}
-\question{53}{Was haben Sie zu tun, wenn Sie Funkverkehr mit einer nicht bewilligten Amateurfunkstelle haben und mit wem dürfen Sie keinen Amateurfunkverkehr haben?}
-\question{54}{Welche besonderen Aufgaben hat die ITU in Bezug auf Funkdienste und welche Ausschüsse sind dafür zuständig?}
-\question{55}{Was bedeutet missbräuchliche Verwendung von Funkanlagen?}
-\question{56}{Was hat der Inhaber einer Amateurfunkstelle zu tun, wenn er nicht bei dieser Stelle anwesend ist?}
-\question{57}{Welche Bestimmungen sind beim Betrieb einer Amateurfunkstelle im Ausland zu beachten?}
-\question{58}{Unter welchen Voraussetzungen darf der Inhaber einer Amateurfunkbewilligung der Bewilligungsklasse 3 im Ausland Amateurfunkbetrieb durchführen?}
-\question{59}{Wozu berechtigt eine Amateurfunkbewilligung der Klasse 4?}
-\question{60}{Aufgrund welcher internationalen Regelung dürfen Funkamateure aus bestimmten Ländern auch ohne individuelle Gastzulassung vorübergehend in Österreich Amateurfunk ausüben?}
-\question{61}{Unter welchen Voraussetzungen ist die Verbindung von Amateurfunkstellen mittels Internettechnologie zulässig?}
+\card{01}{Welche gesetzlichen Bestimmungen sind für den Amateurfunk maßgeblich?}{\begin{itemize}\itemsep1pt
+\item Internationaler Fernmeldevertrag, \item Vollzugsordnung f. Funkdienst (VO-Funk), \item Telekommunikationsgesetz, \item Amateurfunk-Gesetz, \item Amateurfunk -Verordnung, \item Amateurfunkgebühren-Verordnung, \item Kundmachung d.Staaten, die Einwände gegen Amateurfunk erhoben haben. \end{itemize}}
+
+\card{02}{Was ist die „ITU“?}{\begin{itemize}\itemsep1pt
+\item Internationale Fernmeldeunion, \item völkerrechtlicher Verein, \item anerkennt Hoheitsrechte, \item fördert Beziehungen und Zusammenarbeit der Länder durch guten Fernmeldedienst \end{itemize}}
+
+\card{03}{Welche Zwecke verfolgt der internationale Fernmeldevertrag?}{\begin{itemize}\itemsep1pt
+\item Aufrechterhaltung, Ausbau der Zusammenarbeit zur Verbesserung, \item Verwendung der Fernmeldeeinrichtungen, \item technische Entwicklung, \item Leistungserhöhung der Dienste, \item Steigerung der Inanspruchnahme (öffentlich), \item Verbilligung \end{itemize}}
+
+\card{04}{Welche Aufgaben hat das Radiocommunication Bureau?}{\begin{itemize}\itemsep1pt \item Registrierung der Frequenzen, \item Anerkennung der Frequenzen, \item Beratung, auch im Hinblick gestörter Frequenzen
+ \end{itemize}}
+\card{05}{Was ist die CEPT und welche Bedeutung hat sie?}{\begin{itemize}\itemsep1pt \item	Konferenz der europ. Post und Fernmeldeverwaltungen, \item 43 europäische Staaten, \item Australien, USA erkennt sie an, \item Zweck: \begin{itemize}\itemsep1pt \item Beziehungen vertiefen \item Zusammenarbeit fördern \item Markt für TK schaffen \end{itemize} \end{itemize}}
+
+\card{06}{Was ist die VO Funk (Radio Regulations) und was regelt sie?}{\begin{itemize}\itemsep1pt \item	Vollzugsordnung f.d. Funkdienst \item	Bestandteil des Internationalen Fernmeldevertrags \item Bestimmungen über die Praxis \item für Amateurfunker wichtig, weil alle Bestimmungen auch für AF gelten \item	Frequenz muss stabil und frei von Nebenaussendungen sein (state-of-the-art) \end{itemize}}
+
+\card{07}{Definieren Sie den Begriff ,,Funkanlage'' im Sinne des TKG.}{\begin{itemize}\itemsep1pt \item	Sende/Empfangseinrichtung \item beabsichtigte Informationsübertragung \item	ohne Verbindungsleitungen \item	mittels elektromagnetischer Wellen \end{itemize}}
+
+\card{08}{Erläutern Sie den Unterschied zwischen einem Telekommunikationsdienst und dem Amateurfunkdienst?}{KD: gewerblich, Signalübertragung über Kommunikationsnetze einschl. Telekomm. (alles außer Rundfunk)- und	Übertragungsdienste in Rundfunknetze \\ AF: \begin{itemize}\itemsep1pt \item technisch/experimentell \item Erd/Weltraumfunkstellen \item	eigene Ausbildung, Verkehr mit anderen, Not/Katastrophendienst, technische Studien \end{itemize}}
+
+\card{09}{Wann erlischt eine Bewilligung? Was kann passieren, wenn Sie ohne oder ohne entsprechende Amateurfunkbewilligung Amateurfunk betreiben?}{\begin{itemize}\itemsep1pt \item Tod \item Ablauf der Zeit \item Verzicht \item Widerruf (Verstoß gegen Bestimmungen) \end{itemize}	Urkunde ist innerhalb 2 Monaten ans Fernmeldebüro zurückzusenden}
+
+\card{10}{Was passiert, wenn man ohne Bewilligung funkt?}{Verwaltungsübertretung / Verwaltungsstrafe 3.633 EUR}
+
+\card{11}{Welche Funkanlagen sind bewilligungspflichtig, welche Art der Bewilligungen gibt es?}{Funkanlagen grundsätzlich bewilligungspflichtig\\ BMVIT kann für Gerätearten/type generell Errichtung und Betrieb bewilligen; BMVIT kann Einfuhr, Vertrieb und Besitz generell für bewilligungspflichtig erklären (öff. Sicherheit, Behörden). \\ AF-Bewilligung berechtigt zum Besitz von AF-Sendeanlagen, zu Änderung und Selbstbau, zur Einfuhr, zum vorübergehenden Besitz von Funkanlagen, die keine AF sind (3 Monate), zwecks Umbau zur AF für Eigenbedarf}
+
+\card{12}{Sie ändern den Standort Ihrer Funkanlage – was haben Sie zu tun?}{Wenn Bestimmungen in der Bewilligung betroffen sind, bedarf einer Bewilligung:\\ Standortänderung,  Verwendung außerhalb des bewilligten Einsatzgebietes, technische Änderung \\
+Behörde kann Bewilligungen ändern: \\ zur Sicherheit des TK-Verkehrs, aus technischen/betrieblichen Belangen, aus internationalen Gründen (Fernmeldevertragsrecht, geänderte Frequenznutzung). Schonung wirtschaftl./betrieblicher Interessen; man muss auf eigene Kosten nachkommen (ang. Frist)}
+
+\card{13}{Was versteht man unter dem Aufsichtsrecht der Fernmeldebehörden über Telekommunikationsanlagen?}{\begin{itemize}\itemsep1pt \item TKG Kommunikationsdienste unterliegen d. Aufsicht	d. Regulierungsbehörde (Organe der Fernmeldebehörden, des Büros für Funkanlagen und TK-Endeinrichtungen) \item Die Organe haben der Reg.behörde Hilfe insb. bei 	fernmeldetechnischen Fragen zu leisten. \item	TK-Anlagen unterliegen d. Aufsicht d. 	Fernmeldebehörden. TK-Anlagen sind Anl./Geräte zur Abwicklung v. Kommunikation, 	Kabelrundfunknetze, Funkanlage, TK-Endeinrichtungen. \end{itemize}}
+
+\card{14}{Ein Organ der Fernmeldebehörde will ihre Funkanlage überprüfen, was haben Sie zu tun?}{\begin{itemize}\itemsep1pt \item Organen (Ausweis!) derbFMB sind berechtigt, TK-Anlagen (Funkanlagen, Endgeräte) bzw. Teile auf Einhaltung der Gesetze u. Verordnungen zu prüfen \item Der Zugang ist ihnen zu gestatten. \item Auskünfte, Unterlagen. \item			„Vorführung“ der Anlagen, auf eigene Kosten. \end{itemize}}
+
+\card{14}{ Welche Geheimhaltungspflichten treffen Sie als Funkamateur?}{Werden mittels Anlage Nachrichten empfangen, die nicht für die Anlage, das Endgerät, den Benutzer bestimmt sind:\begin{itemize}\itemsep1pt \item Inhalt der Nachricht / Tatsache des Empfangs dürfen nicht aufgezeichnet / anderen mitgeteilt / verwertet	werden. \item Aufgezeichnete Nachrichten sind zu löschen.\end{itemize}}
+
+\card{16}{Was kann die Fernmeldebehörde machen, falls Sie einen anderen Funkdienst stören?}{Bei Störungen einer TK-Anlage durch eine andere können zweckmäßige Maßnahmen angeordnet und vollzogen werden, die zum Schutz der gestörten	Anlagen notwendig sind. Vermeidung überflüssiger Kosten. \\ Unbefugt errichtete / betriebene TK-Anlagen können ohne Androhung außer Betrieb gesetzt werden. \\ Für sonstige entgegen den Bestimmungen errichtete / betrieben TK-Anlagen gilt das nur zur Sicherung / Wiederherstellung ungestörter Kommunikation.}
+
+\card{17}{Welche Gebühren müssen als Funkamateur entrichtet werden?}{\begin{itemize}\itemsep0pt \item	A ...   100 W ... 1,45 EUR \item	B ...   200 W ... 2,91 EUR \item C ...   400 W ... 4,36 EUR \item	D ... 1000 W ... 6,54 EUR \item Klubfunkstelle ... 6,54 EUR \item	Klubfunkstelle (Vereinsräume, Räume Organisationen im öffentlichen Interesse) zu Unterrichtszwecken ohne strahlender Antenne / Fernwirkung ... 1,45 EUR\end{itemize}}
+
+\card{18}{Definieren Sie den Begriff ,,Amateurfunkdienst''?}{\begin{itemize}\itemsep0pt \item technisch / experimentell \item	Erd / Weltraumfunkstellen \item	von Funkamateuren für: \begin{itemize}\itemsep0pt \item Ausbildung \item Verkehr untereinander \item Not / Katastrophenfunk \item	technische Studien\end{itemize}\end{itemize}}
+
+\card{19}{Definieren Sie den Begriff ,,Funkamateure''?}{Das ist eine Person\begin{itemize}\itemsep0pt \item Amateurfunkbewilligung erteilt \item	beschäftigt mit Funktechnik/Betrieb \item	persönliche Neigung bzw. Organisation im öffentlichen Interesse \item jedoch nicht kommerziell / politisch\end{itemize}}
+
+\card{20}{Definieren Sie den Begriff ,,Amateurfunkstelle''?}{\begin{itemize}\itemsep1pt \item Einer od. mehrere, od. Gruppe von Sendern und Empfängern (Zusatzeinrichtungen) \item	zum Betrieb des Amateurfunkdienstes an einem bestimmten Ort \item	erfassen von in Österreich dem Afu-Dienst zugewiesene Frequenzbereiche, auch wenn	der Sende/Empfangsbereich über diese	Frequenzbereiche hinausgeht\end{itemize}}
+
+\card{21}{Definieren Sie den Begriff ,,Stationsverantwortlicher''?}{Natürliche Person, namhaft gemacht \begin{itemize}\itemsep1pt \item von Amateurfunkverein / von einer Organisation im öffentlichen Interesse \item verantwortlich für die Einhaltungen der Bestimmungen / Verordnungen des AFG\end{itemize}}
+
+\card{22}{Definieren Sie den Begriff ,,Klubfunkstelle''?}{Amateurfunkstelle eines Amateurfunkvereins oder einer im öffentlichen Interessen tätigen Organisation}
+
+\card{23}{Definieren Sie den Begriff ,,Bakensender''?}{automatische Amateurfunksendeanlage\begin{itemize}\itemsep1pt \item fester Standort \item sendet ständig technische und betriebliche Merkmale \item Zweck: Frequenzmessung / Erforschung der Funkausbreitungsbedingungen\end{itemize}}
+
+\card{24}{Definieren Sie den Begriff ,,Relaisfunkstelle''?}{automatische Amateurfunksendeanlage\begin{itemize}\itemsep1pt \item Amateurfunkstelle, die der automatischen Informationsübertragung dient\end{itemize}}
+
+\card{25}{ Darf Amateurfunk von Nichtamateuren abgehört werden?}{\begin{itemize}\itemsep1pt \item Ja, jeder darf abhören.\end{itemize}}
+
+\card{26}{Voraussetzungen zur Erlangung einer Amateurfunkbewilligung?}{Errichtung/Betrieb AF-Stelle nur mit Bewilligung. Ausnahmen:  Mitbenutzung, Funkempfangsanlage, die nur AF-Frequenzbereiche abdeckt. Bewilligung ist Personen auf Antrag zu erteilen, wenn: 14. Lebensjahr vollendet, Amateurfunkprüfung abgelegt, befreit oder §25. Nichtvollhandlungsfähige: Haftung einer vollhandlungsfähigen Person bez. Gebührenforderung. Bewilligung fürbAF-Verein/Organisation: Stationsverantwortlicher mit Hauptwohnsitz im Inland (handlungsfähig, AF-Prüfung abgelegt, befreit oder §25)}
+
+\card{27}{Wie und wo ist ein Antrag auf Erteilung einer Amateurfunkbewilligung zu stellen?}{Schriftlich, Daten des Antragstellers/des Stationsverantwortlichen:\\ Vor- / Zuname, Geburtsdatum, Hauptwohnsitz, Standort und Gebiet der AF-Stelle , Leistungsstufe, Bewilligungsklasse, technisch Merkmale \\ Beizulegen: Amateurfunkprüfungszeugnis, Bescheid ü. Befreiung, §25-Zeugnis, Vorschlag Rufzeichen, kein Anspruch. \\ Entscheidung über Antrag: zuständig. Fernmeldebüro (für Ausländer: FMB f. W/Nö/B)}
+
+\card{28}{Welche Angaben stehen in einer Amateurfunkbewilligung?}{\begin{itemize}\itemsep0pt \item Vor- / Zuname \item Geburtsdatum \item Hauptwohnsitz \item Standort und Gebiet der AF-Stelle \item Leistungsstufe \item Bewilligungsklasse \item Rufzeichen \item technisch Merkmale\end{itemize}}
+
+\card{29}{Rufzeichen und Sonderrufzeichen?}{In der Amateurfunkbewilligung ist ein Rufzeichen zuzuweisen. Auf Antrag kann BMVIT zu besonderen Anlässen Sonderrufzeichen befristet zuweisen. BMVIT kann FMB ermächtigen Sonderrufzeichen zuzuweisen. Rufzeichen aussenden: zu Beginn, während Übertragung wiederholt, am Ende. Bei Klubfunkstelle: Klubfunkstellenrufzeichen mit Zustimmung d. Stationsverantwortlichen auch eigenes Rufzeichen (nur Berechtigungsumfang!)}
+
+\card{30}{Wozu berechtigt eine Amateurfunkbewilligung?}{Berechtigt zur Errichtung, zum Betrieb \\
+• einer/mehrerer fester AF-Stellen (angegebene Standorte)
+• einer/mehrerer beweglicher AF-Stellen (gesamtes Bundesgebiet)
+• vorübergehend (3 Monate) feste AF-Stelle an einem anderen Ort im Bundesgebiet als angegeben. \\
+Berechtigt zum Besitz von AF-Sendeanlagen und: \\
+• Änderung / Selbstbau
+• Einfuhr für den Eigenbedarf
+• Besitz von Nicht-AF-Anlagen zum Zweck des Umbaus (vorübergehend, 3 Monate)}
+
+\card{31}{Unter welchen Voraussetzungen dürfen Aussendungen durchgeführt werden?}{Aussendungen mit einer AF-Stelle nur: \\
+• in den zugewiesenen Frequenzen (AF-Dienst/Bewilligungsklasse)
+• in der festgesetzten Sendeart (BWK)
+• mit der erlaubten Sendeleistung (abh. von Leistungsstufe des Frequenzbereichs und AF-Bewilligung)
+• mit der erlaubten Bandbreite
+• bei persönlicher Anwesenheit (ausser Relais/Baken)
+• AF-Stellen nicht mit TK-Netzen verbinden!
+• BMVIT kann Ausnahmen vorsehen (Technikerprobung: Bandbreite, Ausbildung: Sendeleistung)}
+
+\card{32}{Wie ist der Amateurfunkverkehr abzuwickeln?}{Offene Sprache, nicht verschlüsselt.
+Inhalt:\\ • Übertragungsversuche \\ • technische/betriebliche Mitteilungen \\ • Bemerkung persönlicher Natur, bildliche Darstellungen, bei denen wegen Belanglosigkeit eine Inanspruchnahme von TK-Diensten nicht verlangt werden kann \\ • Verkehr nur unmittelbar zwischen bewilligten AF-Stellen ohne Benutzung anderer TK-Anlagen.}
+
+\card{33}{Definieren Sie den Begriff Not- und Katastrophenfunkverkehr?}{\begin{itemize}\itemsep0pt \item Notfunkverkehr: Nachrichtenübermittlung zwischen Funkstelle in Not/beteiligt/Zeuge und einer/mehreren hilfeleistenden Funkstellen. \item Notfall: menschliches Leben in Gefahr \item Katastrophenfunkverkehr: Nachrichtenübermittlung (nat./int. Hilfeleistung betreffend) zwischen Funkstelle im Katastrophengebiet (geogr. Gebiet, für die Dauer) und Hilfe
+leistenden Organisationen.\end{itemize}}
+
+\card{34}{Wo können Sie erfahren, unter welchen technischen Parametern (Sendeart, Leistungsstufe, Einschränkungen, etc.) Sie mit Ihrer Lizenzklasse in welchem Frequenzband Amateurfunk betreiben dürfen?}{In der \emph{Anlage 2} der \emph{Amateurfunkverordnung}
+werden die dem Amateurfunk zugewiesenen Frequenzbereiche, der Status, die zulässige Bewilligungsklasse und Leistungsstufe sowie eventuelle Bemerkungen bzw. Einschränkungen definiert.}
+
+\card{35}{Was ist ein und wozu gibt es ein Funktagebuch?}{\begin{itemize}\itemsep0pt \item Zur Klärung frequenztechnischer Fragen wenn von der FMB verlangt. \item Auch mit Hilfe von EDV. \item Bei Notfunkverkehr komplette Nachricht aufzeichnen. \item 1 Jahr aufbewahren, den Organen des FMB unmittelbar lesbar vorweisen. \end{itemize}}
+
+\card{36}{In welchem Umfang ist Mitbenutzung einer Amateurfunkstelle möglich?}{Inhaber der AF-Bewilligung/Stationsverantwortliche (bleibt für Einhaltung der Bestimmungen verantwortlich, muss überwachen) können Personen, die die AF-Prüfung bestanden haben, die Mitbenutzung gestatten. Mitbenützer darf das nur im Umfang: \\ • der Prüfungskategorie des AF-Prüfungszeugnisses \\ • der Bewilligungsklasse / Leistungsstufe der AF-Bewilligung des AF-Stellen Inhabers \\ • Der BMVIT kann zum Zweck der Ausbildung Ausnahmen vorsehen.}
+
+\card{37}{Wer ist für Amtshandlungen nach dem Amateurfunkgesetz zuständig?}{\begin{itemize}\itemsep1pt \item Für die Amtshandlungen zuständig ist das örtliche FMB (entspr. Hauptwohnsitz). \item Bei mehreren FMBs ist einvernehmlich vorgehen. \item Der BMVIT ist zuständig für die Entscheidung über Rechtsmittel gegen Bescheide des FMB, soweit nicht der UVS
+zuständig ist.\end{itemize}}
+
+\card{38}{Nennen Sie einige Verwaltungsstrafbestimmungen in Bezug auf den Amateurfunk?}{\small{•  senden in AF-Frequenzen, aber nicht in der Bewilligungsklasse
+•  Sendearten nicht in der Bewilligungsklasse
+•  höher Sendeleistung/Bandbreite (Ausnahme nicht vorliegend)
+•  nicht persönlich anwesend
+•  Verbindung AF-Stellen/TK-Anlagen (Ausnahme nicht vorlieg.)
+•  vorsätzlich Verkehr mit nicht bewilligter Funkstelle
+•  nicht unmittelbarer Verkehr mit bewilligter Funkstelle
+•  Verkehr mit Funkstellen in Ländern, die Einwand erh. haben
+•  Gestattung von Mitbenutzung durch Personen ohne Prüfung
+•  Mitbenutzung ohne Prüfung
+•  mangelhafte Überwachung der Mitbenutzung (einhalten der Bestimmungen)}}
+
+\card{39}{Was ist eine CEPT-Lizenz? \\ (oder CEPT-Novizen-Lizenz)}{\begin{itemize}\itemsep0pt \item senden in Frequenzbereichen, die nicht dem AF-Dienst zugewiesen sind \item wenn im Verkehr mit anderen Funkstellen Ansehen/Sicherheit/Wirtschaftsinteressen gefährdet werden, gegen öffentliche Ordnung/Sittlichkeit verstoßen wird \item wenn Notrufe gestört/nicht beantwortet werden \item wenn ein anderes oder kein Rufzeichen gesendet wird\end{itemize}}
+
+\card{40}{Was darf ein ausländischer CEPT-Lizenz Inhaber oder CEPT-Novizen-Lizenz in Österreich ohne eigene österreichische Bewilligung?}{\begin{itemize}\itemsep1pt \item Errichten oder Betreiben einer AF-Stelle ohne AF-Bewilligung \item Verwendung von Daten der Rufzeichenliste für andere Zwecke als AF \end{itemize} Wenn Tatbestand strenger bestrafbar
+(Gerichte zuständig), keine Verwaltungsübertretung.}
+
+\card{41}{Was bedeutet der Begriff Reziprozität und nennen Sie ein Beispiel?}{\begin{itemize}\itemsep1pt \item Eine AF-Bewilligung oder eine Urkunde, die einen Hinweis darauf enthält, dass sie eine CEPT-Lizenz ist. \item Erteilung/Ausstellung: Von der Behörde eines Staates, der die CEPT-Empfehlung T/R61-01 anwendet. \item CEPT-Novice-Lizenz: entsprechend ERC
+REC 05(06)\end{itemize}}
+
+\card{42}{Nennen Sie die Bewilligungsklassen und wozu berechtigen diese?}{ Inhaber einer ausländischen CEPT-Lizenz, älter als 14 Jahre, dürfen 3 Monate ab Einreisetag eine AFU-Stelle errichten und betreiben.}
+
+\card{43}{Welche Leistungsstufen kennen Sie und nennen Sie deren Merkmale?}{\begin{itemize}\itemsep1pt \item Begriff aus dem Völkerrecht \item Angehörige anderer Staaten werden in
+Österreich so behandelt, wie Österreicher im anderen Staat. \end{itemize}
+Beispiel: \begin{itemize}\itemsep1pt \item Ausländern wird Bewilligung nur dann erteilt, wenn Österreichern in diesem Staat auch das Errichten und Betreiben einer AFU-Stelle gestattet ist \end{itemize}}
+
+\card{44}{Unter welchen Voraussetzungen kann eine Amateurfunkbewilligung für die Leistungsstufe C erteilt werden?}{•  3 Klassen (1, 3 und 4) •  international Klasse 1 (CEPT AFU-Bewilligung), Klasse 4 (CEPT NOVICE-Lizenz), Klasse 3 national •  Klasse 1 darf alle Frequenzbereiche und Sendearten (Einschränkungen beachten) nutzen. •  Klasse 3 darf nur 2m und 70cm und bestimmte Sendearten (Einschränkungen beachten) nutzen. Keine Selbstbauanlagen, nur kommerziell gefertigte, nicht veränderte, Leistungsstufe A •  Klasse 4: 2m und 70cm, 4 KW-Bereiche, sonst wie Klasse 3 •  Mitbenutzung von Klubfunkstellen ist gestattet.}
+
+\card{45}{Unter welchen Voraussetzungen kann eine Amateurfunkbewilligung für die Leistungsstufe D erteilt werden?}{\begin{itemize}\itemsep1pt \item A ... 100 Watt max. \item B ... 200 Watt max \item C ... 400 Watt max \item D ... 1000 Watt max \item Überschreitung der Grenzwerte um 20\% tolerabel.\end{itemize}}
+
+\card{46}{Was bedeutet der Status eines Funkdienstes (Primär, Primär/Exklusiv(Pex), Sekundär, ISM)?}{ wenn am genannten Standort seit mind. 1 Jahr eine AF-Stelle mit „Leistungsstufe B“ störungsfrei betrieben wurde.}
+
+\card{47}{Ist die Verwendung der Betriebsart Telegraphie an eine bestimmte Voraussetzungen gebunden?}{Bewilligung für „Leistungsstufe D“: \begin{itemize}\itemsep1pt \item nur AFU-Vereinen und im öffentlichen Interesse tätigen Organisationen \item kann von Ergebnissen eines Probebetriebs (6 Monate) abhängig gemacht werden\end{itemize}}
+
+\card{48}{Wann wird eine schädliche Störung als solche behandelt?}{\small{• Pex = primärer Funkdienst (exklusiv für Amateurfunk) 
+• P = primärer Funkdienst (Mitbenutzung durch andere FD) \\
+• S = sekundärer Funkdienst (primärer Funkdienst hat Vorrang, sekundäre *) dürfen keine Störungen bei primären verursachen *) können keinen Schutz gegen Störungen von primären
+verlangen *) können Schutz gegen Störungen von sekundären verlangen \\
+• ISM = Hochfrequenzbereich für industrielle, wissenschaftliche, medizinische Anwendung}}
+
+\card{49}{Was gilt für einen Amateurfunkbetrieb auf Schiffen und in Flugzeugen?}{\begin{itemize}\itemsep1pt \item Nein, Verwendung aller Betriebsarten bei Klasse 1, 4 und Klasse 3 zulässig. \item Einige Länder außerhalb der CEPT verlangen für die Erteilung einer Gastlizenz
+unter 30 MHz eine Telegrafieprüfung.\end{itemize}}
+
+\card{50}{Welche Aussendungen dürfen von einer Amateurfunkstelle empfangen werden?}{\small{\begin{itemize}\itemsep0pt \item Wenn die Funkanlagen entsprechend Bewilligungen errichtet sind und die gestörte Empfangsanlage vorschriftsmäßig betrieben wird. \item Nicht, wenn Störung durch andere, ordnungsgemäß errichtete/betriebene AF-Stellen verursacht wird. \item Nicht in ISM Bändern. \item Bei Störung durch TK-Einrichtungen kann die FMB (wenn alle beteiligten Anlagen den Vorschriften entsprechen) unter Abwägung des wirtschaftlichen Aufwands techn./betriebl. Maßnahmen zur Behebung anordnen.\end{itemize}}}
+
+\card{51}{Was darf der Nachrichteninhalt einer Amateurfunkaussendung sein?}{Es entscheidet der Pilot / der Kapitän, ob AFU durchgeführt werden darf.}
+
+\card{52}{Gibt es eine Möglichkeit, dass ein Funkamateur, der die Prüfungskategorie 3 erfolgreich abgelegt hat, auf anderen Frequenzen als dem 2m / 70cm-Band Funkverkehr haben darf?}{Mit einer Empfangsanlage dürfen empfangen werden: \begin{itemize}\itemsep1pt \item Aussendungen anderer AF-Stellen \item Rundfunk \item Nachrichten an alle, sofern diese für den
+Gebrauch durch die Öffentlichkeit bestimmt \item Not/Katastrophenverkehr\end{itemize}}
+
+\card{53}{Wer darf eine Relaisfunkstelle errichten / betreiben / benutzen und wie ist deren Rufzeichen auszusenden?}{\small{Offene Sprache (Abkürzungen, Zeichen, Esperanto, Latein), Nachricht muss verständlich bleiben, nur normierte Übertragungsverfahren:
+•  Morsealphabet, Telegraphiealphabet Nr. 2, AMTOR/PACTOR, ITU-R-Empf. M476/M625, HELL-System, (Fernsehen AM), im ITU-R-Report 624 beschriebene, (Packet Radio) AX-25
+Protokoll (alle Übertragungsgeschwindigkeiten), DVBT (EN300744), DVBS (EN300421)
+•  Verwendung anderer Verfahren: Rufzeichen in offener Sprache/normiert, Inhalt 3 Wochen reproduzierbar dokumentiert
+•  Aussendung von reinem Träger nur zu Mess/Testzwecken}}
+
+\card{54}{Was haben Sie zu tun, wenn Sie Funkverkehr mit einer nicht bewilligten Amateurfunkstelle haben und mit wem dürfen Sie keinen Amateurfunkverkehr haben?}{\begin{itemize}\itemsep1pt \item Klubfunkstelle mit Bewilligungsklasse 1 \item darf auf allen, dem AF zugewiesenen Frequenzen \item von Personen mit Klasse 3 und 4 \item zum Zweck der Ausbildung \item unter Überwachung eines Inhabers (Klasse 1) \item mitbenutzt werden\end{itemize}}
+
+\card{55}{Welche besonderen Aufgaben hat die ITU in Bezug auf Funkdienste und welche Ausschüsse sind dafür zuständig?}{• Bewilligung für eine Relaisfunkstelle wird nur einem
+Amateurfunkverein/einer im öffentlichen Interesse tätigen Organisation erteilt,
+• wenn der Einsatz der Betriebsfrequenzen (hinsichtl. zugeteilter Frequ.) störungsfrei erfolgen kann.
+• eigenes Bewilligungsverfahren
+• Benutzung ist allen AF-Stellen zu gestatten
+• Bei Sprachübertragungsrelais: Aussendung des Rufzeichens in Sprache oder mit 60-100 Zeichen pro Minute in Telegraphie.
+• Bei anderen: Aussendung des Rufzeichens in der jeweiligen Sendeart.}
+
+\card{56}{Was bedeutet missbräuchliche Verwendung von Funkanlagen?}{\begin{itemize}\itemsep1pt \item Nicht bewilligte AF-Stelle: Verkehr abbrechen. \item Alles unterlassen, was das Ansehen, die Sicherheit, die Wirtschaftsinteressen gefährdet, was gegen die öffentliche Ordnung oder Sittlichkeit verstößt. \item Unzulässiger Verkehr: Mit AFU-Stellen in Ländern, die Einwand erhoben haben \item Kundmachung durch BMVIT im Bgbl.\end{itemize}}
+
+\card{57}{Was hat der Inhaber einer Amateurfunkstelle zu tun, wenn er nicht bei dieser Stelle anwesend ist?}{\small{Aufgaben:
+•  Zuweisung der Frequenzen
+•  Verhinderung gegenseitiger Störungen
+•  Verbesserung der Ausnutzung der Bänder
+•  Förderung der Zusammenarbeit der Hilfsdienste zur Erhaltung menschlichen Lebens \\
+Ausschüsse:
+•  Radiocommunication Bureau: zugeteilte Frequenzen (Länder) registrieren, Anerkennung sichern, Beratung bei Störungen
+•  Radiocommunication Sector: Studien über technische und betriebliche Fragen, Mitglieder beraten
+•  Telecommunication Sector: Beratung, Studien: Technisches, Betriebs/Gebührenfragen (so billig wie möglich, trotzdem dotiert)}}
+
+\card{58}{Welche Bestimmungen sind beim Betrieb einer Amateurfunkstelle im Ausland zu beachten?}{\small{• Nachrichtenübermittlung, die öffentliche Ordnung und Sicherheit gefährdet, gegen Gesetze verstößt
+• Belästigung oder Verängstigung anderer
+• Verletzung der geltenden Geheimhaltungspflicht
+• Nachrichtenübermittlung, die nicht dem bewilligten Zweck der FA entspricht
+• Inhaber (nicht Zugangsanbieter) müssen zumutbare Maßnahmen zur Vermeidung von Missbrauch treffen
+• bewilligter Zweck, Standort / im Einsatzgebiet
+• bewilligte Frequenzen, Rufzeichen
+• nicht zugelassene FA / TK-Einrichtungen dürfen nicht mit einem öffentl. Komm.netz verbunden/betrieben werden}}
+
+\card{59}{Unter welchen Voraussetzungen darf der Inhaber einer Amateurfunkbewilligung der Bewilligungsklasse 3 im Ausland Amateurfunkbetrieb durchführen?}{}
+
+\card{60}{Wozu berechtigt eine Amateurfunkbewilligung der Klasse 4?}{}
+
+\card{61}{Aufgrund welcher internationalen Regelung dürfen Funkamateure aus bestimmten Ländern auch ohne individuelle Gastzulassung vorübergehend in Österreich Amateurfunk ausüben?}{}
+
+\card{62}{Unter welchen Voraussetzungen ist die Verbindung von Amateurfunkstellen mittels Internettechnologie zulässig?}{}
 
 
 \def\chap{Betrieb und Fertigkeiten \class{1,4}}
 
-\question{01}{Wie eröffnen Sie einen Funkverkehr in Phonie, wie in Telegraphie?}
-\question{02}{Was ist das gebräuchliche Minimum einer Amateurfunkverbindung?}
-\question{03}{Welche Bedeutung haben die Q-Gruppen im allgemeinen?
+\card{01}{Wie eröffnen Sie einen Funkverkehr in Phonie, wie in Telegraphie?}{}
+
+\card{02}{Was ist das gebräuchliche Minimum einer Amateurfunkverbindung?}{}
+
+\card{03a}{Welche Bedeutung haben die Q-Gruppen im allgemeinen?
   \begin{center}
     QRM \quad QSO \quad QSY \quad QSL \quad QRP \quad QTR
   \end{center}
+}{\begin{description}
+  \item[QRM] ich werde gestört (Fremdstörungen),
+  \item[QSO] ich habe Verbindung mit \dots
+  \item[QSY] wechseln Sie auf die Frequenz \dots kHz
+  \item[QSL] ich werde eine Empfangsbestätigung (QSL-Karte) geben
+  \item[QRP] vermindern Sie die Sendeleistung
+  \item[QTR] es ist \dots Uhr GMT (UTC)
+ \end{description}
 }
-\question{03}{Welche Bedeutung haben die Q-Gruppen im allgemeinen?
+
+\card{03b}{Welche Bedeutung haben die Q-Gruppen im allgemeinen?
   \begin{center}
     QRS \quad QRX \quad QRO \quad QRV \quad QSP \quad QRG
   \end{center}
-}
-\question{03}{Welche Bedeutung haben die Q-Gruppen im allgemeinen?
+}{\begin{description}
+  \item[QRS] geben Sie langsamer
+  \item[QRX] ich werde Sie um \dots~Uhr auf \dots~kHz wieder rufen
+  \item[QRO] erhöhen Sie Ihre Sendeleistung
+  \item[QRV] ich bin betriebsbereit
+  \item[QSP] ich werde an \dots\ weiterübermitteln,
+  \item[QRG] ihre genaue Frequenz ist \dots~kHz
+\end{description}}
+
+\card{03c}{Welche Bedeutung haben die Q-Gruppen im allgemeinen?
   \begin{center}
     QRT \quad QRU \quad QRN \quad QRB \quad QTH \quad QSB
   \end{center}
+}{\begin{description}\itemsep0pt
+  \item[QRT] stellen Sie die Aussendung(en) ein
+  \item[QRU] ich habe nichts für Sie vorliegen
+  \item[QRN] ich habe atmosphärische Störungen (1 = keine, 5 = sehr stark),
+  \item[QRB] die Entfernung zwischen unseren beiden Stationen ist \dots\ km
+  \item[QTH] mein Standort ist \dots
+  \item[QSB] Ihre Zeichen weisen Fading auf (= die Empfangsfeldstärke schwankt).
+ \end{description}
 }
 
-%\begin{itemize}
-%  \item QRM ich werde gestört (Fremdstörungen),
-%  \item QSO ich habe Verbindung mit \dots (im Amateurgebrauch auch Bezeichnung für eine Funkverbindung)
-%  \item QSY wechseln Sie auf die Frequenz \dots kHz (im Amateurgebrauch statt einer Frequenz oft das Amateurband),
-%  \item QSL ich werde Ihnen eine Empfangsbestätigung geben (im Amateurgebrauch allgemeiner Hinweis, dass eine Meldung verstanden wurde u n d Bezeichnung für die ,,Funkbestätigungskarte/QSL-Karte'')
-%  \item QRP vermindern Sie die Sendeleistung (im Amateurgebrauch auch Hinweis, dass mit geringer Sendeleistung gearbeitet wird)
-%  \item QTR es ist \dots Uhr GMT (UTC)
-%  \item QRS geben Sie langsamer (eventuell gefolgt von der erwünschten Anzahl Worte pro Minute =WPM),
-%  \item QRX ich werde Sie um \dots Uhr auf \dots kHz wieder rufen (im Amateurgebrauch als allgemeiner Hinweis, dass man später gerufen wird, derzeit aber warten soll),
-%  \item QRO erhöhen Sie Ihre Sendeleistung
-%  \item QRV ich bin betriebsbereit
-%  \item QSP ich werde an \dots weiterübermitteln,
-%  \item QRG Ihre genaue Frequenz ist \dots kHz
-%  \item QRT stellen Sie die Aussendung(en) ein (im Amateurgebrauch auch für ,, ich stelle den Funkbetrieb ein!'')
-%  \item QRU ich habe nichts für Sie vorliegen (im Amateurgebrauch die Mitteilung, dass alle Informationen übermittelt wurden; wird am Ende eines QSOs verwendet),
-%  \item QRN ich habe atmosphärische Störungen (1 = keine, 2 = schwach, 3 = mäßige, 4 = starke, 5 = sehr starke),
-%  \item QRB die Entfernung zwischen unseren beiden Stationen ist....km
-%  \item QTH mein Standort ist \dots
-%  \item QSB Ihre Zeichen weisen Fading auf (= die Empfangsfeldstärke schwankt).
-%\end{itemize}
-
-\question{04}{Sie wollen, dass Ihre Gegenstation die Sendeleistung vermindert. Welche Q-Gruppe verwenden Sie?}
-\question{05}{Was bedeuten die Hinweise \\ ,,5 UP'' bzw. ,,10 DOWN''?}
-\question{06}{Sie wollen in einen bestehenden Funkverkehr einsteigen. Wie führen Sie das durch?}
-\question{07}{Welche betrieblichen Auswirkungen haben die besonderen Ausbreitungsbedingungen auf Kurzwelle?}
-\question{08}{Welche betriebliche Auswirkung hat die Bodenwellen-Ausbreitung?}
-\question{09}{Welche betriebliche Auswirkung hat die Raumwellen-Ausbreitung, in welchem Frequenzbereich ist sie von Bedeutung?}
-\question{10}{Welche betriebliche Bedeutung hat die kritische Frequenz?}
-\question{11}{Welche betriebliche Bedeutung haben die Begriffe ,,MUF'' und ,,LUF''?}
-\question{12}{Was versteht man unter Fading auf Kurzwelle, wodurch entsteht Fading und wie reagieren Sie, um den Funkverkehr aufrecht zu erhalten?}
-\question{13}{Ausbreitung von Funkwellen -- Ausbreitungsmerkmale in den verschiedenen Amateurfunk Frequenzbereichen?}
-\question{14}{Welchen Einfluß hat die Ionosphäre auf die Ausbreitung von Funkwellen über 30 MHz?}
-\question{15}{Erklären Sie die Begriffe Fresnelzone, Geländeschnitt}
-\question{16}{Was ist die tote Zone? Was ist ein Skip?}
+\question{04}{Sie wollen, dass Ihre Gegenstation die Sendeleistung vermindert. Welche Q-Gruppe verwenden Sie?}{}
+\question{05}{Was bedeuten die Hinweise \\ ,,5 UP'' bzw. ''10 DOWN''?}{}
+\question{06}{Sie wollen in einen bestehenden Funkverkehr einsteigen. Wie führen Sie das durch?}{}
+\question{07}{Welche betrieblichen Auswirkungen haben die besonderen Ausbreitungsbedingungen auf Kurzwelle?}{}
+\question{08}{Welche betriebliche Auswirkung hat die Bodenwellen-Ausbreitung?}{}
+\question{09}{Welche betriebliche Auswirkung hat die Raumwellen-Ausbreitung, in welchem Frequenzbereich ist sie von Bedeutung?}{}
+\question{10}{Welche betriebliche Bedeutung hat die kritische Frequenz?}{}
+\question{11}{Welche betriebliche Bedeutung haben die Begriffe ,,MUF'' und ,,LUF''?}{}
+\question{12}{Was versteht man unter Fading auf Kurzwelle, wodurch entsteht Fading und wie reagieren Sie, um den Funkverkehr aufrecht zu erhalten?}{}
+\question{13}{Ausbreitung von Funkwellen -- Ausbreitungsmerkmale in den verschiedenen Amateurfunk Frequenzbereichen?}{}
+\question{14}{Welchen Einfluß hat die Ionosphäre auf die Ausbreitung von Funkwellen über 30 MHz?}{}
+\question{15}{Erklären Sie die Begriffe Fresnelzone, Geländeschnitt}{}
+\question{16}{Was ist die tote Zone? Was ist ein Skip?}{}
 \question{17}{Wovon hängt die maximal erzielbare Reichweite auf Kurzwelle ab?}
 \question{18}{Was verstehen Sie unter kurzem Weg? Was unter langem Weg?}
 \question{19}{Was verstehen Sie unter dem Dämmerungseffekt?}
