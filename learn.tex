@@ -3,6 +3,7 @@
 \usepackage[german]{babel}
 \usepackage[bitstream-charter]{mathdesign}
 \usepackage[T1]{fontenc}
+\usepackage{amsmath}
 \usepackage{enumitem}
 %\newcommand{\cardpaper}{a4paper}
 %\newcommand{\cardpapermode}{portrait}
@@ -328,7 +329,7 @@ Ausschüsse:
 }
 
 \question{04}{Sie wollen, dass Ihre Gegenstation die Sendeleistung vermindert. Welche Q-Gruppe verwenden Sie?}{}
-\question{05}{Was bedeuten die Hinweise \\ ,,5 UP'' bzw. ''10 DOWN''?}{}
+\question{05}{Was bedeuten die Hinweise \\ ,,5 UP'' bzw. ,,10 DOWN''?}{}
 \question{06}{Sie wollen in einen bestehenden Funkverkehr einsteigen. Wie führen Sie das durch?}{}
 \question{07}{Welche betrieblichen Auswirkungen haben die besonderen Ausbreitungsbedingungen auf Kurzwelle?}{}
 \question{08}{Welche betriebliche Auswirkung hat die Bodenwellen-Ausbreitung?}{}
@@ -459,23 +460,229 @@ Ausschüsse:
 
 \def\chap{Technische Grundlagen \class{1}}
 
-\question{01}{Ohmsches und Kirchhoff’sches Gesetz}
-\question{02}{Begriff Leiter, Halbleiter, Nichtleiter}
-\question{03}{Kondensator, Begriff Kapazität, Einheiten - Verhalten bei Gleich- und Wechselspannung}
-\question{04}{Spule, Begriff Induktivität, Einheiten - Verhalten bei Gleich- und Wechselspannung}
-\question{05}{Wärmeverhalten von elektrischen Bauelementen}
-\question{06}{Stromquellen (Kenngrössen)}
-\question{07}{Sinus- und nicht-sinusförmige Signale}
-\question{08}{Was verstehen Sie unter dem Begriff Skin-Effekt?}
-\question{09}{Gleich- und Wechselspannung - Kenngrößen}
-\question{10}{Was verstehen Sie unter dem Begriff Permeabilität?}
-\question{11}{Serien- und Parallelschaltung von $R$, $L$, $C$}
-\question{12}{Was verstehen Sie unter dem Begriff Dielektrikum?}
-\question{13}{Wirk-, Blind- und Scheinleistung bei Wechselstrom.}
-\question{14}{Begriff elektrischer Widerstand (Schein-, Wirk- und Blindwiderstand), Leitwert}
-\question{15}{Berechnen Sie den induktiven Blindwiderstand einer Spule mit $30~\mu H$ bei $7$ MHz (Werte sind variabel)}
-\question{16}{Berechnen Sie den kapazitiven Blindwiderstand eines Kondensators von 500 pF bei 10 MHz (Werte sind variabel)}
-\question{17}{Der Transformator - Prinzip und Anwendung}
+\card{01}{Ohmsches und Kirchhoff’sches Gesetz}{
+Ohmsches Gesetz  gibt den Zusammenhang zwischen einem Widerstand  (R) der anliegenden 
+Spannung (U) und dem durch den Widerst. fließenden Strom (I) wieder.
+\[ U = I \cdot R  \qquad  I = U / R \qquad R = U / I \]
+\begin{description}
+  \item[1. Kirchhoffsches Gesetz] Parallelschaltung v. Widerst. Gesamtstrom = Summe der Teilströme.
+  \item[2. Kirchhoffsches Gesetz] Widerst. In Reihe geschaltet, Gesamtspannung = Summe der Teilspannungen.
+\end{description}}
+
+\card{02}{Begriff Leiter, Halbleiter, Nichtleiter}{
+  \begin{description}
+    \item[Leiter]
+      Materialien, die den elektr. Strom sehr gut leiten. Alle Metalle, Kohle und Säuren.
+      Beste Leitfähigkeit: Silber, Kupfer, Aluminium, Gold, Messing.
+    \item[Halbleiter] Materialien, die Leitfähigkeit
+      aufgrund physikalischer oder elektrischer Einflüsse ändern
+      (Silizium, Germanium).
+    \item[Nichtleiter] Isolatoren leiten schlecht bis gar nicht.
+      Keramik, Kunststoff, trockenes Holz.
+      Gute Isol.: Glas, Keramik, Teflon, Glasfaser Harz, Gummi.
+  \end{description}
+}
+
+
+\card{03}{Kondensator, Begriff Kapazität, Einheiten - Verhalten bei Gleich- und Wechselspannung}{
+  \begin{description}
+    \item[Kondensator]
+      Ladungsspeicher; besteht aus zwei elektr. leitenden Materialien, durch Isolator getrennt.
+      Bei \emph{Gleichspannung} lädt er sich auf und kann später die Ladung an einen Verbraucher abgeben.
+      Bei \emph{Wechselspannung} durch die laufende Umladung wird er zu einem Stromfluss im Leitungskreis,
+      der mit steigender Frequenz zunimmt.
+    \item[Einheit] Farad~(F) für Kapazität  \hspace{20pt} \textbf{Kürzel} C
+    \item[Kleinere Einheiten] Milli- ($10^3$) bis Picofarad ($10^{12}$)
+  \end{description}
+}
+
+\card{04}{Spule, Begriff Induktivität, Einheiten - Verhalten bei Gleich- und Wechselspannung}{
+  \footnotesize
+  \begin{description}
+    \item[Spule] eine oder mehrere Windungen eines Leiters auf einen magnetischen Kern (Induktivität)
+    \item[Gleichspannung] baut in der Spule ein Magnetfeld auf
+    \item[Wechselspannung] durch den Richtungswechseln des Stromes kommt es zu Richtungswechseln des Magnetfeldes (Selbstinduktion) der dem verursachenden Strom entgegen wirkt.
+    Mit steigender Frequenz nimmt Widerstand zu; als induktiver Blindwiderstand~(XL) bezeichnet.
+    \item[Einheit] Henry~(H)   \hspace{50pt} \textbf{Formel} (L)
+    \item[Kleinere Einheiten] Millihenry, Mikrohenry, PicoH 0,001~H = 1~mH = 1000 microH
+  \end{description}
+}
+
+\card{05}{Wärmeverhalten von elektrischen Bauelementen}{
+  Alle Metalle und die meisten guten Leiter erhöhen mit steigender Temperatur ihren Widerstand.
+  \centerline{PTC $\Rightarrow$ positive temperatur coefficient}
+  Die meisten Halbleiter verringern mit steigender Temperatur ihren Widerstand.
+  \centerline{NTC $\Rightarrow$ negative temperatur coefficient}
+  \small
+  \begin{description}
+    \item[Kenngrößen] gibt an um wie viel Ohm sich der Widerstand ändert, wenn die Temperatur um 1 Grad erhöht wird
+    \item[Einheit] Ohm/Grad
+  \end{description}
+}
+
+\card{06}{Stromquellen (Kenngrössen)}{
+  \footnotesize
+  \begin{description}
+    \item[Gleichstrom Primärbatterien] Durch chemischen Prozess wird elektrische Spannung zwischen zwei Polen erzeugt. Strom kann entnommen werden (Entladung).
+    \item[Sekundärbatterien] Akkus vorher aufladen, dann Strom entnehmen.
+    \item[Beispiele]
+      Bleiakku, Nickel-Cadmium-Akku, Nickel-Metallhybrid-Akku, Lithium-Ionen-Akku,
+      Solarzelle, Piezo-Elemente
+    \item[Kenngröße] Spannung, Strombelastbarkeit, Kapazität (Fassungsvermögen) in Ah
+  \end{description}
+  Die 220~V Steckdose liefert Wechselstrom mit 50~Hz.
+}
+
+\card{07}{Sinus- und nicht-sinusförmige Signale}{
+  \footnotesize
+  \begin{description}
+    \item[Sinusförmige Signale] haben zeitlichen Verlauf der exakt einer mathematischen Sinusfunktion entspricht und sind frei von Oberwellen (zB Spannung des Wechselstromnetzes).
+    \item[Nicht sinusförmige Signale]
+      Wechselspannungen mit beliebigen Kurvenverlauf.
+      Dreieck-, Rechteck-, Trapez-, Sägezahn-, Rauschsignale: setzen sich aus mehreren Sinussignalen zusammen.
+    \item[Kenngrößen] \hfill{}
+      \begin{description}
+        \item[bei Gleichspannung] Spannung (Amplitude)
+        \item[bei Wechselspannung] 3 Kenngrößen: Kurvenform, Scheitelspannung (V), Frequenz (Hz) / Polaritätswechsel/sec
+      \end{description}
+  \end{description}
+}
+
+\card{08}{Was verstehen Sie unter dem Begriff Skin-Effekt?}{
+  Bei zunehmenden Frequenzen wird Stromfluss im Leiter immer mehr zum Rand gedrängt.
+  Strom fließt praktisch nur an der Außenhaut.
+  Dadurch steigt der Widerstand an, was zu Leistungsverlust führt, nicht bei Gleichstrom.
+  Dicke HF Leiter auch als Rohre ausgeführt.
+  \begin{description}
+    \item[Abhilfe] viele dünne Adern vergrößern die Oberfläche. Dickere Drähte und Versilbern der Leiter
+    \item[Größenordnung] Eindringtiefe des Stroms
+      9,38~mm bei 50~Hz, 70~$\mu$m bei 1~MHz, 7~$\mu$m bei 100~MHz
+  \end{description}
+}
+
+\card{09}{Gleich- und Wechselspannung - Kenngrößen}{
+  \footnotesize
+  \begin{description}\itemsep0pt
+    \item[Gleichspannung] Spannung ist konstant, die Polarität verändert sich nicht. \textbf{Kürzel} DC (direct current) und \textbf{Kenngrößen} Spannung, Strombelastbarkeit der Quelle, Kapazität in Ah
+    \item[Wechselspannung]\itemsep0pt
+      Spannung und Polarität ändern sich laufend ($\rightarrow$ Frequenz); der zeitliche Verlauf kann als Kurve dargestellt werden. 
+      \begin{description}
+        \item[Kürzel] AC (alternating current)
+        \item[Kenngröße] Spannung, Amplitude, Frequenz, Kurvenform, Strombelastbarkeit der Quelle
+        \item[Formelzeichen] $f = \frac1T$
+        \item[Einheit] Hertz (Hz, kHz, MHz)
+      \end{description}
+  \end{description}
+}
+
+
+\card{10}{Was verstehen Sie unter dem Begriff Permeabilität?}{
+  Wird ein Material in eine Spule eingebracht, erhöht dies die Induktivität der Spule.
+  Permeabilität ist jene Materialkonstante, die angibt um wie viel höher die Induktivität
+  gegenüber Vakuum ist.
+  \begin{description}
+    \item[Formelzeichen] $\mu$
+    \item[Beispiele]
+      \begin{tabular}{rlrl}
+        Luft       & 1      & Eisen      & 5000 \\
+        Aluminimum & 250    & Mu Metall  & 100 000 \\
+        Nickel     & 600    &            & \\
+      \end{tabular}
+  \end{description}
+}
+
+\card{11}{Serien- und Parallelschaltung von $R$, $L$, $C$}{
+  \begin{minipage}{0.5\textwidth}
+    \centering
+    Serienschaltung \\ von $R$ und $L$
+    \begin{center}
+      $ R_{\text{ges}} = R_1 + R_2 $ \\
+      $ L_{\text{ges}} = L_1 + L_2 $
+    \end{center}
+    Parallelschaltung \\ von $R$ und $L$
+    \begin{center}
+      $ {R_{\text{ges}}} = \frac{R_1 \cdot R_2}{R_1 + R_2} $ \\
+      $ {L_{\text{ges}}} = \frac{L_1 \cdot L_2}{L_1 + L_2} $
+    \end{center}
+  \end{minipage}
+  \begin{minipage}{0.49\textwidth}
+    \centering
+    Parallelschaltung von $C$
+    \begin{center}
+      $ C_{\text{ges}} = C_1 + C_2 $
+    \end{center}
+    Serienschaltung von $C$
+    \begin{center}
+      $ {C_{\text{ges}}} = \frac{C_1 \cdot C_2}{C_1 + C_2} $
+    \end{center}
+  \end{minipage}
+}
+
+
+\card{12}{Was verstehen Sie unter dem Begriff Dielektrikum?}{
+  Isolierende Schicht zwischen den Platten eines Kondensators. z.B. Keramik, Kunststoff; Teflon
+  {\small
+    \begin{description}
+      \item[Kenngößen]
+        Dielektritätskonstante, Materialkonstante die angibt um wie viel höher die Kapazität gegenüber Vakuum ist, wenn dieses Material zwischen den Kondensatorplatten angeordnet wird.
+      \item[Beispiele] Luft 1, Papier 1--4, Teflon 2, Wasser 80, destilliertes Wasser isoliert
+      \item[Eigenschaften] Hohe Dielektritätskonstante, hohe Spannungsfestigkeit, geringe Dicke
+    \end{description}
+  }
+}
+
+\card{13}{Wirk-, Blind- und Scheinleistung bei Wechselstrom.}{
+  \begin{description}
+    \item[Wirkleistung] nur ohmsche Widerstand (Verbraucher) vorhanden.
+    \item[Blindleistung] nur kapazitive oder induktive Verbraucher vorhanden.
+    \item[Scheinleistung] ohmsche und (kapazitive oder induktive) Verbraucher vorhanden.
+  \end{description}
+  {\small
+    \textbf{Achtung!}
+      Wirk- und Blindleistung können nicht addiert werden,
+      da Wirk- und Blindströme nicht gleichphasig sind.
+  }
+}
+
+
+\card{14}{Begriff elektrischer Widerstand (Schein-, Wirk- und Blindwiderstand), Leitwert}{
+  \begin{description}
+    \item[Ohmscher Widerstand] bei Gleichstrom nur Ohmscher Widerstand,
+      keine Phasenverschiebung (,,Wirkwiderstand''),
+      Leitwert ist Kehrwert des Ohmschen Widerstands: $G = \frac1{R}$. Einheit Siemens ($S$).
+    \item[Blindwiderstand]
+      Phasenverschiebung von Strom ($+90^\circ$) und Spannung ($-90^\circ$) bei $C$ und $L$.
+      ,,Reaktanz''. Einheit Ohm.
+    \item[Scheinwiderstand]
+      Phasenverschiebung von 0--$90^\circ$. RC- und RL-Kombinationen. ,,Impedanz''. Einheit Ohm.
+  \end{description}
+}
+
+\card{15}{Berechnen Sie den induktiven Blindwiderstand einer Spule mit $30~\mu H$ bei $7$ MHz (Werte sind variabel)}{
+  \centering
+  siehe Skriptum, Seite 39, Frage~T15
+}
+
+\card{16}{Berechnen Sie den kapazitiven Blindwiderstand eines Kondensators von 500 pF bei 10 MHz (Werte sind variabel)}{
+  \centering
+  siehe Skriptum, Seite 38, Frage~T16
+}
+
+\card{17}{Der Transformator - Prinzip und Anwendung}{
+  \small
+  Gemeinsamer Eisenkern mit 2 Wicklungen (Spulen) fließt Wechselströme in Spule (Primärspeicher).
+  Dabei induziert das erzeugte wechselnde Magnetfeld in der 2. Spule (Sekundärspule)
+  eine Wechselspannung. Die Wechselspannungen sind proportional zu den Windungszahlen
+  = Übersetzungsverhältnis.
+  \begin{description}
+    \item[Anwendung] Stromversorgungs-, NF- und HF-Technik
+    \item[Übertrager] anderes Wort für Transformator
+    \item[Kenndaten]
+      Primär- / Sekundärspannung, Windungszahlen, Übersetzungsverhältnis,
+      maximal übertragbare Leistung, Impedanz
+  \end{description}
+}
+
 \question{18}{Der Resonanzschwingkreis - Kenngrößen}
 \question{19}{Der Resonanzschwingkreis - Anwendungen in der Funktechnik}
 \question{20}{Berechnen Sie die Resonanzfrequenz eines Schwingkreises mit folgenden Werten: L = 15 H, C = 30 pF (Werte sind variabel)}
