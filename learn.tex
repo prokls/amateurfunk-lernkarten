@@ -1028,11 +1028,12 @@ Ausschüsse:
   Frequenzbereich 2m-Band: 144~MHz--146~MHz, 40~kHz Bandbreite
 }
 \card{02}{Wie eröffnen Sie einen Sprechfunkverkehr?}{
+  \small
   \begin{enumerate}
     \item Reinhören, ob die Frequenz frei ist (tote Zohne berücksichtigen)
     \item ,,is this frequency in use?``
     \item Antwort ,,QRL'' oder ,,this frequency is in use`` $\rightarrow$ ,,sorry'' oder ,,SRI'' $\rightarrow$ andere Frequenz suchen
-    \item Ist die Frequenz frei, allgemeiner Anruf mit: ,,CQ, CQ, CQ, this is \dots 2x, call, call``
+    \item Ist die Frequenz frei, allgemeiner Anruf mit: ,,CQ, CQ, CQ, this is \dots 2$\times$, call, call``
           oder gezielt nach einer Station rufen. Bei einem Funkwettbewerb ,,CQ CONTEST 3$\times$ this is \dots``
   \end{enumerate}
 }
@@ -1044,40 +1045,52 @@ Ausschüsse:
 }
 \card{04}{Welche Zusätze zu einem Amateurfunkrufzeichen sind zulässig?}{
   \begin{tabular}{rl}
-    /6   & Strich ,,Landescode`` wenn vorübergehend anderer Standort \\
-    /m   & mobile \\
-    /am  & air mobile \\
-    /mm  & maritim mobile \\
-    /p   & portable \\
-    /500 & bewilligte Sonderzusätze
+    \texttt{/6  } & vorübergehend ,,6`` als anderes Bundesland \\
+    \texttt{/m  } & mobile \\
+    \texttt{/am } & air mobile \\
+    \texttt{/mm } & maritim mobile \\
+    \texttt{/p  } & portable \\
+    \texttt{/500} & bewilligte Sonderzusätze
   \end{tabular}
 }
 \card{05}{Nennen Sie mindestens 5 Landeskenner der umliegenden Länder.}{
   \begin{tabular}{llcll}
-    HA & Schweiz     & & S5 & Slowenien \\
-    HB & Ungarn      & & 9A & Kroatien \\
-    DL & Deutschland & & G  & Großbritannien \\
-    I  & Italien     & & F  & Frankreich
+    \texttt{HA} & Schweiz     & & \texttt{S5} & Slowenien \\
+    \texttt{HB} & Ungarn      & & \texttt{9A} & Kroatien \\
+    \texttt{DL} & Deutschland & & \texttt{G}  & Großbritannien \\
+    \texttt{I}  & Italien     & & \texttt{F}  & Frankreich
   \end{tabular}
 }
 \card{06}{Wie beurteilen Sie das Signal Ihrer Gegenstation?}{
-  \begin{tabular}{clr}
-    R1 bis R5 & Lesbarkeit (readability)         & R1 \dots{} nicht lesbar, R5 \dots{} ausgezeichnet lesbar \\
-    S1 bis S9 & Lautstärke (signal strength)     & S1 \dots{} kaum hörbar, S9 \dots{} sehr stark hörbar \\
-    T1 bis T9 & Tonqualität (tone quality)       & T1 \dots{} äußerst rauer Ton, T9 \dots{} reiner Ton
+  \small
+  \begin{tabular}{cl}
+    R1 bis R5 & Lesbarkeit (readability) \\
+    S1 bis S9 & Lautstärke (signal strength) \\
+    T1 bis T9 & Tonqualität (tone quality)
   \end{tabular}
+  \vspace{10pt}
+
+  wobei:
+  \begin{description}
+    \item[Lesbarkeit] R1 = nicht lesbar, R5 = ausgezeichnet lesbar
+    \item[Lautstärke] S1 = kaum hörbar, S9 = sehr stark hörbar
+    \item[Tonqualität] T1 = äußerst rauer Ton, T9 = reiner Ton
+  \end{description}
 }
 \card{07}{Was versteht man unter ,,S-Stufe(n)``?}{
   S-Stufen beurteilen die Lautstärke (signal strength) einer Gegenstelle. (S-Meter)
 
+  \vspace{20pt}
   \begin{tabular}{clclcl}
-    S1 & kaum hörbar    & S4 & mittelmäßig    & S7 & mäßig stark  \\
-    S2 & sehr schwach   & S5 & ziemlich gut   & S8 & stark \\
-    S3 & schwach        & S6 & gut            & S9 & sehr stark hörbar
+    S1 & kaum hörbar    & S6 & gut  \\
+    S2 & sehr schwach   & S7 & mäßig stark \\
+    S3 & schwach        & S8 & stark \\
+    S4 & mittelmäßig    & S9 & sehr stark hörbar \\
+    S5 & ziemlich gut   &    & \\
   \end{tabular}
 }
 \card{08}{Was versteht man unter Not- und Katastrophenfunkverkehr, wie wird er gekennzeichnet?}{
-  §~14 AFG \emph{Notfunkverkehr} ist die Übermittlung von Nachrichten zwischen einer Funkstelle, die selbst in Not ist, beteiligt ist oder Zeuge eines Notfalls ist mit Hilfe leistenden Funkstellen. Kennzeichnung ,,MAYDAY 3x`` gesprochen, ,,SOS 3$\times$`` in Telegraphie, Abschluss mit ,,OVER``. Mitschreiben und Funküberwachung verständigen. Weiterleitung mit ,,MAYDAY RELAIS``. \emph{Sicherheitsfunkverkehr} wird durch das Sicherheitszeichen ,,SECURITEE`` gekennzeichnet.
+  §~14 AFG \emph{Notfunkverkehr} ist die Übermittlung von Nachrichten zwischen einer Funkstelle, die selbst in Not ist, beteiligt ist oder Zeuge eines Notfalls ist mit Hilfe leistenden Funkstellen. Kennzeichnung ,,MAYDAY 3$\times$`` gesprochen, ,,SOS 3$\times$`` in Telegraphie, Abschluss mit ,,OVER``. Mitschreiben und Funküberwachung verständigen. Weiterleitung mit ,,MAYDAY RELAIS``. \emph{Sicherheitsfunkverkehr} wird durch das Sicherheitszeichen ,,SECURITEE`` gekennzeichnet.
 }
 \card{09}{Wie nahe dürfen Sie beim Sendebetrieb an die Bandgrenze herangehen?}{
   Der Frequenzabstand ist abhängig vom Modulationsverfahren, die Aussendung im gesamten Umfang darf die Bandgrenzen nicht überschreiten (zB. Schmalbandmodulation LSB (lower side band): untere  Bandgrenze +3,5~kHz, USB (upper side band): obere Bandgrenze -3,5~kHz). Messung der Aussendung mit Spektrum Analysator. Toleranz der Messgeräte berücksichtigen!
@@ -1123,6 +1136,7 @@ Ausschüsse:
   Verbindung durch Rückstreuung am oberen Rand der Troposphäre. Richtfunkstrecke bis 200~km Reichweite möglich. Wegen geringer Rückstrahlung hohe Sendeleistung und Richtantennen nötig. Je nach Streurichtung unterscheidet man Vorwärtsstreuung, Rückwärtsstreuung und Seitenstreuung. Meist digital genutzt, Niederschlagsstreuung ermöglicht auch (kurze) Sprechfunkverbindungen.
 }
 \card{22}{Was verstehen Sie unter Überreichweiten, was unter dem Funkhorizont?}{
+  \small
   Durch Anomalien in der Atmosphäre kann es zu Überreichweiten kommen, sporadic E-Verbindungen (,,Es``) , oder Ducting durch Inversionsschichten. Überreichweiten können rasch wechseln, daher sind die Aussendungen kurz zu halten. Störung anderer Stationen ist möglich, wenn Stationsausrüstung nicht ausgewogen.
 
   Über 30~MHz tritt mit steigender Frequenz bei der Funkausbreitung quasioptisches Verhalten auf. Dämpfung, Brechung, Streuung, Reflexion und Beugung. Der Radiohorizont ist dabei ca. $\frac13$ größer als der optische Horizont, wird als Standardausbreitung bezeichnet.
@@ -1901,6 +1915,7 @@ Spannung (U) und dem durch den Widerst. fließenden Strom (I) wieder.
   Auf Grund der großen orbitalen Geschwindigkeit eines Satelliten ändern sich die Uplink und Downloadfrequenzen für die Bodenstation während seines Überflugs. Dieses Phänomen wird als \emph{Dopplershift} (auf Basis des Doppler-Effekts) bezeichnet.}
 \card{49}{Komponenten einer Amateurfunkstation für Satellitenfunk}{
   \footnotesize
+  \vspace{2pt}
   \begin{minipage}{0.43\textwidth}
     \begin{itemize}\itemsep1pt
       \item Mikrofon
@@ -1916,6 +1931,8 @@ Spannung (U) und dem durch den Widerst. fließenden Strom (I) wieder.
       \item Mess- und Kontrollgeräte, Blitzschutz (nach geltenden Vorschriften)
     \end{itemize}
   \end{minipage}
+
+  \vspace{10pt}
   Für Satellitenfunk werden eine nachführbare Richtantennenanlage und ein Antennenvorverstärker benötigt, der unmittelbar an Antennenanlage montiert werden soll und bei Sendebetrieb zu schützen ist.
 }
 \card{50}{Abstrahlung und Ausbreitung elektromagnetischer Wellen, Feldstärke?}{
