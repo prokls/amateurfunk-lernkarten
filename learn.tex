@@ -4,6 +4,7 @@
 \usepackage[german]{babel}
 \usepackage{amsmath}
 \usepackage[inline]{enumitem}
+\usepackage{eurosym}
 \usepackage{siunitx}
 %\newcommand{\cardpaper}{a4paper}
 %\newcommand{\cardpapermode}{portrait}
@@ -12,6 +13,9 @@
 \cardfrontstyle[\large\slshape]{headings}
 \cardbackstyle{empty}
 %\cardbackstyle{plain}
+
+\DeclareSIUnit{\pers}{pers}
+\DeclareSIUnit{\EUR}{\text{\euro}}
 
 \sisetup{
   range-phrase = --
@@ -71,14 +75,14 @@ Behörde kann Bewilligungen ändern: \\ zur Sicherheit des TK-Verkehrs, aus tech
 
 \card{17}{Welche Gebühren müssen als Funkamateur entrichtet werden?}{
   \begin{tabular}{ccc}
-    A & 100~W & 1,45~EUR \\
-    B & 200~W & 2,91~EUR \\
-    C & 400~W & 4,36~EUR \\
-    D & 1000~W & 6,54~EUR
+    A & \SI{100}{\watt} & \SI{1,45}{\EUR} \\
+    B & \SI{200}{\watt} & \SI{2,91}{\EUR} \\
+    C & \SI{400}{\watt} & \SI{4,36}{\EUR} \\
+    D & \SI{1000}{\watt} & \SI{6,54}{\EUR}
   \end{tabular}
   \begin{itemize}
-    \item Klubfunkstelle: 6,54~EUR
-    \item Klubfunkstelle (Vereinsräume, Räume Organisationen im öffentlichen Interesse) zu Unterrichtszwecken ohne strahlender Antenne / Fernwirkung: 1,45~EUR
+    \item Klubfunkstelle: \SI{6,54}{\EUR}
+    \item Klubfunkstelle (Vereinsräume, Räume Organisationen im öffentlichen Interesse) zu Unterrichtszwecken ohne strahlender Antenne / Fernwirkung: \SI{1,45}{\EUR}
   \end{itemize}
 }
 
@@ -99,7 +103,7 @@ Behörde kann Bewilligungen ändern: \\ zur Sicherheit des TK-Verkehrs, aus tech
   Amateurfunkstelle, die der automatischen Informationsübertragung dient
 }
 
-\card{25}{ Darf Amateurfunk von Nichtamateuren abgehört werden?}{\begin{itemize}\itemsep1pt \item Ja, jeder darf abhören.\end{itemize}}
+\card{25}{ Darf Amateurfunk von Nichtamateuren abgehört werden?}{Ja, jeder darf abhören.}
 
 \card{26}{Voraussetzungen zur Erlangung einer Amateurfunkbewilligung?}{Errichtung/Betrieb AF-Stelle nur mit Bewilligung. Ausnahmen:  Mitbenutzung, Funkempfangsanlage, die nur AF-Frequenzbereiche abdeckt. Bewilligung ist Personen auf Antrag zu erteilen, wenn: 14. Lebensjahr vollendet, Amateurfunkprüfung abgelegt, befreit oder §25. Nichtvollhandlungsfähige: Haftung einer vollhandlungsfähigen Person bez. Gebührenforderung. Bewilligung für AF-Verein/Organisation: Stationsverantwortlicher mit Hauptwohnsitz im Inland (handlungsfähig, AF-Prüfung abgelegt, befreit oder §25)}
 
@@ -196,19 +200,19 @@ Inhalt:\\ • Übertragungsversuche \\ • technische/betriebliche Mitteilungen 
   \end{itemize}
 }
 
-\card{41}{Nennen Sie die Bewilligungsklassen und wozu berechtigen diese?}{•  3 Klassen (1, 3 und 4) •  international Klasse 1 (CEPT AFU-Bewilligung), Klasse 4 (CEPT NOVICE-Lizenz), Klasse 3 national •  Klasse 1 darf alle Frequenzbereiche und Sendearten (Einschränkungen beachten) nutzen. •  Klasse 3 darf nur 2m und 70cm und bestimmte Sendearten (Einschränkungen beachten) nutzen. Keine Selbstbauanlagen, nur kommerziell gefertigte, nicht veränderte, Leistungsstufe A •  Klasse 4: 2m und 70cm, 4 KW-Bereiche, sonst wie Klasse 3 •  Mitbenutzung von Klubfunkstellen ist gestattet.}
+\card{41}{Nennen Sie die Bewilligungsklassen und wozu berechtigen diese?}{•  3 Klassen (1, 3 und 4) •  international Klasse 1 (CEPT AFU-Bewilligung), Klasse 4 (CEPT NOVICE-Lizenz), Klasse 3 national •  Klasse 1 darf alle Frequenzbereiche und Sendearten (Einschränkungen beachten) nutzen. •  Klasse 3 darf nur 2m und \SI{70}{\centi\metre} und bestimmte Sendearten (Einschränkungen beachten) nutzen. Keine Selbstbauanlagen, nur kommerziell gefertigte, nicht veränderte, Leistungsstufe A •  Klasse 4: 2m und \SI{70}{\centi\metre}, 4 KW-Bereiche, sonst wie Klasse 3 •  Mitbenutzung von Klubfunkstellen ist gestattet.}
 
 \card{42}{Welche Leistungsstufen kennen Sie und nennen Sie deren Merkmale?}{
   \begin{center}
     \vspace{5pt}
     \begin{tabular}{cl}
-      A & 100~Watt max \\
-      B & 200~Watt max \\
-      C & 400~Watt max \\
-      D & 1000~Watt max
+      A & \SI{100}{\watt}att max \\
+      B & \SI{200}{\watt}att max \\
+      C & \SI{400}{\watt}att max \\
+      D & \SI{1000}{\watt}att max
     \end{tabular}
   \end{center}
-  Überschreitung der Grenzwerte um 20\% tolerabel.
+  Überschreitung der Grenzwerte um \SI{20}{\percent} tolerabel.
 }
 
 \card{43}{Unter welchen Voraussetzungen kann eine Amateurfunkbewilligung für die Leistungsstufe C erteilt werden?}{wenn am genannten Standort seit mind. 1 Jahr eine AF-Stelle mit ,,Leistungsstufe B`` störungsfrei betrieben wurde.}
@@ -231,7 +235,7 @@ Inhalt:\\ • Übertragungsversuche \\ • technische/betriebliche Mitteilungen 
 }
 
 \card{46}{Ist die Verwendung der Betriebsart Telegraphie an eine bestimmte Voraussetzungen gebunden?}{\begin{itemize}\itemsep1pt \item Nein, Verwendung aller Betriebsarten bei Klasse 1, 4 und Klasse 3 zulässig. \item Einige Länder außerhalb der CEPT verlangen für die Erteilung einer Gastlizenz
-unter 30~MHz eine Telegrafieprüfung.\end{itemize}}
+unter \SI{30}{\mega\Hz} eine Telegrafieprüfung.\end{itemize}}
 
 \card{47}{Wann wird eine schädliche Störung als solche behandelt?}{\small{\begin{itemize}\itemsep0pt \item Wenn die Funkanlagen entsprechend Bewilligungen errichtet sind und die gestörte Empfangsanlage vorschriftsmäßig betrieben wird. \item Nicht, wenn Störung durch andere, ordnungsgemäß errichtete/betriebene AF-Stellen verursacht wird. \item Nicht in ISM Bändern. \item Bei Störung durch TK-Einrichtungen kann die FMB (wenn alle beteiligten Anlagen den Vorschriften entsprechen) unter Abwägung des wirtschaftlichen Aufwands techn./betriebl. Maßnahmen zur Behebung anordnen.\end{itemize}}}
 
@@ -246,7 +250,7 @@ Protokoll (alle Übertragungsgeschwindigkeiten), DVBT (EN300744), DVBS (EN300421
 •  Verwendung anderer Verfahren: Rufzeichen in offener Sprache/normiert, Inhalt 3 Wochen reproduzierbar dokumentiert
 •  Aussendung von reinem Träger nur zu Mess/Testzwecken}}
 
-\card{51}{Gibt es eine Möglichkeit, dass ein Funkamateur, der die Prüfungskategorie 3 erfolgreich abgelegt hat, auf anderen Frequenzen als dem 2m / 70cm-Band Funkverkehr haben darf?}{\begin{itemize}\itemsep1pt \item Klubfunkstelle mit Bewilligungsklasse 1 \item darf auf allen, dem AF zugewiesenen Frequenzen \item von Personen mit Klasse 3 und 4 \item zum Zweck der Ausbildung \item unter Überwachung eines Inhabers (Klasse 1) \item mitbenutzt werden\end{itemize}}
+\card{51}{Gibt es eine Möglichkeit, dass ein Funkamateur, der die Prüfungskategorie 3 erfolgreich abgelegt hat, auf anderen Frequenzen als dem 2m / \SI{70}{\centi\metre}-Band Funkverkehr haben darf?}{\begin{itemize}\itemsep1pt \item Klubfunkstelle mit Bewilligungsklasse 1 \item darf auf allen, dem AF zugewiesenen Frequenzen \item von Personen mit Klasse 3 und 4 \item zum Zweck der Ausbildung \item unter Überwachung eines Inhabers (Klasse 1) \item mitbenutzt werden\end{itemize}}
 
 \card{52}{Wer darf eine Relaisfunkstelle errichten / betreiben / benutzen und wie ist deren Rufzeichen auszusenden?}{• Bewilligung für eine Relaisfunkstelle wird nur einem
 Amateurfunkverein/einer im öffentlichen Interesse tätigen Organisation erteilt,
@@ -284,8 +288,8 @@ Ausschüsse:
 \card{58}{Unter welchen Voraussetzungen darf der Inhaber einer Amateurfunkbewilligung der Bewilligungsklasse 3 im Ausland Amateurfunkbetrieb durchführen?}{Er muss eine Gastlizenz beantragen.}
 
 \card{59}{Wozu berechtigt eine Amateurfunkbewilligung der Klasse 4?}{\begin{itemize}
-  \item Sendebetrieb im 160, 80, 15, 10, 2m und 70cm Band
-  \item Leistungsstufe A (max. 100~W)
+  \item Sendebetrieb im 160, 80, 15, 10, 2m und \SI{70}{\centi\metre} Band
+  \item Leistungsstufe A (max. \SI{100}{\watt})
   \item nur kommerzielle, unmodifizierte Geräte verwenden
 \end{itemize}}
 
@@ -313,10 +317,10 @@ Ausschüsse:
   \begin{enumerate}
     \item Reinhören, ob Frequenz frei ist
     \item
-      Phonie: ,,is this frequency in use?``,
-      CW: ,,QRL?``
+      Phonie: ,,is this frequency in use?{}``,
+      CW: ,,QRL?{}``
     \item
-      Phonie: ,,this frequency in use!`` $\rightarrow$ ,,sorry!``, \\
+      Phonie: ,,this frequency in use!{}`` $\rightarrow$ ,,sorry!{}``, \\
       CW: ,,QRL`` $\rightarrow$ ,,SRI``
     \item Wenn frei, 3~mal \\
       Phonie: ,,CQ, CQ, CQ - this is call, call`` \\
@@ -414,8 +418,8 @@ Ausschüsse:
   \small
   \begin{itemize}
     \item Raumwelle ist die Ausbreitung eines elektromagnetischen Feldes / von Funkwellen über eine (oder mehrere) Reflexionen an der Ionosphäre (ermöglichen im KW-Bereich den weltweiten Funkverkehr)
-    \item maßgebliche Ausbreitungsform im Kurzwellenbereich (3--30~MHz)
-    \item auch für die Mittel- und Grenzwellenausbreitung (1,5--3,0~MHz) bei Nacht und unter bestimmten Voraussetzungen bis in den 2-m-Band-Bereich von Bedeutung
+    \item maßgebliche Ausbreitungsform im Kurzwellenbereich (3-\SI{-30}{\mega\Hz})
+    \item auch für die Mittel- und Grenzwellenausbreitung (1,5-\SI{-3,0}{\mega\Hz}) bei Nacht und unter bestimmten Voraussetzungen bis in den 2-m-Band-Bereich von Bedeutung
   \end{itemize}
 }
 \card{10}{Welche betriebliche Bedeutung hat die kritische Frequenz?}{
@@ -446,13 +450,13 @@ Ausschüsse:
   \small
   Ausbreitung mit Lichtgeschwindigkeit als ,,Bodenwelle``, ,,direkte Wellen`` oder ,,Raumwellen``
   \begin{description}
-    \item[unter 30~MHz] primär Raumwellenausbreitung
-    \item[unter 30~MHz] es tritt auch die Bodenwelle auf und reicht im 160~m-Band 100--200~km, nimmt aber mit zunehmender Frequenz rasch ab.
-    \item[ab 30~MHz] die Funkwellen nehmen zunehmend ,,optisches Verhalten`` an, d.h. ihre Ausbreitung erfolgt gradlinig. Es treten keine Bodenwellen mehr auf. Primär ,,direkte Wellen``
+    \item[unter \SI{30}{\mega\Hz}] primär Raumwellenausbreitung
+    \item[unter \SI{30}{\mega\Hz}] es tritt auch die Bodenwelle auf und reicht im \SI{160}{\metre}-Band 100--200~km, nimmt aber mit zunehmender Frequenz rasch ab.
+    \item[ab \SI{30}{\mega\Hz}] die Funkwellen nehmen zunehmend ,,optisches Verhalten`` an, d.h. ihre Ausbreitung erfolgt gradlinig. Es treten keine Bodenwellen mehr auf. Primär ,,direkte Wellen``
   \end{description}
 }
-\card{14}{Welchen Einfluß hat die Ionosphäre auf die Ausbreitung von Funkwellen über 30~MHz?}{
-  Auf Frequenzen über 30~MHz hat die Ionosphäre im Allgemeinen nur mehr eine ablenkende Wirkung, es tritt jedoch keine Reflexion mehr auf. Zudem beobachtet man eine Polarisationsdrehung (,,Faradaydrehung``). Durch sporadische E-Schichten kann dennoch kurzzeitig bis in die 6~m-Bereiche Reflexion auftreten.
+\card{14}{Welchen Einfluß hat die Ionosphäre auf die Ausbreitung von Funkwellen über \SI{30}{\mega\Hz}?}{
+  Auf Frequenzen über \SI{30}{\mega\Hz} hat die Ionosphäre im Allgemeinen nur mehr eine ablenkende Wirkung, es tritt jedoch keine Reflexion mehr auf. Zudem beobachtet man eine Polarisationsdrehung (,,Faradaydrehung``). Durch sporadische E-Schichten kann dennoch kurzzeitig bis in die 6~m-Bereiche Reflexion auftreten.
 }
 \card{15}{Erklären Sie die Begriffe Fresnelzone, Geländeschnitt}{
   \begin{description}
@@ -555,7 +559,7 @@ Ausschüsse:
     \item Sonnenfleckenzyklus (dauert im Schnitt 11,2 Jahre = 11-Jahreszyklus)
   \end{itemize}
 }
-\card{26}{Beschreiben Sie das charakteristische Ausbreitungsverhalten in den dem Amateurfunkdienst zugewiesenen Frequenzbändern unter 30~MHz?}{
+\card{26}{Beschreiben Sie das charakteristische Ausbreitungsverhalten in den dem Amateurfunkdienst zugewiesenen Frequenzbändern unter \SI{30}{\mega\Hz}?}{
   \footnotesize
   BW = Bodenwellenausbreitung, RW = Raumwellenausbreitung
   \begin{minipage}{0.5\textwidth}
@@ -590,18 +594,18 @@ Ausschüsse:
 \card{29}{Welche Faktoren können den Funkbetrieb auf Kurzwelle beeinflussen?}{
   \small
   \begin{itemize}
-    \item Signal-Rauschabstand: für Sprechfunk (SSB) ein S/N-Abstand von 10~dB erforderlich
+    \item Signal-Rauschabstand: für Sprechfunk (SSB) ein S/N-Abstand von \SI{10}{\dB} erforderlich
     \item Signal-Störabstand bei natürlichen Störquellen: Gewitter, statische Entladung
     \item Signal-Störabstand bei nicht natürlichen Störquellen: Funken (z.B. nicht entstörte Maschinen)
     \item Splattern
     \item Anomalien in der Funkausbreitung (zB. Fading, Nachhalleffekte)
   \end{itemize}
 }
-\card{30}{Wie wirkt sich die Tageszeit auf die Ausbreitung in den Kurzwellenbändern bis 40m aus? (160m/80m-/40m-Band)}{
+\card{30}{Wie wirkt sich die Tageszeit auf die Ausbreitung in den Kurzwellenbändern bis \SI{40}{\metre} aus? (\SI{160}{\metre}/\SI{80}{\metre}-/\SI{40}{\metre}-Band)}{
   Das 160-m-, 80-m-Band, gelegentlich auch das 40-m-Band sind aufgrund der D-Schicht-Dämpfung während des Tages nur für Bodenwellenausbreitung nutzbar. Ab Beginn der Abend-Dämmerung und während der Nacht ist Raumwellenausbreitung gegeben, solange die LUP nicht unterschritten wird.
 }
 \card{31}{Was verstehen Sie unter ,,Sporadic E-Verbindungen``?}{
-  Die Funkverbindungen, über Raumwellen, die durch Reflexionen an sporadischen E-Schichten ermöglicht werden. Sie treten selten auf Frequenzbereichen unter 20~MHz auf und sind eine typische Erscheinungsform auf dem 10m- und dem 6m-Band.
+  Die Funkverbindungen, über Raumwellen, die durch Reflexionen an sporadischen E-Schichten ermöglicht werden. Sie treten selten auf Frequenzbereichen unter \SI{20}{\mega\Hz} auf und sind eine typische Erscheinungsform auf dem \SI{10}{\metre}- und dem 6m-Band.
 }
 \card{32}{Was verstehen Sie unter ,,Short-Skips``?}{
   Ausbreitungsbedingungen, bei denen Funkverkehr in die sonst tote Zone hinein möglich ist, ohne dass die gesamte tote Zone erreicht werde kann. Die Ursache können sporadische E-Schichten sein.
@@ -637,9 +641,9 @@ Ausschüsse:
   \end{itemize}
 }
 \card{36}{Welche Sendearten sind im Kurzwellenbereich zulässig?}{
-  Auf Kurzwelle, d.h. im Frequenzbereich zwischen 3--30~MHz sind gemäß VO-Funk allle Sendearten zulässig, die eine Bandbreite von höchstens \SI{7}{\kilo\Hz} haben.
+  Auf Kurzwelle, d.h. im Frequenzbereich zwischen 3-\SI{-30}{\mega\Hz} sind gemäß VO-Funk allle Sendearten zulässig, die eine Bandbreite von höchstens \SI{7}{\kilo\Hz} haben.
 
-  Für den Amateurfunkdienst: Erweiterung der Regelung auf das 160-m-Band und im Bereich über 29~MHz ist auch die Sendeart ,,Schmalband-FM`` zugelassen. In den höherfrequenten Bändern können höhere Bandbreiten verwendet werden
+  Für den Amateurfunkdienst: Erweiterung der Regelung auf das 160-m-Band und im Bereich über \SI{29}{\mega\Hz} ist auch die Sendeart ,,Schmalband-FM`` zugelassen. In den höherfrequenten Bändern können höhere Bandbreiten verwendet werden
 }
 \card{37}{Müssen Sie ein Funktagebuch führen und welche Angaben muss es enthalten?}{
   Nur auf Anordnung der Fernmeldebehörde für einen festgelegten Zeitraum.
@@ -674,14 +678,14 @@ Ausschüsse:
   \vspace{30pt}
   \footnotesize
   \begin{tabular}{rlrl}
-    1,81--1,95~MHz: & 160~m & 18,068--18,168~MHz: & 17~m \\
-    3,5--3,8~MHz: & 80~m & 28,0--29,7~MHz: & 10~m \\
-    7,0--7,2~MHz: & 40~m & 50--52~MHz: & 6~m \\
-    10,1--10,5~MHz: & 30~m & 144--146~MHz: & 2~m \\
-    14,0--14,35~MHz: & 20~m & 430--440~MHz: & 70~cm \\
+    1,81-\SI{-1,95}{\mega\Hz}: & \SI{160}{\metre} & 18,068-\SI{-18,168}{\mega\Hz}: & \SI{17}{\metre} \\
+    3,5-\SI{-3,8}{\mega\Hz}: & \SI{80}{\metre} & 28,0-\SI{-29,7}{\mega\Hz}: & \SI{10}{\metre} \\
+    7,0-\SI{-7,2}{\mega\Hz}: & \SI{40}{\metre} & 50-\SI{-52}{\mega\Hz}: & 6~m \\
+    10,1-\SI{-10,5}{\mega\Hz}: & \SI{30}{\metre} & 144-\SI{-146}{\mega\Hz}: & 2~m \\
+    14,0-\SI{-14,35}{\mega\Hz}: & \SI{20}{\metre} & 430-\SI{-440}{\mega\Hz}: & \SI{70}{\centi\metre} \\
   \end{tabular}
 }
-\card{41}{Wie arbeiten Sie mit ausländischen Amateurfunkstationen zusammen, die einen anderen/erweiterten Bandbereich benutzen? (Beispiele: 40m, 80m)?}{
+\card{41}{Wie arbeiten Sie mit ausländischen Amateurfunkstationen zusammen, die einen anderen/erweiterten Bandbereich benutzen? (Beispiele: \SI{40}{\metre}, \SI{80}{\metre})?}{
   Man nennt den Betrieb mit unterschiedlichen Sende- und Empfangsfrequenz ,,Split-Betrieb``. Dabei bleibt der Empfänger auf der Sendefrequenz der Gegenstation und der Sender wird auf die von der Gegenstation genannte, im zulässigen Frequenzband liegende, Frequenz eingestellt.
 }
 \card{42}{Was bedeuten die folgenden Abkürzungen: BK, CQ, CW, DE, K?}{
@@ -833,7 +837,7 @@ Ausschüsse:
       & \multicolumn{3}{l}{für internationales Gebiet} \\
   \end{tabular}
 }
-\card{56}{Welche Bestimmungen sind beim Betrieb im 160m-Band zu beachten?}{
+\card{56}{Welche Bestimmungen sind beim Betrieb im \SI{160}{\metre}-Band zu beachten?}{
   Laut Anlage 2 der AFV:
 
   \footnotesize
@@ -919,7 +923,7 @@ Ausschüsse:
   \begin{itemize}
     \item zusätzlich zur Standartausrüstung wird eine Videokamera und ein ATV-Konverter benötigt
     \item Übertragung ist analog und digital möglich
-    \item die Betriebsabwicklung erfolgt auf vereinbarten oder vorgeschriebenen Frequenzen (70m- Band oder höher)
+    \item die Betriebsabwicklung erfolgt auf vereinbarten oder vorgeschriebenen Frequenzen (\SI{70}{\metre}- Band oder höher)
   \end{itemize}
 }
 \card{65}{Was ist bei Überreichweitenbedingungen zu beachten?}{
@@ -933,7 +937,7 @@ Ausschüsse:
 }
 \card{66}{Welchen Einfluss hat die Wahl des Standortes für UKW-Ausbreitung?}{
   \begin{itemize}\itemsep0pt
-    \item Ausbreitung auf Frequenzen über 100~MHz erfolgt ,,quasi-optisch``
+    \item Ausbreitung auf Frequenzen über \SI{100}{\mega\Hz} erfolgt ,,quasi-optisch``
     \item dieses Verhalten nimmt mit steigender Frequenz weiter zu
     \item je höher der Sendestandort desto größer die Reichweite
     \item Durch Reflexionen an größeren Hindernissen, kann es zur Funkschatten kommen (machen Funkverbindung unmöglich)
@@ -1015,29 +1019,29 @@ Ausschüsse:
     \item Strom- und Spannungsmessgerät
   \end{itemize}
 }
-\card{74}{Beschreiben Sie das typische Ausbreitungsverhalten in den Frequenzbändern 6m--2m und 70cm.}{
+\card{74}{Beschreiben Sie das typische Ausbreitungsverhalten in den Frequenzbändern 6m--2m und \SI{70}{\centi\metre}.}{
   \begin{itemize}
     \item Standardausbreitung: Lichtähnliche Ausbreitung, Abschattung, Reflexion, etc.
-    \item Erhöhte Reichweite durch Inversionsschichten in der Tropsphäre (70m=sehr gut; 2m=gut; 6m=weniger gute Reaktion)
-    \item In den Sommermonaten erhöhte Reichweiten durch sporadische E-Schichten (70m=schlechte; 2m=gut; 6m=sehr gute Reaktion)
+    \item Erhöhte Reichweite durch Inversionsschichten in der Tropsphäre (\SI{70}{\metre}=sehr gut; 2m=gut; 6m=weniger gute Reaktion)
+    \item In den Sommermonaten erhöhte Reichweiten durch sporadische E-Schichten (\SI{70}{\metre}=schlechte; 2m=gut; 6m=sehr gute Reaktion)
   \end{itemize}
 }
 
 \def\chap{Betrieb und Fertigkeiten \class{3}}
 
-\card{01}{Frequenzbereich des 70cm-Amateurfunkbandes / 2m Bandes?}{
-  70~cm-Amateurfunkband: 430--440~MHz,
-  439,1--440~MHz nur Empfang,
+\card{01}{Frequenzbereich des \SI{70}{\centi\metre}-Amateurfunkbandes / 2m Bandes?}{
+  \SI{70}{\centi\metre}-Amateurfunkband: 430-\SI{-440}{\mega\Hz},
+  439,1-\SI{-440}{\mega\Hz} nur Empfang,
   max. Bandbreite 1~MHz
 
-  Frequenzbereich 2m-Band: 144~MHz--146~MHz, 40~kHz Bandbreite
+  Frequenzbereich 2m-Band: \SI{144}{\mega\Hz}-\SI{-146}{\mega\Hz}, \SI{40}{\kilo\Hz} Bandbreite
 }
 \card{02}{Wie eröffnen Sie einen Sprechfunkverkehr?}{
   \small
   \begin{enumerate}
     \item Reinhören, ob die Frequenz frei ist (tote Zohne berücksichtigen)
-    \item ,,is this frequency in use?``
-    \item Antwort ,,QRL'' oder ,,this frequency is in use`` $\rightarrow$ ,,sorry'' oder ,,SRI'' $\rightarrow$ andere Frequenz suchen
+    \item ,,is this frequency in use?{}``
+    \item Antwort ,,QRL`` oder ,,this frequency is in use`` $\rightarrow$ ,,sorry`` oder ,,SRI`` $\rightarrow$ andere Frequenz suchen
     \item Ist die Frequenz frei, allgemeiner Anruf mit: ,,CQ, CQ, CQ, this is \dots 2$\times$, call, call``
           oder gezielt nach einer Station rufen. Bei einem Funkwettbewerb ,,CQ CONTEST 3$\times$ this is \dots``
   \end{enumerate}
@@ -1098,35 +1102,35 @@ Ausschüsse:
   §~14 AFG \emph{Notfunkverkehr} ist die Übermittlung von Nachrichten zwischen einer Funkstelle, die selbst in Not ist, beteiligt ist oder Zeuge eines Notfalls ist mit Hilfe leistenden Funkstellen. Kennzeichnung ,,MAYDAY 3$\times$`` gesprochen, ,,SOS 3$\times$`` in Telegraphie, Abschluss mit ,,OVER``. Mitschreiben und Funküberwachung verständigen. Weiterleitung mit ,,MAYDAY RELAIS``. \emph{Sicherheitsfunkverkehr} wird durch das Sicherheitszeichen ,,SECURITEE`` gekennzeichnet.
 }
 \card{09}{Wie nahe dürfen Sie beim Sendebetrieb an die Bandgrenze herangehen?}{
-  Der Frequenzabstand ist abhängig vom Modulationsverfahren, die Aussendung im gesamten Umfang darf die Bandgrenzen nicht überschreiten (zB. Schmalbandmodulation LSB (lower side band): untere  Bandgrenze +3,5~kHz, USB (upper side band): obere Bandgrenze -3,5~kHz). Messung der Aussendung mit Spektrum Analysator. Toleranz der Messgeräte berücksichtigen!
+  Der Frequenzabstand ist abhängig vom Modulationsverfahren, die Aussendung im gesamten Umfang darf die Bandgrenzen nicht überschreiten (zB. Schmalbandmodulation LSB (lower side band): untere  Bandgrenze \SI{+3,5}{\kilo\Hz}, USB (upper side band): obere Bandgrenze \SI{-3,5}{\kilo\Hz}). Messung der Aussendung mit Spektrum Analysator. Toleranz der Messgeräte berücksichtigen!
 }
 \card{10}{Welche Sendearten sind mit der Bewilligungsklasse~3 zulässig und mit welcher maximalen Sendeleistung?}{
-  §~8.~(3) AFV in Anlage~2 bezeichnete Frequenzbereiche, 144~MHz bis 146~MHz und 430~MHz bis 440~MHz (Sendebetrieb bis 439,1~MHz) Beachtung der Verhaltensvorschriften und in der AFV enthaltenen Einschränkungen, keine Eigenbaugeräte erlaubt, Leistungsklasse A (bis 100 W PEP), FM, 2~m: max 40~kHz Bandbreite.
+  §~8.~(3) AFV in Anlage~2 bezeichnete Frequenzbereiche, \SI{144}{\mega\Hz} bis \SI{146}{\mega\Hz} und \SI{430}{\mega\Hz} bis \SI{440}{\mega\Hz} (Sendebetrieb bis \SI{439,1}{\mega\Hz}) Beachtung der Verhaltensvorschriften und in der AFV enthaltenen Einschränkungen, keine Eigenbaugeräte erlaubt, Leistungsklasse A (bis \SI{100}{\watt} PEP), FM, 2~m: max \SI{40}{\kilo\Hz} Bandbreite.
 }
 \card{11}{Was versteht man unter einem Amateurfunkrelais, wozu dient es?}{
   Relais = Sender und Empfänger auf zwei unterschiedlichen Frequenzen, Empfangssignal moduliert den Sender, meist mit gemeinsamer Antenne an einem hochgelegenen Standort.
 
   Ermöglicht große Reichweiten im UKW Band.
   Senderauftastung durch Squelch oder Pilotton.
-  Versatz 2~m: 0,6~MHz
+  Versatz 2~m: \SI{0,6}{\mega\Hz}
 }
 \card{12}{Wie wickeln Sie einen Betrieb über ein Amateurfunkrelais ab?}{
-  Relaisfrequenz sowie Versatzfrequenz am Funkgerät einstellen, eventuell auch Pilotton zur Auftastung  erforderlich. Versatzfrequenz auf 2~m: minus 0,6~MHz, 70~cm: 7,6~MHz, beobachten, Pausen einhalten, bei Überreichweiten (Mehrfachöffnungen möglich) kurze Aussendungen
+  Relaisfrequenz sowie Versatzfrequenz am Funkgerät einstellen, eventuell auch Pilotton zur Auftastung  erforderlich. Versatzfrequenz auf 2~m: minus \SI{0,6}{\mega\Hz}, \SI{70}{\centi\metre}: \SI{7,6}{\mega\Hz}, beobachten, Pausen einhalten, bei Überreichweiten (Mehrfachöffnungen möglich) kurze Aussendungen
 }
 \card{13}{Buchstabieren Sie Ihren Vor- und Zunamen nach dem internationalen Buchstabieralphabet.}{
   Alfa – Bravo – Charlie – Delta – Echo – Foxtrott – Golf – Hotel – India – Juliett – Kilo – Lima – Kike – November – Oslar – Papa – Quebec – Romeo – Sierra – Tango – Uniform –Viktor – Whiskey – X-Ray – Yankee - Zulu
 }
 \card{14}{Wie verhalten Sie sich beim Empfang von Signalen mit ,,Doppler - Shift``?}{
-  Tritt vor allem bei Satellitenverkehr auf. Wenn sich Gegenstation nähert, auf tieferer Frequenz senden, bei Entfernung Sendefrequenz erhöhen. Die Bodenstation muss laufend die Sende und Empfangsfrequenz      nachführen. Kann $\pm$12~kHz betragen.
+  Tritt vor allem bei Satellitenverkehr auf. Wenn sich Gegenstation nähert, auf tieferer Frequenz senden, bei Entfernung Sendefrequenz erhöhen. Die Bodenstation muss laufend die Sende und Empfangsfrequenz      nachführen. Kann $\pm$\SI{12}{\kilo\Hz} betragen.
 }
 \card{15}{Was versteht man unter ,,Frequenzablage`` bei Relaisbetrieb?}{
-  Frequenzablage bei Relaisbetrieb bezeichnet die Differenz (shift) zwischen Empfangs und Sendefrequenz, im 2~m Band: minus 0,6~MHz, 70~cm: 7,6~MHz genormt. Die Ablage dient zur Trennung von Sendesignal und Empfangssignal im Relais.
+  Frequenzablage bei Relaisbetrieb bezeichnet die Differenz (shift) zwischen Empfangs und Sendefrequenz, im 2~m Band: minus \SI{0,6}{\mega\Hz}, \SI{70}{\centi\metre}: \SI{7,6}{\mega\Hz} genormt. Die Ablage dient zur Trennung von Sendesignal und Empfangssignal im Relais.
 }
-\card{16}{Nennen Sie drei anormale Ausbreitungsmöglichkeiten im 70~cm-Band oder 2~m Band.}{
+\card{16}{Nennen Sie drei anormale Ausbreitungsmöglichkeiten im \SI{70}{\centi\metre}-Band oder 2~m Band.}{
   Überreichweiten: Reflexion an Sporadic E-Schicht, Troposphärisches Ducting durch Inversionsschichte, Scatter Verbindungen = Reflexion an Ionisationskanal durch Meteoriten oder Regen, Erde Mond Erde Verbindungen, Satellitenverbindung
 }
 \card{17}{Welche Betriebsverfahren werden im Satellitenfunkverkehr angewendet?}{
-  Satellitenbetrieb entspricht Relaisbetrieb mit Kanal oder Bandumsetzer. 2~m, 70~cm, 23~cm Band. Nachführbare Jagi Antennen, Berücksichtigung der Dopplerverschiebung. Sende und Empfangsfrequenz müssen getrennt nachgeführt werden, digitale Betriebsarten von Vorteil. Transponder setzt zwischen zwei unterschiedlichen Bändern um.
+  Satellitenbetrieb entspricht Relaisbetrieb mit Kanal oder Bandumsetzer. 2~m, \SI{70}{\centi\metre}, \SI{23}{\centi\metre} Band. Nachführbare Jagi Antennen, Berücksichtigung der Dopplerverschiebung. Sende und Empfangsfrequenz müssen getrennt nachgeführt werden, digitale Betriebsarten von Vorteil. Transponder setzt zwischen zwei unterschiedlichen Bändern um.
 }
 \card{18}{Was verstehen Sie unter ,,Scatter-Verbindung``?}{
   Scatterverbindungen sind Funkverbindungen, die auf Streueffekten beruhen. Man unterscheidet im Bezug auf die Ausbreitungsrichtung: Vorwärtsstreuung, Rückwärtsstreuung, Seitenstreuung. Richtantennen und hohe Sendeleistung werden benötigt. Geringes S/N, daher bevorzugt digitale Verfahren. Niederschlagsstreuung ist auch für Sprechfunk geeignet. Durchgänge wegen Änderung der Ausbreitungsbedingungen kurz halten.
@@ -1144,10 +1148,10 @@ Ausschüsse:
   \small
   Durch Anomalien in der Atmosphäre kann es zu Überreichweiten kommen, sporadic E-Verbindungen (,,Es``) , oder Ducting durch Inversionsschichten. Überreichweiten können rasch wechseln, daher sind die Aussendungen kurz zu halten. Störung anderer Stationen ist möglich, wenn Stationsausrüstung nicht ausgewogen.
 
-  Über 30~MHz tritt mit steigender Frequenz bei der Funkausbreitung quasioptisches Verhalten auf. Dämpfung, Brechung, Streuung, Reflexion und Beugung. Der Radiohorizont ist dabei ca. $\frac13$ größer als der optische Horizont, wird als Standardausbreitung bezeichnet.
+  Über \SI{30}{\mega\Hz} tritt mit steigender Frequenz bei der Funkausbreitung quasioptisches Verhalten auf. Dämpfung, Brechung, Streuung, Reflexion und Beugung. Der Radiohorizont ist dabei ca. $\frac13$ größer als der optische Horizont, wird als Standardausbreitung bezeichnet.
 }
-\card{23}{Wodurch werden starke Überreichweiten im 70~cm-Band verursacht?}{
-  Überreichweiten treten bevorzugt bei großflächigen Temperaturinversionen auf wobei Reichweiten über 1000~km keine Seltenheit sind. Ausbildung von Ducts (,,atmosphärischer Wellenleiter``)  wobei das im 70~cm Band bevorzugt gegenüber dem 2~m Band auftritt.
+\card{23}{Wodurch werden starke Überreichweiten im \SI{70}{\centi\metre}-Band verursacht?}{
+  Überreichweiten treten bevorzugt bei großflächigen Temperaturinversionen auf wobei Reichweiten über 1000~km keine Seltenheit sind. Ausbildung von Ducts (,,atmosphärischer Wellenleiter``)  wobei das im \SI{70}{\centi\metre} Band bevorzugt gegenüber dem 2~m Band auftritt.
 }
 \card{24}{Wie verhalten Sie sich bei Überreichweitenbedingungen, wenn Sie im Relaisbetrieb arbeiten?}{
   Bei Überreichweitenbedingungen sind Mehrfachauftastungen möglich, Funkverkehr kann gestört werden. Durch die Ablage wird der eigene Sendekanal nicht mitgehört, man bemerkt die Störung einer Verbindung nicht und kann auch nicht auf ein Break reagieren. Die Verbindungen sind daher kurz zu halten.
@@ -1156,14 +1160,14 @@ Ausschüsse:
   Für die UKW-Ausbreitung sind Wettervorhersagen zweckmäßig, weiters die Sonnenaktivität, die durch Sonnenfleckenrelativzahl und den solar flux bei 2,8 GHz angegeben wird .  Die Messung der Ausbreitungsbedingungen ist mit dem Empfang von Bakensendern möglich. Aktuelle Ausbreitungsbedingungen werden im Internet publiziert.
 }
 \card{26}{Welche Faktoren beeinflussen die erzielbare Reichweite im 2m-Band?}{
-  2~m Band vorwiegend auf optischen Horizont beschränkt (+33~\% darüber hinaus). Bei Hindernissen, die gut reflektieren (zB Hochhäuser) Ausbreitung durch Mehrfachreflexion. Selten gibt es sporadische Es-Schichten, die Raumwellen reflektieren. Ausbildung von Ducts (atmosphärische Wellenleiter) mit Reichweiten über 1000~km (durch starke Sonneneinstrahlung oder Temperaturinversion). Dämpfende Faktoren: Nebel, Regen, Wälder. 
+  2~m Band vorwiegend auf optischen Horizont beschränkt (\SI{+33}{\percent} darüber hinaus). Bei Hindernissen, die gut reflektieren (zB Hochhäuser) Ausbreitung durch Mehrfachreflexion. Selten gibt es sporadische Es-Schichten, die Raumwellen reflektieren. Ausbildung von Ducts (atmosphärische Wellenleiter) mit Reichweiten über 1000~km (durch starke Sonneneinstrahlung oder Temperaturinversion). Dämpfende Faktoren: Nebel, Regen, Wälder. 
 }
 \card{27}{Erklären Sie die Bedeutung der auch im Sprechfunk verwendeten Q-Gruppen: QSO - QSY - QRL.}{
   \begin{description}
     \item[QSO] ich habe Verbindung mit \dots
     \item[QSY] wechseln sie auf die Frequenz \dots{} kHz
     \item[QRL]
-      entspricht in CW der Frage: ,,Is this frequency in use?``,
+      entspricht in CW der Frage: ,,Is this frequency in use?{}``,
       als Antwort: ,,bin beschäftigt, bitte nicht stören``
   \end{description}
 }
@@ -1192,18 +1196,18 @@ Ausschüsse:
 \card{31}{Was versteht man unter der Betriebsart ,,Packet-Radio``, welche Betriebsverfahren werden dabei angewendet?}{
   Packet Radio ist eine \emph{Maschinenbetriebsart} (digital) d.h. es ist zusätzlich zB. ein PC erforderlich. Die Information wird in Datenpakete zerlegt und mit einer Adresse und Prüfsumme versehen. Mehrere Stationen können nacheinander denselben Kanal benutzen. Die Stationen sind europaweit vernetzt, damit Vergrößerung des Radiohorizonts. Protokoll AX~25, Funkverkehr kann mitgelesen werden, CQ an eine mitgelesene Station oder eigener Anruf wird gestartet.
 }
-\card{32}{Welche Faktoren beeinflussen die erzielbare Reichweite im 70~cm-Band?}{
+\card{32}{Welche Faktoren beeinflussen die erzielbare Reichweite im \SI{70}{\centi\metre}-Band?}{
   Höhe des Standorts hat großen Einfluß, daraus ergeben sich Funkhorizont und Funkschatten.
 
-  70~cm Band: 430--440~MHz quasioptisches Verhalten mit Dämpfung, Brechung, Streuung, Reflexion und Beugung. Ducting bei Inversionsschichten, Reflexion an Hindernissen (Felswand, Eisenbeton), Streuung durch Regenwolken.
+  \SI{70}{\centi\metre} Band: 430-\SI{-440}{\mega\Hz} quasioptisches Verhalten mit Dämpfung, Brechung, Streuung, Reflexion und Beugung. Ducting bei Inversionsschichten, Reflexion an Hindernissen (Felswand, Eisenbeton), Streuung durch Regenwolken.
 }
 \card{33}{Was verstehen Sie unter ,,Split-Betrieb``?}{
   Das ist der Betrieb mit unterschiedlicher Sende und Empfangsfrequenz. Der Empfänger bleibt auf der Sendefrequenz der Gegenstation, der Sender wird auf die von der Gegenstation genannte im zulässigen Frequenzband liegende Frequenz eingestellt. Sendefrequenzbereich darf nicht überschritten werden! Bezeichnung ,,QSX \dots{} kHz`` bei Telegrafie. ,,5 UP`` oder ,,10 DOWN`` im VOX-Betrieb.
 }
-\card{34}{Welche Verfahren werden bei ATV-Betrieb im 70~cm-Band angewendet und welche Besonderheiten sind dabei zu beachten?}{
+\card{34}{Welche Verfahren werden bei ATV-Betrieb im \SI{70}{\centi\metre}-Band angewendet und welche Besonderheiten sind dabei zu beachten?}{
   ATV-Betrieb = Amateurfunk-Fernsehübertragung (Amateur Television). Neben Standardfunkausrüstung wird senderseitig eine Videokamera und ein ATV-Konverter benötigt.
 
-  Auf der Empfangseite ist ein Bildschirm erforderlich. Die Übertragung kann analog aber auch digital erfolgen. Abwicklung im 70~cm Band oder bei höheren Frequenzen (23~cm) mit SAT Receiver und Pre-Amplifier auf 1,2~GHz. Zu beachten ist die hohe Bandbreite des Videosignals $\Rightarrow$ Bandbreite max. 1~MHz.
+  Auf der Empfangseite ist ein Bildschirm erforderlich. Die Übertragung kann analog aber auch digital erfolgen. Abwicklung im \SI{70}{\centi\metre} Band oder bei höheren Frequenzen (\SI{23}{\centi\metre}) mit SAT Receiver und Pre-Amplifier auf 1,2~GHz. Zu beachten ist die hohe Bandbreite des Videosignals $\Rightarrow$ Bandbreite max. 1~MHz.
 }
 \card{35}{Wie gehen Sie bei der Planung einer Amateurfunkverbindung zu einem bestimmten Ort vor?}{
   Ausgangspunkt ist die verfügbare technische Ausrüstung (Frequenzband, Sendeleistung, Betriebsarten, Antennen).
@@ -1216,8 +1220,8 @@ Ausschüsse:
 \card{36}{Wie teilen Sie der Gegenstation den Standort ihrer Amateurfunkstelle mit?}{
   QTH (Standort) wird entweder mit geografischen Koordinaten (Längen und Breitengrad) übermittelt. Weiters mittels Ortsnamen oder QRA-Locator (Unterteilung der Erde in Groß, Mittel und Kleinfelder) Graz JN77RB (= Maidenhead Locator)
 }
-\card{37}{Was ist hinsichtlich der Herstellung oder Veränderung von Geräten für den Amateurfunkverkehr im 2~m oder 70~cm-Band zu beachten?}{
-  Amateurfunker der Bewilligungsklasse~3 dürfen nur Geräte aus kommerzieller Fertigung im 2~m und 70~cm Band betreiben. Herstellung und Veränderung sind der Klasse~1 vorbehalten. Die Sendeleistung (PEP) darf maximal 100~W betragen. Es wird kein CE Kennzeichen benötigt. Für NICHT modifizierte Geräte sind keine  Kontrollinstrumente für Frequenz, Spannung und Leistung erforderlich.
+\card{37}{Was ist hinsichtlich der Herstellung oder Veränderung von Geräten für den Amateurfunkverkehr im 2~m oder \SI{70}{\centi\metre}-Band zu beachten?}{
+  Amateurfunker der Bewilligungsklasse~3 dürfen nur Geräte aus kommerzieller Fertigung im 2~m und \SI{70}{\centi\metre} Band betreiben. Herstellung und Veränderung sind der Klasse~1 vorbehalten. Die Sendeleistung (PEP) darf maximal \SI{100}{\watt} betragen. Es wird kein CE Kennzeichen benötigt. Für NICHT modifizierte Geräte sind keine  Kontrollinstrumente für Frequenz, Spannung und Leistung erforderlich.
 }
 \card{38}{Sie haben einen abstimmbaren Leistungsverstärker - wie stimmen Sie ihn ab?}{
   Der Leistungsverstärker ist immer abstrahlungsfrei abzustimmen. Dies wird durch Verwendung einer Dummy Load erreicht (Kunstantenne = absorbierender Widerstand). Die Anpassung an die Betriebsantenne ist auf ein Minimum zu beschränken, wenn auf der gewählten Frequenz kein erkennbarer Funkverkehr stattfindet.
@@ -1324,7 +1328,7 @@ Spannung (U) und dem durch den Widerst. fließenden Strom (I) wieder.
   \begin{description}
     \item[Abhilfe] viele dünne Adern vergrößern die Oberfläche. Dickere Drähte und Versilbern der Leiter
     \item[Größenordnung] Eindringtiefe des Stroms
-      9,38~mm bei 50~Hz, 70~$\mu$m bei 1~MHz, 7~$\mu$m bei 100~MHz
+      9,\SI{38}{\milli\metre} bei 50~Hz, 70~$\mu$m bei 1~MHz, 7~$\mu$m bei \SI{100}{\mega\Hz}
   \end{description}
 }
 
@@ -1432,7 +1436,7 @@ Spannung (U) und dem durch den Widerst. fließenden Strom (I) wieder.
   siehe Skriptum, Seite 39, Frage~T15
 }
 
-\card{16}{Berechnen Sie den kapazitiven Blindwiderstand eines Kondensators von 500~pF bei 10~MHz (Werte sind variabel)}{
+\card{16}{Berechnen Sie den kapazitiven Blindwiderstand eines Kondensators von 500~pF bei \SI{10}{\mega\Hz} (Werte sind variabel)}{
   \centering
   siehe Skriptum, Seite 38, Frage~T16
 }
@@ -1679,7 +1683,7 @@ heruntergemischt wird.
 ist MDS (minimal detectable signal) definiert als das Signal, das
 mit einem SN Wert von 3 dB feststellbar ist. Signalp. von ca. 0,2 müV 
 intermodulationsfreier Bereich: Abstand zweier gleich starker Signale,
-die ein Empfänger verkraften kann, ohne zu übersteuern  (gute Werte>90dB)
+die ein Empfänger verkraften kann, ohne zu übersteuern  (gute Werte>\SI{90}{\dB})
 Eigenrauschen: (noise level) von allen Rau.QU. im Empfänger zusammenwirkt,
 wenn kein Eingangs. vorhanden.
 }
@@ -1977,7 +1981,7 @@ Richtwirkung)
 Reflexion der Strahler durch Reflektor
 Verstärkung der Strahlen durch Direktoren
 Je mehr Direktoren, desto größere Richtwirkung
-(max. 18 dB)
+(max. \SI{18}{\dB})
 Kenngrößen: Frequenz(bereich), Impedanz, Gewinn,
 Anzahl Elemente, Öffnungswinkel, Rück- 
 Seitendämpfung, Nebenkeulen
@@ -2049,7 +2053,7 @@ Dielektrikum aus Kunststoff, Teflon, etc.
 Außenleiter aus Kupfergeflecht, Folie, Festmantel
 Kunststoffisolation
 Kenngrößen: Leitungswellenwiderstand,
-Dämpfung in dB/100m (frequenzabhängig),
+Dämpfung in dB/\SI{100}{\metre} (frequenzabhängig),
 Schirmungsfaktor, Verkürzungsfaktor 
 Mechanische: kleinster Biegungsradius, 
 Zugfestigkeit
@@ -2060,10 +2064,10 @@ Das Verhältnis zweier Leistungen (oder Spannungen)
 und dient Vergleichen in Antennentechnik
 Antenne mit 6 dB Gewinn über Dipol strahlt in
 Hauptstrahlrichtung die 4-fache Leistung des 
-Dipol aus, 13 dB die 20-fache, 3 dB 2-fache
-Leistung, 10 dB 10-fache 
+Dipol aus, \SI{13}{\dB} die 20-fache, 3 dB 2-fache
+Leistung, \SI{10}{\dB} 10-fache 
 Spannungsverhältnis:
-6 dB 2-fache Spannung, 12 dB 4- fache-, 20 dB
+6 dB 2-fache Spannung, \SI{12}{\dB} 4- fache-, \SI{20}{\dB}
 10 fache Spannung.
 }
 \card{76}{Was versteht man unter Richtantennen, Anwendungsmöglichkeiten}{
@@ -2089,7 +2093,7 @@ Maximal zulässige Leistung: ergibt sich aus
 Stärke \& Material der Elemente \& Bauteile, W
 Kenngrößen: Datenblatt
 }
-\card{78}{Dimensionieren Sie einen Halbwellendipol für f = 3.6~MHz ; V = 0.97 (Werte sind variabel)}{
+\card{78}{Dimensionieren Sie einen Halbwellendipol für f = \SI{3.6}{\mega\Hz} ; V = 0.97 (Werte sind variabel)}{
   \[
     \text{Länge} = \frac{\text{Verkürzungsfaktor}\cdot 300}{2 \times \text{frequency (in MHz)}}
   \]
@@ -2097,21 +2101,21 @@ Kenngrößen: Datenblatt
 
 Verkürzungsfaktor: je dicker, desto kürzer die Welle/ Antenne
 }
-\card{79}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung: 200 Watt; Dämpfung der Antennenleitung: 6 dB/100m; Kabellänge : 50 m; Gewinn: 10 dB (Werte sind variabel)}{
+\card{79}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung: \SI{200}{\watt}; Dämpfung der Antennenleitung: 6 dB/\SI{100}{\metre}; Kabellänge : 50 m; Gewinn: \SI{10}{\dB} (Werte sind variabel)}{
   effektive Kabel-Dämpfung = 3 dB
 an der Antenne kommt demnach halbe
-Leistung an = 100 W
+Leistung an = \SI{100}{\watt}
 Gewinn = 10 fach
-Effektive Strahlungsleistung = 1000 W
+Effektive Strahlungsleistung = \SI{1000}{\watt}
 Strahlungsleistung für einzuhaltende 
 Grenzwerte wichtig!
 }
-\card{80}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung 100 Watt; Dämpfung der Antennenleitung 12 dB/100m; Kabellänge 25 m; Rundstrahlantenne mit Gesamtwirkungsgrad von 50 \% (Werte sind variabel)}{
+\card{80}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung \SI{100}{\watt}; Dämpfung der Antennenleitung \SI{12}{\dB}/\SI{100}{\metre}; Kabellänge 25 m; Rundstrahlantenne mit Gesamtwirkungsgrad von 50 \% (Werte sind variabel)}{
   effektive Kabeldämpfung = 3 dB
 an der Antenne kommt demnach halbe 
-Leistung an = 50 W
+Leistung an = \SI{50}{\watt}
 Wirkungsgrad = 50 %
-Effektive Strahlungsleistung =  25 Watt
+Effektive Strahlungsleistung =  \SI{25}{\watt}
 Strahlungsleistung für einzuhaltende
 Grenzwerte wichtig!
 }
@@ -2214,7 +2218,7 @@ Ein Dipol kann mit Traps zu einer Mehrbandantenne
 gemacht werden.
 Parallelresonanzkreis, sperrt für höhere Frequenz,
 wirkt für tiefere Frequenz als Verlängerungsspule
-40m/80m Antenne: 32,9 m 7Mhz Trapabstnd 16,5 m
+\SI{40}{\metre}/\SI{80}{\metre} Antenne: 32,9 m 7Mhz Trapabstnd 16,5 m
 Anwendung : W3DZZ Antenne, Mehrband Yagi, 
 VK2AOU Mehrband Quad Antenne
 Einsatz auch in Empfängern und Sendern als
@@ -2238,7 +2242,7 @@ Netzzuleitungen kann Abfließen von HF in
 Das Stromnetz verhindern
 Breitbandnetzfilter
 Typische Werte:
-Induktivität 10-50mH
+Induktivität 10-\SI{50}{\metre}H
 Kapazität 10-100 nF
 }
 \card{92}{Funkentstörmaßnahmen bei Beeinflussung durch hochfrequente Ströme und Felder}{
@@ -2317,7 +2321,7 @@ oberen Frequenzgrenzen ausgesendeten mittleren Leistungen 0,5 % der gesamten mit
 
 Kenngröße: \SI{}{\kilo\Hz}
 \SI{0.5}{\percent} der ge. mittl. Leistung = 1/200 d. ges. 
-mittl. Leistung  = 1/100 (-20dB) davon die $\frac12$
+mittl. Leistung  = 1/100 (-\SI{20}{\dB}) davon die $\frac12$
 somit \SI{-23}{\dB}  bezogen auf gesamte mittlere
 Leistung.
 oberen \& unteren Frequenzgr. ergeben
@@ -2480,14 +2484,14 @@ sich aus dem Modulationspr.  (SSB)
       im Amateurfunk: 5~kHz
     \item[Modulationsindex]
       Frequenzhub (kHz) / Modulationsfrequenz (kHz)
-      Im Amateurfunk wird die Frequenzmodulation auf den 2~m und 70~cm Bändern benützt.
+      Im Amateurfunk wird die Frequenzmodulation auf den 2~m und \SI{70}{\centi\metre} Bändern benützt.
       Der Frequenzhub beträgt in der Regel 5~kHz. Die Modulationsfrequenz beträgt 3~kHz.
       Modulationsindex von $\frac53 = 1,7$
   \end{description}
 }
 \card{19}{Definieren Sie den Begriff ,,belegte Bandbreite``. Arten und Vorteile der Einseitenbandmodulation?}{
   \small
-  Jene Frequenzbandbreite, bei der die unterhalb und oberhalb ihrer Frequenzgrenzen ausgesendeten mittleren Leistungen 0,5~\% der gesamten mittleren Leistung einer gegebenen Aussendung betragen.
+  Jene Frequenzbandbreite, bei der die unterhalb und oberhalb ihrer Frequenzgrenzen ausgesendeten mittleren Leistungen \SI{0,5}{\percent} der gesamten mittleren Leistung einer gegebenen Aussendung betragen.
   Der Vorteil der Einseitenbandmodulation liegt in der weit günstigeren Leistungausbeute und der halben Bandbreite. Beides ergibt eine geringere Störanfälligkeit der Signalübertragung.
 
   Methoden:
@@ -2496,7 +2500,7 @@ sich aus dem Modulationspr.  (SSB)
     \item Phasenmethode
   \end{itemize}
 }
-\card{21}{Begriff Dezibel (Werte fragen: zB 3~dB, 6~dB, 10~dB, 30~dB Leistungssteigerung)}{
+\card{21}{Begriff Dezibel (Werte fragen: zB 3~dB, 6~dB, \SI{10}{\dB}, \SI{30}{\dB} Leistungssteigerung)}{
   {\small
     Dezibel ist ein logarithmisches Maß für das Verhältnis von zwei gleichartigen Leistungsgrößen
     $P_1$ und $P_2$ bzw. Spannungsgrößen $U_1$ und $U_2$.}
@@ -2507,19 +2511,19 @@ sich aus dem Modulationspr.  (SSB)
       \begin{description}\itemsep0pt
         \item[3~dB] 2fach
         \item[6~dB] vierfach
-        \item[10~dB] zehnfach
-        \item[13~dB] 20-fach
-        \item[20~dB] 100-fach
+        \item[\SI{10}{\dB}] zehnfach
+        \item[\SI{13}{\dB}] 20-fach
+        \item[\SI{20}{\dB}] 100-fach
         \item[-3~dB] halb
-        \item[-10~dB] ein Zehntel
+        \item[-\SI{10}{\dB}] ein Zehntel
       \end{description}
       \end{minipage}
       \begin{minipage}{0.5\textwidth}
       Spannungsverhältnisse in dB:
       \begin{description}
         \item[6~dB] doppelte Spannung
-        \item[12~dB] vierfache Spannung
-        \item[20~dB] zehnfache Spannung
+        \item[\SI{12}{\dB}] vierfache Spannung
+        \item[\SI{20}{\dB}] zehnfache Spannung
         \item[-6~dB] halbe Spannung
       \end{description}
     \end{minipage}
@@ -2545,7 +2549,7 @@ sich aus dem Modulationspr.  (SSB)
 \card{24}{Was versteht man unter ,,AGC`` und ,,AFC``? Erklären Sie die Empfängerkenngrößen - Empfindlichkeit, Eigenrauschen, Empfangsmischprodukte}{
   \footnotesize
   \begin{description}
-    \item[AGC] Lautstärke des NF-Signals eines Empfängers konstant gehalten. Notwendig, da Amplituden von Antenne kommende Signale Bereich von 120~dB übersteigen können.
+    \item[AGC] Lautstärke des NF-Signals eines Empfängers konstant gehalten. Notwendig, da Amplituden von Antenne kommende Signale Bereich von \SI{120}{\dB} übersteigen können.
     \item[AFC] Aus FM Demodulator Nachstimmspannung gewonnen, zur Nachstimmung der Oszillator-Frequenz,Schwankungen Empfangsfrequenz ausgeglichen.
   \end{description}
   \begin{enumerate}
@@ -2563,15 +2567,15 @@ sich aus dem Modulationspr.  (SSB)
 
   Digitale Signale weisen nur zwei (binäre; 0 oder 1) Spannungszustände auf und keine Zwischenwerte. Zur Verarbeitung ist Linearität nicht erforderlich. Nichtlinearität ist sogar von Vorteil. Beispiel Lichtschalter: ,,An`` oder ,,Aus``}
 \card{28}{Was versteht man unter der Ausgangsleistung, was unter der Verlustleistung?}{
-  Die Ausgangsleistung ist jene Leistung, die ein Sender an eine definierte Schnittstelle abgibt (Sendeausgangsbuchse, meist 50~Ohm). Durch den nicht 100~\%igen Wirkungsgrad eines Senders muss der Sender bei einer vorgegebenen Ausgangsleistung mehr Energie zugeführt werden, als er abgeben kann. Die Differenz zwischen zugeführter und abgegebener Leistung (Ausgangsleistung) wird als Verlustleistung bezeichnet.
+  Die Ausgangsleistung ist jene Leistung, die ein Sender an eine definierte Schnittstelle abgibt (Sendeausgangsbuchse, meist 50~Ohm). Durch den nicht \SI{100}{\percent}igen Wirkungsgrad eines Senders muss der Sender bei einer vorgegebenen Ausgangsleistung mehr Energie zugeführt werden, als er abgeben kann. Die Differenz zwischen zugeführter und abgegebener Leistung (Ausgangsleistung) wird als Verlustleistung bezeichnet.
 }
-\card{29}{Was versteht man unter der Strahlungsleistung? (Beispiel vorgeben, zB. Sender mit 10 W Ausgangsleistung; Antennenkabel mit 3 dB Dämpfung; Antenne mit 10 dB Gewinn)}{
+\card{29}{Was versteht man unter der Strahlungsleistung? (Beispiel vorgeben, zB. Sender mit \SI{10}{\watt} Ausgangsleistung; Antennenkabel mit 3 dB Dämpfung; Antenne mit \SI{10}{\dB} Gewinn)}{
   \small
   Die \emph{effektive Strahlungsleistung} ergibt sich aus der in eine Sendeantenne eingespeisten Leistung, vermehrt um den Antennengewinn in dB. ERP bezieht sich auf einen Halbwellendipol ($\Rightarrow$ dBd). Bezieht man den Antennengewinn auf den Isotropstrahler ($\Rightarrow$ dBi), spricht man von EIRP (Watt):
   \[ \text{EIRP} = \text{ERP} \cdot 1,64 \]
-  \[ \text{ERP} = 10~W- 3~dB + 10~dB = 10 \cdot 0,5 \cdot 10 = 50~W \]
-  Die Strahlungsleistung beträgt $\text{ERP} = 50~W$
-  \[ \text{EIRP} = 50 \cdot 1,64 = 82~W \]
+  \[ \text{ERP} = \SI{10}{\watt}- 3~dB + \SI{10}{\dB} = 10 \cdot 0,5 \cdot 10 = \SI{50}{\watt} \]
+  Die Strahlungsleistung beträgt $\text{ERP} = \SI{50}{\watt}$
+  \[ \text{EIRP} = 50 \cdot 1,64 = \SI{82}{\watt} \]
 }
 \card{30}{Begriff Speiseleitung (Antennenzuleitung) - Kenngrößen?}{
   \footnotesize
@@ -2607,7 +2611,7 @@ sich aus dem Modulationspr.  (SSB)
   \begin{itemize}
     \item Wellenwiderstand im Speisepunkt: ca. 50~Ohm, Speisung mit Koaxialkabel und Balun
     \item Strahlungsdiagramm: hat die Form einer Acht, d.h. Strahlungsmaxima quer zur Antennenachse, axiale Minima
-    \item Gewinn: 2,15~dB in Hauptstrahlrichtung
+    \item Gewinn: 2,\SI{15}{\dB} in Hauptstrahlrichtung
     \item Im Amateurfunk werden häufig gestreckte und abgewinkelte Dipole verwendet
   \end{itemize}
 }
@@ -2773,7 +2777,7 @@ sich aus dem Modulationspr.  (SSB)
   Unter der \emph{Freiraumausbreitung} versteht man die Ausbreitung des elektromagnetischen Feldes im materiefreien Raum (Vakuum). Bei Freiraumausbreitung nimmt die Feldstärke mit wachsender Entfernung nur auf Grund der Entfernung ab (Entfernungsdämpfung). Freiraumbedingungen herrschen praktisch im Weltraum und noch mit sehr guter Näherung innerhalb des optischen Horizontes, wenn sonst keine störenden Effekte auftreten (Niederschlag, Reflexionen).
 }
 \card{52}{Welche Einflüsse haben Hindernisse auf die UKW-Ausbreitung?}{
-  Ausbreitung über 100~MHz erfolgt quasi optisch. Unter der Annahme einer Standardatmosphäre, die eine Ablenkung der Funkstrahlen zum Boden bewirkt, ergibt sich für einen Standort eine max. Reichweite, die man als Funkhorizont bezeichnet. Je höher der Standort, desto größer die Reichweite. Durch Reflektion kann es zu einem Funkschatten kommen, der eine Funkverbindung unmöglich macht. Neben der Lage spielt also auch die Hindernisfreiheit eine wichtige Rolle.
+  Ausbreitung über \SI{100}{\mega\Hz} erfolgt quasi optisch. Unter der Annahme einer Standardatmosphäre, die eine Ablenkung der Funkstrahlen zum Boden bewirkt, ergibt sich für einen Standort eine max. Reichweite, die man als Funkhorizont bezeichnet. Je höher der Standort, desto größer die Reichweite. Durch Reflektion kann es zu einem Funkschatten kommen, der eine Funkverbindung unmöglich macht. Neben der Lage spielt also auch die Hindernisfreiheit eine wichtige Rolle.
 }
 \card{53}{Definieren Sie den Begriff ,,Schädliche Störung``?}{
   Ist eine Störung, welche die Abwicklung des Funkverkehrs bei einem anderen Funkdienst, Navigationsfunkdienst, Sicherheitsfunkdienst gefährdet oder den Verkehr bei einem Funkdienst, der in Übereinstimmung mit den für den Funkverkehr geltenden Vorschriften wahrgenommen wird, beeinträchtigt, behindert oder wiederholt unterbricht. Auch Amateurfunk kann von schädlichen Störungen betroffen sein.
