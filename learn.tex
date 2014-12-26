@@ -4,6 +4,7 @@
 \usepackage[german]{babel}
 \usepackage{amsmath}
 \usepackage[inline]{enumitem}
+\usepackage{siunitx}
 %\newcommand{\cardpaper}{a4paper}
 %\newcommand{\cardpapermode}{portrait}
 \renewcommand{\cardrows}{4}
@@ -11,6 +12,10 @@
 \cardfrontstyle[\large\slshape]{headings}
 \cardbackstyle{empty}
 %\cardbackstyle{plain}
+
+\sisetup{
+  range-phrase = --
+}
 
 \newcommand\question[2]{
   \begin{flashcard}[{\chap} -- #1]{#2}\end{flashcard}
@@ -373,7 +378,7 @@ Ausschüsse:
 }
 
 \card{04}{Sie wollen, dass Ihre Gegenstation die Sendeleistung vermindert. Welche Q-Gruppe verwenden Sie?}{Die Q-Gruppe QRP}
-\card{05}{Was bedeuten die Hinweise \\ ,,5 UP`` bzw. ,,10 DOWN``?}{Der eigene Sender sollte um 5~kHz nach oben (10~kHz nach unten) verstellt werden, um dort, wo die Gegenstation hört, zu senden. Der Empfänger bleibt auf der Frequenz, auf der die Gegenstation sendet. (Split-Betrieb).}
+\card{05}{Was bedeuten die Hinweise \\ ,,5 UP`` bzw. ,,10 DOWN``?}{Der eigene Sender sollte um \SI{5}{\kilo\Hz} nach oben (\SI{10}{\kilo\Hz} nach unten) verstellt werden, um dort, wo die Gegenstation hört, zu senden. Der Empfänger bleibt auf der Frequenz, auf der die Gegenstation sendet. (Split-Betrieb).}
 \card{06}{Sie wollen in einen bestehenden Funkverkehr einsteigen. Wie führen Sie das durch?}{
   \begin{itemize}
     \item Funkverkehr beobachten
@@ -632,7 +637,7 @@ Ausschüsse:
   \end{itemize}
 }
 \card{36}{Welche Sendearten sind im Kurzwellenbereich zulässig?}{
-  Auf Kurzwelle, d.h. im Frequenzbereich zwischen 3--30~MHz sind gemäß VO-Funk allle Sendearten zulässig, die eine Bandbreite von höchstens 7~kHz haben.
+  Auf Kurzwelle, d.h. im Frequenzbereich zwischen 3--30~MHz sind gemäß VO-Funk allle Sendearten zulässig, die eine Bandbreite von höchstens \SI{7}{\kilo\Hz} haben.
 
   Für den Amateurfunkdienst: Erweiterung der Regelung auf das 160-m-Band und im Bereich über 29~MHz ist auch die Sendeart ,,Schmalband-FM`` zugelassen. In den höherfrequenten Bändern können höhere Bandbreiten verwendet werden
 }
@@ -781,7 +786,7 @@ Ausschüsse:
 }
 \card{52}{Was ist beim Betrieb an den Bandgrenzen zu beachten?}{
   Es ist zu beachten, dass die Aussendung im gesamten Umfang die Bandgrenze nicht überschreitet. Dabei ist die Toleranz der verfügbaren Messmöglichkeiten/Messgeräte und die verwendete Sendeart zu beachten. Messen kann man die Bandbreite der Aussendung mit z.B. einem Spektrum-Analysator.
-  Bsp.: bei Verwendung von USB-Modulation darf nicht näher als 3,5~kHz an die obere Bandgrenze herangegangen werden.
+  Bsp.: bei Verwendung von USB-Modulation darf nicht näher als \SI{3,5}{\kilo\Hz} an die obere Bandgrenze herangegangen werden.
 }
 \card{53}{Nennen Sie Beispiele österreichischer Amateurfunkrufzeichen mit Zusätzen (zB: am, mm, /1).}{
   \footnotesize
@@ -836,10 +841,10 @@ Ausschüsse:
   \begin{tabular}{clll}
     Frequenz & Klasse & Leistungsstufe & Sendearten \\
   \hline \\
-    1810--1830~kHz & 1,4  & A    & M \& F \\
-    1830--1840~kHz & 1,4* & A\&B & M \& F \\
-    1840--1850~kHz & 1,4  & A\&B & M \& F \& S \\
-    1850--1950~kHz & 1,4* & A    & M \& F \& S \\
+    \SIrange{1810}{1830}{\kilo\Hz} & 1,4  & A    & M \& F \\
+    \SIrange{1830}{1840}{\kilo\Hz} & 1,4* & A\&B & M \& F \\
+    \SIrange{1840}{1850}{\kilo\Hz} & 1,4  & A\&B & M \& F \& S \\
+    \SIrange{1850}{1950}{\kilo\Hz} & 1,4* & A    & M \& F \& S \\
   \end{tabular}
   \vspace{10pt}
 
@@ -938,7 +943,7 @@ Ausschüsse:
   \footnotesize
   SSTV ist die Übertragung nicht bewegter Bilder (Standbilder, Slow Scan Television)
   \begin{itemize}
-    \item der Bildinhalt wird abgetastet und schmalbandig übertragen (Übertragungsbandbreite 2--3~kHz)
+    \item der Bildinhalt wird abgetastet und schmalbandig übertragen (Übertragungsbandbreite \SIrange{2}{3}{\kilo\Hz})
     \item eignet sich auf für KW
     \item neben Videokamera benötigt man einen SSTV-Konverter oder einen PC mit entsprechender Software
     \item Übertragung erfolgt analog in der Betriebsart SSB (SSB-tauglicher Transceiver ist notwendig)
@@ -1447,94 +1452,913 @@ Spannung (U) und dem durch den Widerst. fließenden Strom (I) wieder.
   \end{description}
 }
 
-\question{18}{Der Resonanzschwingkreis - Kenngrößen}
-\question{19}{Der Resonanzschwingkreis - Anwendungen in der Funktechnik}
-\question{20}{Berechnen Sie die Resonanzfrequenz eines Schwingkreises mit folgenden Werten: L = 15 H, C = 30 pF (Werte sind variabel)}
-\question{21}{Filter – Arten, Aufbau, Verwendung und Wirkungsweise}
-\question{22}{Was sind Halbleiter?}
-\question{23}{Die Diode - Aufbau, Wirkungsweise und Anwendung}
-\question{24}{Der Transistor - Aufbau, Wirkungsweise und Anwendung}
-\question{25}{Die Elektronenröhre - Aufbau, Wirkungsweise und Anwendung}
-\question{26}{Arten von Gleichrichterschaltungen - Wirkungsweise}
-\question{27}{Stabilisatorschaltungen}
-\question{28}{Hochspannungsnetzteil - Aufbau, Dimensionierung und Schutzmaßnahmen}
-\question{29}{Welche Arten von digitalen Bauteilen kennen Sie? - Wirkungsweise}
-\question{30}{Was sind elektronische Gatter? - Wirkungsweise}
-\question{31}{Messung von Spannung und Strom am Beispiel eines vorgegebenen Stromkreises}
-\question{32}{Erklären Sie die prinzipielle Wirkungsweise eines Griddipmeters, Anwendung und Funktion}
-\question{33}{Erklären Sie die Funktionsweise eines HF-Wattmeters}
-\question{34}{Erklären Sie die Funktionsweise eines Oszillografen (Oszilloskop)}
-\question{35}{Erklären Sie die Funktionsweise eines Spektrumanalysators}
-\question{36}{Begriff Demodulation}
-\question{37}{Zeichnen Sie das Blockschaltbild eines Überlagerungsempfängers}
-\question{38}{Was verstehen Sie unter Spiegelfrequenz und Zwischenfrequenz?}
-\question{39}{Erklären Sie die Kenngrößen eines Empfängers - Empfindlichkeit, intermodulationsfreier Bereich, Eigenrauschen}
-\question{40}{Erklären Sie den Begriff des Rauschens. - Auswirkungen auf den Empfang.}
-\question{41}{Mischer in Empfängern - Funktionsweise und mögliche technische Probleme}
-\question{42}{Nichtlineare Verzerrungen - Ursachen und Auswirkungen}
-\question{43}{Empfängerstörstrahlung - Ursachen und Auswirkungen}
-\question{44}{Mikrofonarten - Wirkungsweise}
-\question{45}{Prinzip, Arten und Kenngrößen der Einseitenbandmodulation}
-\question{46}{Prinzip, Arten und Kenngrößen der Pulsmodulation}
-\question{47}{Erklären Sie die wichtigsten Anwendungen der digitalen Modulationsverfahren}
-\question{48}{Erklären Sie die Begriffe CRC und FEC}
-\question{49}{Prinzip und Kenngrößen der Frequenzmodulation}
-\question{50}{Prinzip und Kenngrößen der Amplitudenmodulation}
-\question{51}{Erklären Sie den Begriff Modulation (analoge und digitale Verfahren)}
-\question{52}{Oszillatoren - Grundprinzip, Arten}
-\question{53}{Erklären Sie den Begriff VCO}
-\question{54}{Erklären Sie den Begriff PLL}
-\question{55}{Erklären Sie den Begriff DSP}
-\question{56}{Erklären Sie die Begriffe sampling, anti aliasing filter, ADC/DAC}
-\question{57}{Merkmale, Komponenten, Baugruppen eines Senders}
-\question{58}{Zweck von Puffer- und Vervielfacherstufen, Aufbau}
-\question{59}{Aufbau einer Senderendstufe, Leistungsauskopplung}
-\question{60}{Anpassung eines Senderausganges an eine symmetrische oder asymmetrische Antennenspeiseleitung}
-\question{61}{Der Antennentuner, Wirkungsweise, 2 typische Beispiele}
-\question{62}{Antennenzuleitungen - Aufbau, Kenngrößen}
-\question{63}{Erklären Sie den Begriff Balun. Aufbau, Verwendung und Wirkungsweise}
-\question{64}{Der Dipol - Aufbau, Kenngrößen und Eigenschaften}
-\question{65}{Die Vertikalantenne - Aufbau, Kenngrößen und Eigenschaften}
-\question{66}{Gekoppelte Antennen - Aufbau, Kenngrößen und Eigenschaften}
-\question{67}{Strahlungsdiagramm einer Antenne}
-\question{68}{Die Yagi-Antenne - Aufbau, Kenngrößen und Eigenschaften}
-\question{69}{Breitbandantennen - Aufbau, Kenngrößen und Eigenschaften}
-\question{70}{Die Parabolantenne - Aufbau, Kenngrößen und Eigenschaften}
-\question{71}{Erklären Sie den Begriff Wellenwiderstand}
-\question{72}{Stehwellen und Wanderwellen, Ursachen und Auswirkungen}
-\question{73}{Strahlungsfeld einer Antenne, Gefahren}
-\question{74}{Aufbau und Kenngrößen eines Koaxialkabels}
-\question{75}{Erklären Sie den Begriff Dezibel am Beispiel der Anwendung in der Antennentechnik}
-\question{76}{Was versteht man unter Richtantennen, Anwendungsmöglichkeiten}
-\question{77}{Welche Kenngrößen von Antennen kennen Sie und wie können sie gemessen werden?}
-\question{78}{Dimensionieren Sie einen Halbwellendipol für f = 3.6~MHz ; V = 0.97 (Werte sind variabel)}
-\question{79}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung: 200 Watt; Dämpfung der Antennenleitung: 6 dB/100m; Kabellänge : 50 m; Gewinn: 10 dB (Werte sind variabel)}
-\question{80}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung 100 Watt; Dämpfung der Antennenleitung 12 dB/100m; Kabellänge 25 m; Rundstrahlantenne mit Gesamtwirkungsgrad von 50 \% (Werte sind variabel)}
-\question{81}{Langdrahtantennen - Aufbau, Kenngrößen und Eigenschaften}
-\question{82}{Zweck von Radials / Erdnetz bei Vertikalantennen - Dimensionierung}
-\question{83}{Blitzschutz für Antennenanlagen}
-\question{84}{Sicherheitsabstände bei Antennen}
-\question{85}{Erklären Sie den Begriff ,,elektromagnetisches Feld``. Kenngrößen?}
-\question{86}{Begriff elektrisches und magnetisches Feld; Abschirmmaßnahmen für das elektrische bzw. das magnetische Feld?}
-\question{87}{Erklären Sie den Begriff ,,EMV`` und dessen Bedeutung im Amateurfunk}
-\question{88}{Erklären Sie den Begriff ,,EMVU`` und dessen Bedeutung im Amateurfunk}
-\question{89}{Erklären Sie den Begriff ,,Trap``, Aufbau und Wirkungsweise}
-\question{90}{Was versteht man unter einem Hohlraumresonator, Anwendung.}
-\question{91}{Funkentstörmaßnahmen im Bereich Stromversorgung der Amateurfunkstelle}
-\question{92}{Funkentstörmaßnahmen bei Beeinflussung durch hochfrequente Ströme und Felder}
-\question{93}{Was sind Tastklicks, wie werden sie vermieden?}
-\question{94}{Erklären Sie die Begriffe: ,,Unerwünschte Aussendungen``, ,,Ausserbandaussendungen``, ,,Nebenaussendungen`` (spurious emissions)}
-\question{95}{Erklären Sie den Begriff: ,,Splatter`` - Ursachen und Auswirkungen}
-\question{96}{Erklären sie den Begriff ,,schädliche Störungen``}
-\question{97}{Prinzipieller Aufbau einer Relaisfunkstelle und einer Bakenfunkstelle}
-\question{98}{Definieren Sie den Begriff ,,Senderleistung``}
-\question{99}{Definieren Sie den Begriff ,,Spitzenleistung``}
-\question{100}{Definieren Sie den Begriff ,,belegte Bandbreite``}
-\question{101}{Definieren Sie den Begriff ,,Interferenz in elektronischen Anlagen``; beschreiben Sie Ursachen und Gegenmassnahmen}
-\question{102}{Erklären Sie die Begriffe ,,Blocking``, ,,Intermodulation``}
-\question{103}{Welche Gefahren bestehen für Personen durch den elektrischen Strom?}
-\question{104}{Was ist beim Betrieb von Hochspannung führenden Geräten zu beachten?}
-\question{105}{Definieren Sie die Gefahren durch Gewitter für die Funkstation und das Bedienpersonal, beschreiben Sie Vorbeugemassnahmen}
+\card{18}{Der Resonanzschwingkreis - Kenngrößen}{
+  \small
+  Zusammenschaltung von Kondensator und Spule. Zusammenschaltung weist einen frequenzabhängigen Scheinwiderstand $Z$ (Impedanz) auf. Jedes Element hat frequenzabhängigen Blindwiderstand $X_c$ bzw. $X_l$. $X_c$ nimmt mit Frequenz ab, $X_l$ nimmt zu.
+
+  \begin{description}\itemsep0pt
+    \item[Parallelschwingkreis] $Z$ bei Resonanz Maximum
+    \item[Serienschwingkreis] $Z$ bei Resonanz Minimum
+    \item[Kenngrößen] Resonanzfreq., Blindwiderstand $v$  % TODO: verify
+  \end{description}
+
+  $C$ und $L$ gleich Impedanz $Z$ wird ohmsch.
+  Bandbreite Güte $Q = \frac{f}{B}$.
+  % TODO: whaaaaat?
+  ho.Maxi.Z=Paral.Kreis, 
+  tif. Min. Z=Serienkr.
+}
+\card{19}{Der Resonanzschwingkreis - Anwendungen in der Funktechnik}{
+  \small
+  \emph{Selektionsmittel} (Filter) eingesetzt, um Signale einer Frequenz hervorzuheben oder zu unterdrücken.
+
+  Anwendung:
+  \begin{itemize*}\itemsep0pt
+    \item Eingang
+    \item Schaltung von Empfängern
+    \item HF Verstärker
+    \item Oszillator
+  \end{itemize*}
+
+  \begin{description}
+    \item[Parallelschwingkreis] hohe Impedanz in Resonazfall nur erwünschte Signale gelangen in Empfänger
+    \item[Serienschwingkreis] nutzt niedere Impedanz $i$. Resonanzfall um unerwünschte Signale einer Frequenz werden ,,kurzgeschlossen``,  alle anderen gelangen in Empfänger.
+  \end{description}
+}
+\card{20}{Berechnen Sie die Resonanzfrequenz eines Schwingkreises mit folgenden Werten: L = 15 H, C = 30 pF (Werte sind variabel)}{
+  % TODO: elaborate
+  \[ f = 159 / ??  \]
+  \[ 15*30  =  \SI{7.49}{\mega\Hz} \]
+}
+\card{21}{Filter – Arten, Aufbau, Verwendung und Wirkungsweise}{
+  \footnotesize
+  Hochpassfilter, Tiefpassfilter, Bandpassfilter.
+
+  \begin{description}
+    \item[Bandpass] Eingang von Empfängern
+    \item[Oberwellenfilter] am Ausgang von Sendeverstärkern
+    \item[Kenngrößen]
+  \end{description}
+  {
+    \scriptsize
+      \begin{minipage}{0.5\textwidth}
+        \begin{itemize}\itemsep0pt
+          \item Grenzfrequenz (u.G b. Hochp. o. G b. Tiefp.)  % TODO: whaaaat?
+          \item Bandbreite (b. Bandpass)
+          \item Durchlassdämpfung, Flankensteilheit (Anzahl Filterstufen)
+          \item Welligkeit (Durchlass nicht alle Frequenz gleich)
+        \end{itemize}
+      \end{minipage}
+      \begin{minipage}{0.47\textwidth}
+        \begin{itemize}\itemsep0pt
+          \item Quarzfilter: extr. Hohe Güte aufber. Sign. Empfänger u. Sender
+          \item Aktive Filter: Im NF-Bereich Operationsverstärker für Audio Signale (Analogfilter).
+            DSP (Digitale Filter).
+        \end{itemize}
+      \end{minipage}
+  }
+}
+\card{22}{Was sind Halbleiter?}{
+  Ihre Leitfähigkeit kann durch physikalische Einflüsse gesteuert werden. Material: Silizium, Germanium.
+
+  ,,Dotierung``: Verunreinigung des Grundmaterials.
+
+  Je nach Dotierung entsteht P-Leiter (Ladungsträger) oder N-Leiter (Ladtr.).
+  Wichtige Eigenschaften kommen erst zustande  wenn $P + N$ Leiter zusammengebracht werden.
+}
+\card{23}{Die Diode - Aufbau, Wirkungsweise und Anwendung}{
+  \small
+  Halbleiter Bauelement mit P-N-Übergang
+  \begin{description}
+    \item[P-Schicht] Anode
+    \item[N-Schicht] Kathode
+    \item[Anwendungen] Gleichrichter (da nur 1 Flussrichtung)
+    \item[Durchlass] +Pol an Anode min. \SI{0,7}{\volt}
+    \item[Sperre] +Pol an Kathode gekennzeichnet Ring
+    \item[Kenngröße] Max. Sperrspannung, Strombelastbarkeit
+    \item[Bauform] Schraubbef. (Kühlung) Kunstoff-Glasgehäuse, Mehrfachdioden in 1. Gehäuse
+  \end{description}
+}
+\card{24}{Der Transistor - Aufbau, Wirkungsweise und Anwendung}{
+  \small
+  Halbleiter Bauelement. Besteht aus 2 N-Leitern zwischen denen eine dünne Schicht eines p-Leiters liegt (NPN-Typ; auch PNP-Typ möglich).
+
+  Mitl. Schicht Basis äußeren Sch. Emitter \& Kollektor j. Schicht hat Anschluss
+  In digit. Schaltkreisen Vielzahl v. Transist. auf gemeinsame
+  Unterl. Substrat aufgebracht.
+
+  \begin{description}
+    \item[Kenndaten] Typ NPN oder PNP. Stromverstärkung, max. Kollektorspannung, Strom, Grenzfrequenz
+    \item[Anwendungen] Verstärker NF-HF Oszillatoren, Signalerzeugung, Schalter, Regelkreise
+  \end{description}
+}
+\card{25}{Die Elektronenröhre - Aufbau, Wirkungsweise und Anwendung}{
+  \begin{description}
+    \item[Aufbau, Wirkungsweise]
+      Luftleerer Glaskolben. Elektroden, Kathode wird zum Glühen gebracht, emittiert Elektronen, Anode fängt Elektronen auf (Stromfluss nur in dieser Richtung möglich, Diode) Gitterförmige Elektrode zwischen Anode und Kathode: Anodenstromänderung durch kleine Spannungsänderung (Triode)
+    \item[Anwendung] als HF-Verstärker (PA = Power Amplifier)
+  \end{description}
+}
+\card{26}{Arten von Gleichrichterschaltungen - Wirkungsweise}{
+  Einweg Gleichri.: Trafo (230 V-12V)–Diode-Kondensator: Es wird nur 
+  positive Halbwelle verwendet, hohe Restwelligk., 50 Hz
+  Doppelweg Gleichri.: Trafo (Mittelanzapfung beider Halbwellen), 2 Dioden,
+  Verbind. beider Dioden zum Kondensator: Beide Halbwellen verwendet,
+  geringe Restwelligk. 100 Hz
+  Vollweg/Brückengleichr.: Trafo (1 Wicklung nötig)-4Dioden-Kondensator:
+  beide Halbwellen verwendet, geringe Restwelligkeit, 100 Hz
+  Glättung Restwelligk. D. Kondens.
+}
+\card{27}{Stabilisatorschaltungen}{In Stromversorgungs-Funk- Verstärkern- und Messgeräten.
+Einfachste Form: Zenerdiode und Vorwiderstand Spannungsstabilisierung
+durch Zenerdiode und Längstransistor.
+Spannungen über x Volt werden durch Zenerdiode und Transistor „vernichtet".
+Nach dem Transistor liegen immer max. x Volt an. 
+Festspannungsregler: komplette Stabi - Schaltung in einem IC
+Festspannungsregler sind als integrierte Schaltkreise fertig erhältlich
+}
+\card{28}{Hochspannungsnetzteil - Aufbau, Dimensionierung und Schutzmaßnahmen}{
+  Spannungsverdopplung durch schalten von Kondensatoren in Reihe 
+(bei der Gleichrichtung)
+Gleichspannung ab 500V absolut lebensgefährlich
+Ab  50 V Berührungsschutz, Hochspannungskäfig (Deckelschalter)
+Entladungswiderstände über Elkos.
+Vor jeden Eingriff: Netzstecker ziehe, entladen der Elkos abwarten
+}
+\card{29}{Welche Arten von digitalen Bauteilen kennen Sie? - Wirkungsweise}{
+  Dienen der Erzeugung und Verarbeitung von digit.Sign.
+weisen nur zwei binäre Spannungszustände (0 o.1) auf
+Arbeiten grundsätzlich nichtlinear keine Zwischenwerte
+Vorteile: Rechenoperationen im binären Zahlenraum 
+Gatter:  logische Verknüpfung UND ODER
+Kippstufen:  (getriggert eigenständig hin und her schalten)
+Puffer: Signalfolgen speichern u. ausgeben
+Zähler: Impulse in vorgegebener Zeit ermitteln
+Anzeigen: Zahlen u. Buchst. Sichtbar macht (Display)
+}
+\card{30}{Was sind elektronische Gatter? - Wirkungsweise}{
+  Sind die einfachste Form digitaler Bauelemente
+Sie verknüpfen zwei oder mehrere digitale Eingangssignale 
+mit digitalen Ausgangssignal
+Gatter kennen nur 2 Zustände z.B.  low or high, aktiv oder passiv,
+0 oder 1.
+}
+\card{31}{Messung von Spannung und Strom am Beispiel eines vorgegebenen Stromkreises}{
+  Spannung: wird mit Voltmeter(Innenwiderstand möglichst hoch)
+Parallel zum Schaltungsteil gemessen
+Strom: mit Amperemeter (Innenwiderstand möglichst gering) 
+Durch auftrennen des Stromkreises in Reihe gemessen
+}
+\card{32}{Erklären Sie die prinzipielle Wirkungsweise eines Griddipmeters, Anwendung und Funktion}{
+  Zur Bestimmung der Resonanzfrequenz eines Schwingkreises
+Besteht aus einem einstellbaren Oszillator, wenn beide Frequenzen
+übereinstimmen, wird dem Oszillator Energie entzogen
+(wird am Messinstrument angezeigt) somit kann die Frequenz 
+festgestellt werden.
+}
+\card{33}{Erklären Sie die Funktionsweise eines HF-Wattmeters}{
+  Das hochfrequente Signal wird direkt oder über Richtkoppler 
+(richtungsabhängiges Abzweigen von elektromagnetischen Wellen
+aus einer Leitung) einem Diodengleichrichter zugeführt. 
+Bei konstantem Abschlusswiderstand wird  Skala des 
+Messwerks direkt in Watt kalibriert.
+Messen des SWR (Stehwellenverhältnis 1:unendlich) Kontrolle
+der Impedanz
+Leistungsmesser f. fwd (hinlaufende) und refl. (rücklaufende) Welle
+auf der Basis von Diodengleichrichtern 
+}
+\card{34}{Erklären Sie die Funktionsweise eines Oszillografen (Oszilloskop)}{
+  Mit Oszillogr. kann der zeitliche Verlauf sinusförmiger o. nichtsinusf.
+Signale dargestellt und gemessen werden.
+Horiz. Achse x = Zeit,  vertik. Achse y = Spannung
+In einer Kathodenstrahlröhre treffen gebündelte Elektronen auf einen 
+Bildschirm und  bringen ihn am Auftreffpunkt zum Leuchten
+Die Ablenkfrequenz kann eingestellt und an die Frequenz des
+Darzustellenden Signals angepasst werden.
+}
+\card{35}{Erklären Sie die Funktionsweise eines Spektrumanalysators}{
+  Können mehrere Signale mit verschiedenen Frequenzen gleichzeitig 
+in wählbaren Frequenzbereich dargestellt werden.
+Über  eine Kathodenstrahlröhre erfolgt optische Darstellung der in einem
+Signal enthaltenen Frequenzen
+X = Frequenzen  y = Amplitude
+Damit lassen sich ein Frequenzbereich, das Nutzsignal u. ev. unerwünschte
+Aussendungen sowie deren Stärke messtechnisch erfassen.
+}
+\card{36}{Begriff Demodulation}{
+  Bei Demodulation wird das NF Signal (Sprache, Daten) aus dem modulierten
+HF Signal zurückgewonnen Je nach Modulationsart ist Demodulator 
+unterschiedlich aufgebaut u. trägt versch. Bezeichnungen
+FM – Ratiodetektor (LC Schwingkreis) Quadraturdemodulator
+AM  Diodendetektor (eine Diode ein RC-Glied für Rückgewinnung des
+Nutzsignals ausreichend)  
+SSB Produktdetektor (wie AM zuzsätzlich dazumischen des Trägers durch BFO) 
+}
+\card{37}{Zeichnen Sie das Blockschaltbild eines Überlagerungsempfängers}{
+  Antenne
+Bandpassfilter
+HF Verstärker
+Mischer (Empfangsfrequenz mit VFO Frequenz)
+ZF (Quarz) Filter (Bandpassfilter)
+ZF Verstärker
+Produktdetektor(SSB Demod, BFO Frequenz liefert Träger)
+NF Verstärker (liefert AGC an ZF und HF Verstärker)
+NF Endstufe
+}
+\card{38}{Was verstehen Sie unter Spiegelfrequenz und Zwischenfrequenz?}{
+  Spiegelfrequenz ist die zweite unerwünschte Empfangsfrequenz eines
+Überlagerungsempfängers, da bei jeder Mischung Summen und 
+Differenzfrequenzen entstehen. Unterdrückung durch Bandpassfilter im
+Eingang (lässt nur Empfangsfrequenz durch).
+Zwischenfrequenz: Frequenz auf die das Empfangssignal in
+Überlagerungsempfänger mit Hilfe eines Lokaloszillators 
+heruntergemischt wird.
+}
+\card{39}{Erklären Sie die Kenngrößen eines Empfängers - Empfindlichkeit, intermodulationsfreier Bereich, Eigenrauschen}{
+  Empfindlichkeit: kleinste Signalpegel der noch empfangen werden kann
+ist MDS (minimal detectable signal) definiert als das Signal, das
+mit einem SN Wert von 3 dB feststellbar ist. Signalp. von ca. 0,2 müV 
+intermodulationsfreier Bereich: Abstand zweier gleich starker Signale,
+die ein Empfänger verkraften kann, ohne zu übersteuern  (gute Werte>90dB)
+Eigenrauschen: (noise level) von allen Rau.QU. im Empfänger zusammenwirkt,
+wenn kein Eingangs. vorhanden.
+}
+\card{40}{Erklären Sie den Begriff des Rauschens. - Auswirkungen auf den Empfang.}{
+  Unregelmäßige therm. Elektronenbewegungen erzeugen in jedem Bauteil
+unregelm. Stromschwankungen, die als Rauschen (Noise) bezeichnet w.
+geringe Bandbreite niedriger Rauschpegel. 
+Auf Gerätebauteile zurückzuführende Rauschqu. ergeben Eigenrauschen.
+Abhilfe: Rauscharme Bauteile, Kühlung
+Äußeres  Rauschen entst. d. atmosphärisches- galaktischen Rauschen
+und dem sog. man made noise  (techn. Rauschqu.)
+äußere Rauschen ist frequenz- \& Standort abhängig.  
+}
+\card{41}{Mischer in Empfängern - Funktionsweise und mögliche technische Probleme}{
+  Bauteil/Schaltung zur Mischung zweier Signale mit unterschiedlichen 
+Frequenzen (Amplituden beeinflussen einander) 
+Mischung der Empfangsfrequenz erfolgt mittels Oszillator zur 
+Zwischenfrequenz
+es entstehen Summe und Differenz der beiden Frequenzen
+Spiegelfrequenz muss schon am Eingang ausgefiltert werden
+(Bandpass), sonst Gefahr des Spiegelfrequenzempfangs.
+}
+\card{42}{Nichtlineare Verzerrungen - Ursachen und Auswirkungen}{
+  Nichtlineare Verzerrungen = Intermodulation (Kreuzmodulation)
+Entstehen: durch Aussteuerung einer Stufe in den nichtlinearen 
+Kennlinienteil durch starke Signale im Empfangszweig Vorstufe
+des Empfängers mischt unerwünschte Signale in den 
+Empfangsbereich hinein (Geistersignale)
+Abhilfe: durch einschalten eines Abschwächers vor dem Empfänger
+In Sendern: häufigste Ursache von unerwünschten Nebenaussendungen
+Übersteuerung  durch unsachgemäße Bedienung 
+}
+\card{43}{Empfängerstörstrahlung - Ursachen und Auswirkungen}{
+  Ursache: Jeder Oszillator ist Sender kleiner Leistung. Muss vom
+Antenneneingang (Überlagerungsempfänger) entkoppelt werden.
+Keine Abstrahlung Entkoppelung erfolgt durch HF Vorverstärker, 
+aktive Mischer, Bandfilter (nur Empfangssignal)
+Messung mit Spektrumanalysator am Antenneneingang bzw. Antenne
+am Spektrumanalysator zur Lokalisierung der Abstrahlung
+}
+\card{44}{Mikrofonarten - Wirkungsweise}{
+  \tiny
+  \begin{description}
+    \item[Kohlemikrofon*]
+      externe Stromversorgnung,
+      Membran presst Kohlkörnchenschicht zusammen,
+      Druck ändert elektrischen Widerstand
+    \item[Kondensatormikrofon*]
+      2 Platten; Abstand ändert sich mit Sprache
+    \item[Elektretmikrofon*]
+      Kunstharzmasse bildet Elektret, ändert beim Verformen die Ladung der Kapazität,
+      Ausgangssignal hochohmig, daher Einbau eines Vorverstärkers
+    \item[Dynamisches Mikrofon$^\dagger$]
+      Membran mit beweglicher Spule verbunden,
+      taucht in Magnetfeld eines Dauermagneten ein,
+      induziert Wechselspannung 
+    \item[Kristallmikrofon$^\dagger$]
+      Kristalle aus Seignetsalz und Keramiken geben bei mechanischer Belastung elektrische Spannung ab,
+      Piezoeffekt, Membran
+  \end{description}
+
+  * \quad externe Stromversorgung \\
+  $\dagger$ \quad interne Stromversorgung
+}
+\card{45}{Prinzip, Arten und Kenngrößen der Einseitenbandmodulation}{
+  ausgehend von AM Signal, Unterdrückung von 
+Träger und einem Seitenband (Filter- o. 
+Phasenmethode)
+Filter: Quarz lässt nur Seitenband durch
+Phase: SSB Signalerzeugung über Phasenschiebernetzwerk
+Träger 50%, je Seitenband 25% Leistung
+Kenngrößen: Trägerunterdrückung, unterdrückt
+unerwünschtes Seitenband, Spitzenausgangsleistung
+Vorteil: bessere Leistungsausbeute (Reichweite),
+halbe Bandbreite, weniger störanfällig (Fading)
+}
+\card{46}{Prinzip, Arten und Kenngrößen der Pulsmodulation}{
+  PAM: Pulsamplitudenmodulation
+PDM: Pulsdauermodulation
+PFM: Pulsfrequenzmodulation
+PCM: Pulscodemodulation
+Kenngrößen: Modulationsgrad, Frequenzhub oder Codierung
+Anwendung bei hohen Frequenzen 
+}
+\card{47}{Erklären Sie die wichtigsten Anwendungen der digitalen Modulationsverfahren}{
+  FSK (Frequenzumtastung, 2 definierte Frequenzen): RTTY, Packet Radio
+  PSK (Phasenumtastung, Träger wird um $45^\circ$ oder $90^\circ$ verschoben, 2 oder 4 Zustände):
+  PSK 31, Datenübertragung
+  QAM: (Quadrature Amplitudenmodulation, Kombination von Amplituden- und Phasenmodulation): digitales Fernsehen, Datenübertragung
+}
+\card{48}{Erklären Sie die Begriffe CRC und FEC}{
+  CRC: Cyclic Redundancy Check: Mitsenden einer binären
+Prüfsumme, Empfänger  berechnet selbst und vergleicht,
+wenn ungleich, Anforderung Wiederholung
+(ARQ = automatic repeat request)
+FEC: Forward Error Correction mitsenden redundanter
+Information, erlaubt Korrektur von Fehlern bei
+Decodierung
+}
+\card{49}{Prinzip und Kenngrößen der Frequenzmodulation}{
+  Modulationssignal verändert die Grundfrequenz des Sendeoszillators
+Kenngrößen:
+Frequenzhub in kHz (Änderung Trägersignal, üblich 5 kHz). 
+Modulationsindex (Verhältnis Frequenzhub- Modulationsfrequenz)
+Lautstärke liegt in Frequenzauslenkung des Trägers
+FM auf 2m und 70 cm Band
+}
+\card{50}{Prinzip und Kenngrößen der Amplitudenmodulation}{
+  Modulationssignal verändert die Ausgangsleistung des Senders
+Kenngröße: Modulationsgrad 0%-100% (größer 100% führt
+zu Verzerrungen)
+Frequenz des Modulationssignals ergibt Bandbreite
+der Seitenbänder
+Lautstärke liegt in Amplitude des Trägers
+AFU auf KW praktisch nur mehr in SSB
+}
+\card{51}{Erklären Sie den Begriff Modulation (analoge und digitale Verfahren)}{
+  Modulation: Aufprägen eines niederfrequenten Signals
+auf einen  hochfrequenten Träger
+analog: Niederfrequentes Signal kann jeden Wert zwischen 
+Maximum und Minimum annehmen
+Digital: Niederfrequentes Signal kann nur 2 Zustände annehmen 
+0 oder 1 Verfahren ist mathematische Multiplikation
+}
+\card{52}{Oszillatoren - Grundprinzip, Arten}{
+  Ein Oszillator erzeugt ein Wechselspannungssignal gewünschter Frequenz u. Kurvenform, ist ein Verstärker bei dem ein Teil des Ausgangsignals wieder an Eingang zurückgeführt wird
+  Arten: VFO (variable frequency osc.) durch abstimmbaren Schwingkreis
+  X(C)O (xtal crystal osc.) Quarzoszillator nur in geringen Umfang zu verändern - hohe Güte \& Temperaturstabilität
+  VCO (voltage controlled osc.) Spannungsgesteuerter Oszillator
+}
+\card{53}{Erklären Sie den Begriff VCO}{
+  VCO: voltage controlled oscillator. spannungsgesteuerter Oszil.
+Aufbau: Dem frequenzbestimmenden LC (Resonanzschwingkr.)  
+wird eine Kapazitätsdiode parallel geschaltet. An die Diode wird
+eine variable Gleichspannung angeschlossen
+Diode ändert je nach Spannung die Kapazität, dadurch auch 
+Die Ausgangsfrequenz des Oszillators
+Anwendung: PLL Schaltung Superhet
+}
+\card{54}{Erklären Sie den Begriff PLL}{
+  PLL: phase locked loop
+Aufbau: Ausgangsfrequenz eines VCO wird über Frequenzteiler
+einem Phasenvergleicher zugeführt. Referenzfrequenz kommt 
+vom Quarzoszillator.
+Am Ausgang: veränderliche Gleichspannung, die die 
+Kapazitätsdiode des VCO steuert, dadurch wird der VCO immer
+auf die Sollfrequenz eingestellt.
+Anwendung: quarzstabile Frequenzen, wesentlich höher, als mit
+Quarz zu erzeugen
+Andere Frequenzen durch Änderung des Teilungsverhältnisses.
+}
+\card{55}{Erklären Sie den Begriff DSP}{
+  DSP: digital signal prozessing
+Realisierung der Aufgaben von Sendern, Empfängern, 
+Oszillatorn, Verstärkern, Filtern, Mischer, etc. durch
+Digitaltechnik
+Sampling des Analogsignals
+Umwandlung mit ADC (analog digital converter) in 
+einen digitalen Wert
+signal processing
+Umwandlung mit DAC (digital analog) in ein analoges
+Signal
+anti aliasing filter: Verhindern von zu hohen 
+Frequenzen am Eingang
+}
+\card{56}{Erklären Sie die Begriffe sampling, anti aliasing filter, ADC/DAC}{
+  sampling: Abtasten der Amplitude eines Signals
+in einer bestimmten Frequenz
+anti aliasing filter: Verhinderung am Eingang, dass
+zu hohe Frequenzen digitalisiert werden (Tiefpass)
+ADC/DAC: converter (digital analog bzw. analog digital)
+}
+\card{57}{Merkmale, Komponenten, Baugruppen eines Senders}{
+  Mikrofon, Verstärker, Oszillator
+Balance Modulator (liefert Seitenbänder aus AM vom Mikrofon)
+Quarzfilter (LSB oder USB)
+Mischer mit VFO auf HF
+Bandpass (nur HF, Spiegelfrequenzen wegfiltern)
+Verstärker: Treiber, Endstufe
+Anpassung an der Endstufe
+Tiefpass (Oberwellen wegfiltern)
+Antenne
+}
+\card{58}{Zweck von Puffer- und Vervielfacherstufen, Aufbau}{
+  Pufferstufe: Entkopplung des Oszillators von den 
+nachfolgenden Stufen, Aufbau wie ein sehr schwach
+gekoppelter Verstärker
+Vervielfacher: Eine stark übersteuerte Verstärkerstufe
+erzeugt viele Oberwellen. Am Ausgang filtert ein 
+Resonazkreis die gewünschte Oberwelle aus, 
+unterdrückt die anderen Oberwellen und die Grundwelle
+}
+\card{59}{Aufbau einer Senderendstufe, Leistungsauskopplung}{
+  Senderendstufe verstärkt das Signal auf die
+gewünschte Sendeausgangsleistung
+verstärkende Elemente: Röhren, Transistoren
+Leistungsauskopplung: Transformieren des 
+Hochfrequenzwiderstandes der verstärkenden 
+Elemente auf den Normwiderstand der 
+Senderschnittstelle (50 Ohm), dadurch optimale
+Leistungsabgabe
+Tiefpassfilter dient zur Oberwellenunterdrückung
+}
+\card{60}{Anpassung eines Senderausganges an eine symmetrische oder asymmetrische Antennenspeiseleitung}{
+  Optimale Leistungsübertragung: wenn 
+Senderschnittstelle und Speiseleitung bezüglich
+Wellenwiderstand und 
+Symmetrieeigenschaften übereinstimmen 
+stimmen Kenngrößen nicht überein: 
+Transformieren (Widerstand, Anpassung) 
+symmetrieren (mittels Balun)
+}
+\card{61}{Der Antennentuner, Wirkungsweise, 2 typische Beispiele}{
+  Antennentuner (Anpassung) dient zur 
+Resonanzabsimmung der Antenne
+Optimal an der Antenneschnittstelle 
+meistens aber bei Schnittstelle Senderausgang-
+Antennenkabel
+Sender erhält dadurch geforderten 
+Nennwiderstand (50 Ohm), dadurch erhält man
+die geforderte Nennleistung des Senders
+Fehlt Anpassung: Schutzschaltung regelt 
+Sendeleistung auf wenige Watt zurück
+}
+\card{62}{Antennenzuleitungen - Aufbau, Kenngrößen}{
+  Symmetrische: Bandkabel, Paralleldrahtleitung
+  Aufb: 2 Leiter, isol. Abstandh.
+  Unsymmetrische: Koaxkabel
+  Aufbau: Innenleiter, Dielektrikum, Außenleiter,Isol.
+  Hohlleiter: verlustarmer Transport von HF Energie
+  Aufbau: Rohre ohne Innenleiter, Querschn. 
+  Zusammenh. mit Wellenlänge (Kupfer, Alu. versilbert)
+  Kenngrößen: Impedanz, Wellenwiderst. 50 Ohm, Verkürzungsfaktor (Kabelkennwert), Belastbarkeit (alle Werte unabhängig v. Länge und Frequenz)
+  Dämpfung LÄNG. \& FREQUENZABH.
+}
+\card{63}{Erklären Sie den Begriff Balun. Aufbau, Verwendung und Wirkungsweise}{
+  Balun = balanced to unbalanced
+Verwendung: Anpassen einer symmetrischen Last an eine unsymmetrische und umgekehrt, z.B. Koaxkabel an Dipol 
+Wirkungsw.: eines der beiden gegenphasigen Signale wird mit Verzögerungsleitung oder einen Übertrager gleichsinnig zum anderen gedreht und zu diesem parallel geschaltet. Dadurch sinkt die Impedanz auf $\frac14$ ab und es erfolgt Anpassung der Wellenwiderstände.
+Wird nicht symmetriert, treten am Koax Mantelwellen auf, Schirmwirkung geht verloren, Kabel strahlt (Antenne)
+}
+\card{64}{Der Dipol - Aufbau, Kenngrößen und Eigenschaften}{
+  Dipol: Antenne aus 2  gleich langen Leiterhälften
+  Halbwellendipol: elektrische Gesamtlänge $\frac\lambda2$
+  Mittige Anspeisung: Widerstand 50 Ohm, dadurch 
+symmetrische Anspeisung durch Koax und Balun 
+leicht möglich
+Strahlungsdiagramm: Form einer 8 (Strahlungsminima
+ in der Antennenebene)
+alle linearen Antennenformen lassen sich auf Dipole
+(bzw. Kombinationen) zurückführen.
+Verwendete Formen: gestreckte Drahtdipole,
+abgewinkelte Dipole (inverted V)
+}
+\card{65}{Die Vertikalantenne - Aufbau, Kenngrößen und Eigenschaften}{
+  vertikale Aufstellung = polarisation
+Verwendung von Viertelwellenstrahlern
+Fehlende Strahlerhälfte vom Erdnetz/ Radials
+simuliert im Resonanzfall ca. 30 Ohm 
+Strahlungswiderstand 
+Horizontale Charakteristik ergibt Rundstrahler
+Vertikale Charakteristik abhängig von
+Bodeneigenschaften
+Verwendung: Mobilantennen (Fahrzeug = Gegengewicht)
+Kenngrößen: Wirkungsgrad, vertikaler Abstrahlwinkel,
+Bandbreite
+}
+\card{66}{Gekoppelte Antennen - Aufbau, Kenngrößen und Eigenschaften}{
+  Verbindung mehrere Dipole über Koppelleitungen
+(Gruppenantenne)
+dadurch haben alle Dipole die gleiche Abstrahlphase,
+ausgeprägte Richtwirkung 
+Gewinnverdoppelung (3 dB) bei jeder Dipolzahlverdoppelung
+Reflektor hinter Gruppenantenne erhöht Gewinn
+Kenngrößen: Frequenz(bereich), Impedanz, Gewinn, 
+Öffnungswinkel (horizontal \& vertikal),
+Rück- Seitendämpfung, Nebenkeulen
+}
+\card{67}{Strahlungsdiagramm einer Antenne}{
+  zeigt die räumliche Verteilung des abgestrahlten
+Feldes (Energiedichte Verteilung)
+Unterschied Rundstrahl / Richtantenne
+Bezugsfläche: Erdoberfläche
+Horizontaldiagramm / Vertikaldiagramm
+Kenngrößen: vertikaler Erhebungs- Abstrahlwinkel
+Horizontaler Öffnungswinkel (3dB Abfall-Winkel)
+Haupt- Nebenkeulen
+dB Vor- Rückwärts-Verhältnis (Haupt-Rückkeule)
+}
+\card{68}{Die Yagi-Antenne - Aufbau, Kenngrößen und Eigenschaften}{
+  Ergänzung eines aktiv angespeisten resonanten 
+Halbwellendipol durch 2 oder mehrere
+Halbwellenstrahler: Yagi (Uda) Antenne (einseitige
+Richtwirkung)
+Reflexion der Strahler durch Reflektor
+Verstärkung der Strahlen durch Direktoren
+Je mehr Direktoren, desto größere Richtwirkung
+(max. 18 dB)
+Kenngrößen: Frequenz(bereich), Impedanz, Gewinn,
+Anzahl Elemente, Öffnungswinkel, Rück- 
+Seitendämpfung, Nebenkeulen
+}
+\card{69}{Breitbandantennen - Aufbau, Kenngrößen und Eigenschaften}{
+  Breitbandantennen sind gekennzeichnet, dass
+innerhalb eines definierten Frequenzbereichs die
+Antenneneigenschaften nicht ändern
+speziell Fußpunktimpedanz (Schnittstellenwiderst.)
+Bandbreiten von 1:2 bis 1:10 erzielbar
+Realisierung:
+Dicke Antennenelemente (Rohr- Reußenform – mechanische
+Grenzen)
+Belastung der Ant., um linearen Stromfluss
+herbeizuführen (Verluste von bis zu 50%)
+aufwendige geometrische Bauform (LogPer)
+Kenngrößen: Bandbreite, Wirkungsgrad
+}
+\card{70}{Die Parabolantenne - Aufbau, Kenngrößen und Eigenschaften}{
+  parabolförmige Reflektorwand hinter Strahler
+im Brennpunkt des Paraboles
+ausgeprägte Richtwirkung und 
+Rückwärtsdämpfung
+Gewinn deutlich über 30 %
+Kenngrößen: Frequenz(bereich), Impedanz
+Gewinn, Öffnungswinkel der Hauptkeule,
+Rückdämpfung, Nebenkeulen, 
+Flächenwirkungsgrad
+}
+\card{71}{Erklären Sie den Begriff Wellenwiderstand}{
+  Kenngröße, die angibt mit welchen Widerstand 
+Eine Leitung abgeschlossen werden muss
+Charakteristisch für hochfrequente Leitungen,
+von L und C Belag abhängig
+Speiseleitung ist fortgesetzte Kombination von 
+Parallelkapazitäten und Reiheninduktivitäten
+Impedanz vom  Durchmesserverhältnis zwischen
+Innen- und Außenleiter, bleibt auf allen Längen
+Konstant
+}
+\card{72}{Stehwellen und Wanderwellen, Ursachen und Auswirkungen}{
+  Impedanz- richtiger Abschluss, d. hochfrequenten
+Schnittstelle (Antenne, Senderausg.): nur 
+Wanderwellen, Leistungstransport eine Richtung
+Fehlanpas.: Stehwellen, da ein Teil der Leistung
+reflektiert (Stehwellenverh., SWR, ideal 1, 
+schlecht unendlich) = Überlastung der Endstufe,
+zusätzlicher Leistungsverlust
+Stimmen Symmetrieeigenschaften an einer Schnittstelle
+nicht überein, treten auf  d. Leitung (Koax) 
+Mantelwellen auf, die Leitung beginnt zu strahlen
+}
+\card{73}{Strahlungsfeld einer Antenne, Gefahren}{
+  FUA:   beachten der einschlägigen Vorschriften
+der EU, + nationale Normen und Rechtsvorschriften
+ÖNORM S 1120 (ÖVE/ÖNORM E 8850)
+Grenzwerte für Exposition der Bevölkerung durch
+Elektromagnetische Felder (EMF)
+Technische Maßnahmen zur Minderung der Gefahren:
+Vergrößerung des Abstandes zur Antenne
+(Montagehöhe)
+Absenkung/Vermeidung der Emission (QRP, Abschalten, 
+Anordnung der Antenne)
+Beschränkung des Aufenthalts- Expositionsdauer
+}
+\card{74}{Aufbau und Kenngrößen eines Koaxialkabels}{
+  Aufbau: zentraler Innenleiter aus Kupfer oder versilbert 
+Dielektrikum aus Kunststoff, Teflon, etc.
+Außenleiter aus Kupfergeflecht, Folie, Festmantel
+Kunststoffisolation
+Kenngrößen: Leitungswellenwiderstand,
+Dämpfung in dB/100m (frequenzabhängig),
+Schirmungsfaktor, Verkürzungsfaktor 
+Mechanische: kleinster Biegungsradius, 
+Zugfestigkeit
+}
+\card{75}{Erklären Sie den Begriff Dezibel am Beispiel der Anwendung in der Antennentechnik}{
+  Dezibel in der Antennentechnik beschreibt
+Das Verhältnis zweier Leistungen (oder Spannungen)
+und dient Vergleichen in Antennentechnik
+Antenne mit 6 dB Gewinn über Dipol strahlt in
+Hauptstrahlrichtung die 4-fache Leistung des 
+Dipol aus, 13 dB die 20-fache, 3 dB 2-fache
+Leistung, 10 dB 10-fache 
+Spannungsverhältnis:
+6 dB 2-fache Spannung, 12 dB 4- fache-, 20 dB
+10 fache Spannung.
+}
+\card{76}{Was versteht man unter Richtantennen, Anwendungsmöglichkeiten}{
+  eine oder mehrere Vorzugsrichtungen im
+Antennendiagramm 
+Sendeleistung wird  gezielt gebündelt (Gewinn)
+Ausblenden von Störungen
+Bauformen: Yagi, Dipolzeilen/flächen, 
+logarithmisch periodische Antennen, V-Antennen,
+Rhombic Antennen
+Kenngrößen: Frequenz(bereich), Gewinn, 
+Öffnungswinkel, Rück- Seitendämpfung,
+Nebenkeulen, Abstrahlwinkel (je höher, umso
+Flacher)
+}
+\card{77}{Welche Kenngrößen von Antennen kennen Sie und wie können sie gemessen werden?}{
+  Resonanzfrequenz: Dipmeter,  MHz
+Fußpunktimpedanz: Impedanzmessbrücke,  Ohm
+Gewinn \& Strahlungsdiagramm: Messsender, 
+Pegelmessgerät, Referenzantenne,   dB, dBi
+Bandbreite: Stehwellenmessgerät,   kHz, o. W
+Maximal zulässige Leistung: ergibt sich aus 
+Stärke \& Material der Elemente \& Bauteile, W
+Kenngrößen: Datenblatt
+}
+\card{78}{Dimensionieren Sie einen Halbwellendipol für f = 3.6~MHz ; V = 0.97 (Werte sind variabel)}{
+  \[
+    \text{Länge} = \frac{\text{Verkürzungsfaktor}\cdot 300}{2 \times \text{frequency (in MHz)}}
+  \]
+              2 x Frequenz (in MHz)
+
+Verkürzungsfaktor: je dicker, desto kürzer die Welle/ Antenne
+}
+\card{79}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung: 200 Watt; Dämpfung der Antennenleitung: 6 dB/100m; Kabellänge : 50 m; Gewinn: 10 dB (Werte sind variabel)}{
+  effektive Kabel-Dämpfung = 3 dB
+an der Antenne kommt demnach halbe
+Leistung an = 100 W
+Gewinn = 10 fach
+Effektive Strahlungsleistung = 1000 W
+Strahlungsleistung für einzuhaltende 
+Grenzwerte wichtig!
+}
+\card{80}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung 100 Watt; Dämpfung der Antennenleitung 12 dB/100m; Kabellänge 25 m; Rundstrahlantenne mit Gesamtwirkungsgrad von 50 \% (Werte sind variabel)}{
+  effektive Kabeldämpfung = 3 dB
+an der Antenne kommt demnach halbe 
+Leistung an = 50 W
+Wirkungsgrad = 50 %
+Effektive Strahlungsleistung =  25 Watt
+Strahlungsleistung für einzuhaltende
+Grenzwerte wichtig!
+}
+\card{81}{Langdrahtantennen - Aufbau, Kenngrößen und Eigenschaften}{
+  linear, länger als eine Wellenlänge
+Gewinn gegenüber Halbwellendipol
+Strahlungsdiagr. zeigt Vorzugsrichtungen 
+Annäherung der Antennenachse
+Endspeisung hohe Fußpunktimpedanz
+Antenne mit Koaxspeisung, aber ohne Zusatzanpassung,
+darf nicht beliebig lang sein. Lösung: Halbwellendipol
+mit Mitteleinspeisung (Imped. 50 Ohm)
+Beispiel: gestreckter Dipol (b. Äste gleich lang),
+offene Speiseleitung
+Zeppelinantenne: Halbwellendipol, an einem Ende
+frei, erfordern Tuner
+}
+\card{82}{Zweck von Radials / Erdnetz bei Vertikalantennen - Dimensionierung}{
+  Zweck: fehlende Dipolhälfte zu ersetzen, ist notwendig
+damit Antenne zu geschlossenen Stromkreis wird
+mind. 20 radial verlaufende Drähte eingraben
+Im Zentrum verbunden, an einen Pol der Speiseleitung
+Angeschlossen
+Andere Pol der Leitung wird an einen 
+Viertelwellenstrahler (Monopol) angeschlossen
+Besonders flacher Abstrahlwinkel, Lang, Mittelwelle
+}
+\card{83}{Blitzschutz für Antennenanlagen}{
+  Standrohr und deren Ableitungen (Antennenkabel)
+Müssen über geeignete Komponenten an den Blitzschutz
+Angeschlossen bzw. geerdet werden
+Ringerder, Banderder (3m lang; 0,5 m tief,
+Staberder 1,5 m )
+Arbeiten nur durch konzessionierte Blitzschutzfirma
+ausführen
+}
+\card{84}{Sicherheitsabstände bei Antennen}{
+  auch wenn nur zum Empfang
+elektrische und mechanische Sicherheit muss 
+gewährleistet werden, Errichter ist für alle 
+Schäden haftbar
+mehrere Antennen auf einem Dach dürfen 
+sich nicht behindern
+Ab einer gewissen Höhe als Bauwerk 
+Eingestuft: Baupolizeiliche Genehmigung 
+Elektromagnetische Verträglichkeit (Umwelt)
+Strahlungsfeld 
+}
+\card{85}{Erklären Sie den Begriff ,,elektromagnetisches Feld``. Kenngrößen?}{
+  Entsteh. d. eklektrom. Feldes u. seiner Fortpfl.
+beruht auf Gesetzmäßigkeit (Maxwell)
+Änderung elektrisches Feld erzeugt magnetisches 
+Änder. Magneti. Feld erzeugt elektr.
+abhä. von Antennenbauform wird zuerst elektrische
+o. magnet. Komponente angeregt, bzw. ausgenützt
+Kenngröße: Ausbreitungsgeschwindigk. c=300.000km/sec
+Ausbreitungsrichtung
+Wellenlänge (Lamda) wie weit 1 Schwingungsperiode
+Polarisation bez. auf Erdoberfl. (vertikal, horizontal, 
+zirkular)
+Feldstärke V/m
+}
+\card{86}{Begriff elektrisches und magnetisches Feld; Abschirmmaßnahmen für das elektrische bzw. das magnetische Feld?}{
+  elektrisches Feld: bildet sich zwischen den Platten
+eines Kondensators, elektr. Feldstärke V/m
+magnetisches Feld: um einen stromdurchflossenen Leiter,(Tesla)
+Abschirmung elektr. Feld: Abschirmung Faraydscher Käfig,
+Kenngröße: Schirmfaktor 
+Abschirm. magnetisches Feld: Gleichfelder nur unvollständig
+durch ferromagnetische Stoffe (Permeabilität) 
+Wechselfelder durch elektr. gut leitende Materialien
+(Kupferblech, Kurzschlussgefahr)
+}
+\card{87}{Erklären Sie den Begriff ,,EMV`` und dessen Bedeutung im Amateurfunk}{
+  Elektromagnetische Verträglichkeit
+Verhalten von elektrischen und 
+elektronischen Geräten gegenüber
+elektromagnetischen Feldern
+Beeinflussung (Störung) anderer 
+Kommunikationsanlagen und elektrischen
+und elektronischen Geräten
+}
+\card{88}{Erklären Sie den Begriff ,,EMVU`` und dessen Bedeutung im Amateurfunk}{
+  Elektromagnetische Umweltverträglichkeit
+verhalten von biologischen Gewebe gegenüber
+elektromagnetischen Feldern
+mögliche Gefährdung des Menschen
+Biologisches Gewebe erwärmt sich durch
+absorption der Felder (kontrolliert: Mikrowellenherd) z.B.
+Mobiltelefon (Langzeitfolgen?)
+abhängig von der Frequenz von Wechselferldern
+Kommt es zu Resonanz (Magnetresonanz)
+kritische Kenngröße: Abstand zur Strahlungsquelle 2,5 m
+Strahlungsleistung
+Frequenz
+}
+\card{89}{Erklären Sie den Begriff ,,Trap``, Aufbau und Wirkungsweise}{
+  heißt „Falle"
+Ein Dipol kann mit Traps zu einer Mehrbandantenne
+gemacht werden.
+Parallelresonanzkreis, sperrt für höhere Frequenz,
+wirkt für tiefere Frequenz als Verlängerungsspule
+40m/80m Antenne: 32,9 m 7Mhz Trapabstnd 16,5 m
+Anwendung : W3DZZ Antenne, Mehrband Yagi, 
+VK2AOU Mehrband Quad Antenne
+Einsatz auch in Empfängern und Sendern als
+Sperrkreis, Unterdrückung unerwünschter Frequenzen
+}
+\card{90}{Was versteht man unter einem Hohlraumresonator, Anwendung.}{
+  Hohlraumresonator verwendet Resonanz zur
+Verstärkung einer Welle (GHz Bereich)
+Koaxiale Ankopplung
+Verwendung als Schwingkreis oder Filter
+Einbringen von Leitern oder Nichtleitern
+verändert Resonanzfrequenz, Feinabstimmung
+mit Schrauben die in den Hohlraum
+hineinreichen
+Anwendung: z.B.: Mikrowellenherd, Orgelpfeifen,
+Kamin bei Sturm
+}
+\card{91}{Funkentstörmaßnahmen im Bereich Stromversorgung der Amateurfunkstelle}{
+  korrekte Verdrosselung und Abblockung der
+Netzzuleitungen kann Abfließen von HF in
+Das Stromnetz verhindern
+Breitbandnetzfilter
+Typische Werte:
+Induktivität 10-50mH
+Kapazität 10-100 nF
+}
+\card{92}{Funkentstörmaßnahmen bei Beeinflussung durch hochfrequente Ströme und Felder}{
+  Entkoppelung der Antennen
+Einbau von Hochpass- Tiefpassfiltern
+verhinderung von HF Einströmung in
+Lautsprecher und NF Leitungen durch
+Ferritdrosseln
+Abschirmung des beeinflussten Gerätes
+unerwünschte Ausbreitung von HF durch
+Stromnetz, Speiseleitung, Antenne,
+Einströmung/ Einstrahlung
+}
+\card{93}{Was sind Tastklicks, wie werden sie vermieden?}{
+  Sendertastung eines Morsesignals zu hart,
+rechteckförmig, entsteht Vergrößerung der
+Bandbreite
+kann durch RC – Glieder weicher gemacht
+werden (kleinere Bandbreite)
+}
+\card{94}{Erklären Sie die Begriffe: ,,Unerwünschte Aussendungen``, ,,Ausserbandaussendungen``, ,,Nebenaussendungen`` (spurious emissions)}{
+  unerwünschte Aussendung: schlechte Träger
+und Seitenbandunterdrückung beim SSB Sender,
+ Bandbreitenüberschreitung bei AM/FM
+Sender durch Übermodulation
+Ausserbandaussendungen: entstehen, durch
+nichtunterdrückte Oberwellen
+Nebenaussendungen: entstehen wenn das
+Sendesignalk durch Mischvorgang gebildet und das
+unerwünschte Mischprodukt nicht korrekt ausgefiltert 
+wird bzw. durch Selbsterregung einer Verstärkerstufe
+im Sender
+}
+\card{95}{Erklären Sie den Begriff: ,,Splatter`` - Ursachen und Auswirkungen}{
+  verursacht durch Übermodulation/Über-
+steuerung bei AM/SSB Sendern
+(Fehlbedienung)
+Sender wird in nicht linearen Zustand
+Ausgesteuert erhöhte Bandbreite, schlechte
+Verständlichkeit
+Vermeidung!  Korrekte Bedienung
+}
+\card{96}{Erklären sie den Begriff ,,schädliche Störungen``}{
+  Störung welche die Abwicklung des Funkverkehrs
+bei einem anderen Funkdienst Navigation FD,
+Sicherheits FD beeinträchtigt, behindert, oder
+wiederholt unterbricht
+AMF der in Übereinstimmung der Vorschriften
+wahrgenommen wird, kann auch von schädlichen
+Störungen betroffen sein
+}
+\card{97}{Prinzipieller Aufbau einer Relaisfunkstelle und einer Bakenfunkstelle}{
+  Relais: Sender und Empfänger auf 
+unterschiedlichen Frequenzen, gemeinsame
+Antenne, hochgelegener Standort
+Empfangssignal moduliert den Sender
+daher  große Reichweite mit UKW
+Bake: Hochgelegener Standort, zur
+Beobachtung der Ausbreitungsverhältnisse
+}
+\card{98}{Definieren Sie den Begriff ,,Senderleistung``}{
+  AFV §1: Sendeleistung: die der Antennespeiseleitung zugeführte Leistung Messgröße in Watt
+}
+\card{99}{Definieren Sie den Begriff ,,Spitzenleistung``}{
+  Spitzenleistung ist die Effektivleistung, die ein
+Sender während einer Periode der 
+Hochfrequenzschwingung während der höchsten
+Spitze der Modulationshüllkurve unverzerrt
+Der Antennenspeiseleitung zuführt
+Diese Spitzenleistung ist identisch mit dem
+Begriff PEP (peak envelope power)
+}
+\card{100}{Definieren Sie den Begriff ,,belegte Bandbreite``}{
+  AFV §1 Bezeichnet die  Frequenzbandbreite,  bei der die unterhalb ihrer unteren und oberhalb ihrer
+oberen Frequenzgrenzen ausgesendeten mittleren Leistungen 0,5 % der gesamten mittleren Leistung einer gegebenen Aussendung betragen
+
+Kenngröße: \SI{}{\kilo\Hz}
+\SI{0.5}{\percent} der ge. mittl. Leistung = 1/200 d. ges. 
+mittl. Leistung  = 1/100 (-20dB) davon die $\frac12$
+somit \SI{-23}{\dB}  bezogen auf gesamte mittlere
+Leistung.
+oberen \& unteren Frequenzgr. ergeben
+sich aus dem Modulationspr.  (SSB)
+}
+\card{101}{Definieren Sie den Begriff ,,Interferenz in elektronischen Anlagen``; beschreiben Sie Ursachen und Gegenmassnahmen}{
+  Interferenz bedeutet Überlagern
+  Überlagern einer unerwünschten Aussendung
+  Durch unerwünschte, störende Aussendungen (meist mehrere) kann schädliche Störungen verursachen
+  Ursache im Aufbau/Konzept der Empfangsanlage zu suchen
+  Gegenmaßnahmen: selektive Eingangsfilter, hochwertige Filter im ZF Bereich
+}
+\card{102}{Erklären Sie die Begriffe ,,Blocking``, ,,Intermodulation``}{
+  Blocking: extrem starkes Fremdsignal abseits
+  Der Empfangsfrequenz übersteuert Vorstufe derart, dass kein Empfang schwächerer Signale möglich ist
+  Intermodulation: unbeabsichtigte Mischung in einer Empfängerstufe mit 2 oder mehren Signalen;
+  Entstehung von unerwünschten Mischprodukten, vortäuschen von nicht existenten Signalen; zu unterscheiden von unerwünschten Nebenausstrahlungen, die durch Intermodulation im Sender entstehen
+}
+\card{103}{Welche Gefahren bestehen für Personen durch den elektrischen Strom?}{
+  je nach Hautfeuchtigkeit mehr oder weniger
+  gute Leitfähigkeit
+  Spannungen ab \SI{50}{\volt} (Effektivwert) gelten als gefährlich
+  Verbrennungen, Herzflimmern, Herzstillstand
+}
+\card{104}{Was ist beim Betrieb von Hochspannung führenden Geräten zu beachten?}{
+  allseitig geschlossener Hochspannungskäfig mit Deckelschalter
+  Entladewiderstände über Elektrolytkondensator
+  Vor jedem Eingriff: Netzstecker ziehen, Entladen der Elkos abwarten
+  niemals im eingeschalteten Zustand daran arbeiten
+}
+\card{105}{Definieren Sie die Gefahren durch Gewitter für die Funkstation und das Bedienpersonal, beschreiben Sie Vorbeugemassnahmen}{
+  durch hoch angebrachte Antennenanlage Gefahr
+  einer Primärblitzschlages (direkt in Antenne)
+  Sekundärblitzschlag schlägt in 230 V Leitung ein 
+  Und beschädigt durch induktive Spannungsspitzen
+  Angeschlossene Geräte
+  Vorbeugungsmaßnahmen: korrekter Blitzschutz
+  Beim Herrannahen eines Gewitters Antennen 
+  erden, Antennenkabel vom Gerät trennen,
+  Funkbetrieb einstellen
+}
 
 \def\chap{Technische Grundlagen \class{3,4}}
 
