@@ -2849,25 +2849,27 @@ oberen Frequenzgrenzen ausgesendeten mittleren Leistungen \SI{0,5}{\percent} der
       \end{itemize*}
   \end{description}
 }
-\card{04}{Kenngrößen einer Gleichstromquelle. Kenngrößen einer Wechselstromquelle - Gefahrengrenze?}{
-  \small
-  \begin{description}
-    \item[Gleichstrom] Die Spannung ist konstant, Polarität verändert sich nicht.
+\card{04}{Kenngrößen einer Gleichstromquelle}{
+  Die Spannung ist konstant, Polarität verändert sich nicht.
 
-      \begin{itemize*}
-        \item Spannung
-        \item Strombelastbarkeit der Quelle
-        \item Kapazität in Ah (Batterie, Akkus)
-      \end{itemize*}
-    \item[Wechselstrom] Spannung und Polarität ändern sich laufend, Kurvendarstellung 
+  \begin{itemize}
+    \item Spannung
+    \item Strombelastbarkeit der Quelle
+    \item Kapazität in Ah (Batterie, Akkus)
+  \end{itemize}
 
-      \begin{itemize*}
-        \item Spannung (Amplitude)
-        \item Frequenz
-        \item Kurvenform (Signalform)
-        \item Strombelastbarkeit der Quelle
-      \end{itemize*}
-  \end{description}
+  Die Gefahrengrenze liegt bei 25~V, Lebensgefahr besteht bei 40~V.
+}
+\card{05}{Kenngrößen einer Wechselstromquelle - Gefahrengrenze?}{
+  Spannung und Polarität ändern sich laufend, Kurvendarstellung
+
+  \begin{itemize}
+    \item Spannung (Amplitude)
+    \item Frequenz
+    \item Kurvenform (Signalform)
+    \item Strombelastbarkeit der Quelle
+  \end{itemize}
+
   Die Gefahrengrenze liegt bei 25~V, Lebensgefahr besteht bei 40~V.
 }
 \card{06}{Nennen Sie die wichtigsten Eigenschaften von Ohm'schen Widerständen, Induktivitäten und Kapazitäten.}{
@@ -2880,38 +2882,29 @@ oberen Frequenzgrenzen ausgesendeten mittleren Leistungen \SI{0,5}{\percent} der
 }
 \card{07}{Was verstehen Sie unter dem Begriff ,,Fehlanpassung``?}{Eine Fehlanpassung liegt vor, wenn die Anpassungsbedingungen bei Strom-, Spannungs- und Leistungsanpassung nicht erfüllt sind.}
 \card{08}{Was verstehen Sie unter dem Begriff ,,Transformation``?}{Transformation ist der allgemeine Begriff für ,,Wandlung`` (zB. Spannungstransformation, Impedanztransformation). Auf- oder Abwärtstransformation von Wechselspannungen in der Stromversorgungs-, Niederfrequenz- und Hochfrequenztechnik.}
-\card{09}{Prinzipieller Aufbau eines Kommunikationssystems. Erläutern Sie die Wirkungsweise von Mikrophon und Lautsprecher bzw. Kopfhörer.}{
-  \small
-  \begin{itemize*}
-    \item Signal- Eingabegerät (Mikrophon)
+\card{09}{Prinzipieller Aufbau eines Kommunikationssystems}{
+  \begin{itemize}
+    \item Signal-Eingabegerät (Mikrophon)
     \item Sender
     \item Antennenanpassgerät
     \item Antenne
     \item Empfänger
-    \item Signal Ausgabegerät (Kopfhörer)
-  \end{itemize*}
-  \vspace{10pt}
-
-  Ein Mikrophon ist ein Schallwandler, der Schall in elektrische Spannungsänderungen als Signal umwandelt. Ein Wandler - gekoppelt mit einer Membran - generiert Tonfrequenz-Wechselspannung oder eine pulsierende Gleichspannung. Ein Lautsprecher ist ein Wandler der elektrische Signale in Schall (Ton) umwandelt. Tonerzeugung in für Menschen hörbaren Frequenzbereichen.
+    \item Signal-Ausgabegerät (Kopfhörer)
+  \end{itemize}
+}
+\card{10}{Erläutern Sie die Wirkungsweise von Mikrophon und Lautsprecher bzw. Kopfhörer.}{
+  Ein Mikrophon ist ein Schallwandler, der Schall in elektrische Spannungsänderungen als Signal umwandelt. Ein Wandler (gekoppelt mit einer Membran) generiert Tonfrequenz-Wechselspannung oder eine pulsierende Gleichspannung. Ein Lautsprecher ist ein Wandler der elektrische Signale in Schall (Ton) umwandelt. Tonerzeugung in für Menschen hörbaren Frequenzbereichen.
 }
 \card{11}{Prinzipieller Aufbau eines Senders}{
   \small
-  \begin{minipage}{0.4\textwidth}
-  \begin{itemize}
+  \begin{itemize}\itemsep-2pt
     \item Oszillator (CO oder VFO)
     \item Modulator
     \item Pufferstufe
-  \end{itemize}
-  \end{minipage}
-  \begin{minipage}{0.5\textwidth}
-  \begin{itemize}
     \item Frequenzvervielfacher
     \item Treiber
     \item Endstufe
   \end{itemize}
-  \end{minipage}
-  \vspace{10pt}
-
   Moderne Sender arbeiten nach dem Überlagerungsprinzip, allerdings verläuft der Signalweg in umgekehrte Richtung. Viele Baugruppen sind für das Senden und Empfangen nutzbar, deshalb ist dieses Konzept in Sendeempfängern (,,Transceiver``) verbreitet.
 }
 \card{12}{Funktionsprinzip des Oszillators}{
@@ -2923,9 +2916,12 @@ oberen Frequenzgrenzen ausgesendeten mittleren Leistungen \SI{0,5}{\percent} der
   Die einfachsten Bauweisen bestehen aus einem Filter, HF-Verstärker, Demodulator, NF-Verstärker.
   Demodulator bezeichnet eine Baugruppe, die der Wiedergewinnung des Modulationssignals aus dem HF-Signal dient. Je nach Modulationsart ist der Demodulator unterschiedlich aufgebaut.
 }
-\card{14}{Prinzip des Überlagerungsempfängers. Was verstehen Sie unter dem Begriff Zwischenfrequenz?}{
-  Bandfilter; Verstärkung im HF-Verstärker; Signale werden im Mischer mit Signal eines VFO gemischt; Filter wird ZF herausgefiltert und zu ZF Verstärker; Produktdetektor erfolgt Mischung mit Signal des BFO; Aus Mischprodukt wird NF-Signal verarbeitet. Über NF Verstärker und NF Endstufe zu Lautsprecher.
-  Mischung von zwei HF-Signalen, entstehen 2 neue Signale (Summe oder Differenz). Ein Mischprodukt kann gefiltert werden und weiter verarbeitet- Zwischenfrequenz} % TODO
+\card{14}{Prinzip des Überlagerungsempfängers}{
+  Eine Antenne nimmt das Signal entgegen und übergibt es einem HF-Verstärker. Zugleich bringt ein abstimmbarer Oszillator ein Signal auf der gewünschten Frequenz ein. Ein Mischer mischt diese Signale indem er Addition und Subtraktion durchführt. Das Ergebnissignal wird gefiltert, verstärkt, demoduliert und schließlich in einem NF-Verstärker verstärkt bevor es über einen Lautsprecher ausgegeben wird.
+}
+\card{15}{Was verstehen Sie unter dem Begriff Zwischenfrequenz?}{
+  Wenn man zwei hochfrequente Signale mischt, entstehen immer zwei neue Signale, deren Frequenzen sich aus der Summe und der Differenz der Ausgangsfrequenzen ergibt (,,Mischprodukte``). Eines der beiden Mischprdukte kann ausgewählt werden (,,Filter``) und als ,,Zwischenfrequenz`` in Überlagerungsempfängern weiter verarbeitet werden.
+}
 \card{16}{Was verstehen Sie unter dem Begriff Modulation?}{
   Modulation ist ein zentraler Begriff jeder technischen Form von Nachrichtenübertragung. Man muss zwischen dem Träger, der dauernd ausgesandt wird (zB. elektromagnetische Strahlung), und dem eigentlichen Signal, das mittels des Trägers übertragen werden soll, unterscheiden. Modulation bezeichnet den Vorgang, bei dem einen hochfrequenten Träger ein NF Signal aufgeprägt wird. Es gibt analoge und digitale Verfahren der Modulation.}
 \card{17}{Kenngrößen der Amplitudenmodulation}{
@@ -2947,9 +2943,10 @@ oberen Frequenzgrenzen ausgesendeten mittleren Leistungen \SI{0,5}{\percent} der
       Modulationsindex von $\frac53 = 1,7$
   \end{description}
 }
-\card{19}{Definieren Sie den Begriff ,,belegte Bandbreite``. Arten und Vorteile der Einseitenbandmodulation?}{
-  \small
+\card{19}{Definieren Sie den Begriff ,,belegte Bandbreite``}{
   Jene Frequenzbandbreite, bei der die unterhalb und oberhalb ihrer Frequenzgrenzen ausgesendeten mittleren Leistungen \SI{0,5}{\percent} der gesamten mittleren Leistung einer gegebenen Aussendung betragen.
+}
+\card{20}{Arten und Vorteile der Einseitenbandmodulation?}{
   Der Vorteil der Einseitenbandmodulation liegt in der weit günstigeren Leistungausbeute und der halben Bandbreite. Beides ergibt eine geringere Störanfälligkeit der Signalübertragung.
 
   Methoden:
@@ -3004,17 +3001,18 @@ oberen Frequenzgrenzen ausgesendeten mittleren Leistungen \SI{0,5}{\percent} der
     \item Oszillatoren
   \end{itemize}
 }
-\card{24}{Was versteht man unter ,,AGC`` und ,,AFC``? Erklären Sie die Empfängerkenngrößen - Empfindlichkeit, Eigenrauschen, Empfangsmischprodukte}{
-  \footnotesize
+\card{24}{Was versteht man unter ,,AGC`` und ,,AFC``?}{
   \begin{description}
     \item[AGC] Lautstärke des NF-Signals eines Empfängers konstant gehalten. Notwendig, da Amplituden von Antenne kommende Signale Bereich von \SI{120}{\dB} übersteigen können.
     \item[AFC] Aus FM Demodulator Nachstimmspannung gewonnen, zur Nachstimmung der Oszillator-Frequenz,Schwankungen Empfangsfrequenz ausgeglichen.
   \end{description}
-  \begin{enumerate}
-    \item kleinster Signalpegel Empfangen werden kann
-    \item Rauschquellen aller Bauteile, kein Eingangssignal
-    \item Empfangsfrequenz gemischt- 2 Mischprodukte entstehen
-  \end{enumerate}
+}
+\card{25}{Erklären Sie die Empfängerkenngrößen - Empfindlichkeit, Eigenrauschen, Empfangsmischprodukte}{
+  \begin{description}
+    \item[Empfindlichkeit] kleinster Signalpegel der empfangen werden kann (= MDS, minimal detectable signal, Signal das mit einem S/N Wert von \SI{3}{\dB} feststellbar ist)
+    \item[Eigenrauschen] Rauschquellen aller Bauteile, wenn kein Eingangssignal vorliegt
+    \item[Empfangsmischprodukte] Empfangsfrequenz gemischt - 2 Mischprodukte entstehen
+  \end{description}
 }
 \card{26}{Was versteht man unter dem S/N - Verhältnis?}{
   Das Zahlenverhältnis von Signalpegel zu Rauschpegel. S/N wird in dB angegeben und auch zur Messung der Grenzempfindlichkeit von Empfängern benützt.
