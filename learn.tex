@@ -2551,22 +2551,32 @@ Spannung (U) und dem durch den Widerst. fließenden Strom (I) wieder.
   \]
   Im Allgemeinen $\lambda = \frac{c}{f}$, aber Antennenlänge soll $\frac\lambda2$ betragen. Weiters nutzen wir die Praktikerformel $\SI[math-rm = \mathnormal, parse-numbers = false]{\lambda}{\metre} = \frac{300}{\SI[math-rm = \mathnormal, parse-numbers = false]{f}{\mega\Hz}}$. Verkürzungsfaktor hängt von Drahtstärke (je dicker, desto kleiner) und Isoliermantel ab.
 }
-\card{79}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung: \SI{200}{\watt}; Dämpfung der Antennenleitung: 6 dB/\SI{100}{\metre}; Kabellänge : 50 m; Gewinn: \SI{10}{\dB} (Werte sind variabel)}{
-  effektive Kabel-Dämpfung = 3 dB
-an der Antenne kommt demnach halbe
-Leistung an = \SI{100}{\watt}
-Gewinn = 10 fach
-Effektive Strahlungsleistung = \SI{1000}{\watt}
-Strahlungsleistung für einzuhaltende 
-Grenzwerte wichtig!
-}
-\card{80}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung \SI{100}{\watt}; Dämpfung der Antennenleitung \SI{12}{\dB}/\SI{100}{\metre}; Kabellänge \SI{25}{\metre}; Rundstrahlantenne mit Gesamtwirkungsgrad von \SI{50}{\percent} (Werte sind variabel)}{
+\card{79}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung: \SI{200}{\watt}; Dämpfung der Antennenleitung: \SI{6}{\dB}/\SI{100}{\metre}; Kabellänge: \SI{50}{\metre}; Gewinn: \SI{10}{\dB}d (Werte sind variabel)}{
+  \item
+  Da Gewinn in dBd gegeben ist, ist ERP zu berechnen.
+
   \item
   effektive Kabeldämpfung = $-6\cdot (50/100) = \SI{-3}{\dB}$ \\
   daher Leistungsfaktor = $0.5$ \\
   daher Leistung an Antenne = $\SI{200}{\watt} \cdot 0.5 = \SI{100}\watt$ \\
   Antennengewinn als Leistungsfaktor = $\SI{10}{\dB} \Rightarrow 10$ \\
   $\text{ERP} = \SI{100}{\watt} \cdot 10 = \SI{1000}{\watt}$
+
+  \item
+  Strahlungsleistung ist für einzuhaltende Grenzwerte wichtig!
+}
+\card{80}{Bestimmen Sie die effektive Strahlungsleistung bei folgenden Gegebenheiten: Senderleistung \SI{100}{\watt}; Dämpfung der Antennenleitung \SI{12}{\dB}/\SI{100}{\metre}; Kabellänge \SI{25}{\metre}; Rundstrahlantenne mit Gesamtwirkungsgrad von \SI{50}{\percent} (Werte sind variabel)}{
+  \small
+  \item
+  Unklar ob Dipol oder Isotropstrahler. Nehmen wir Isotropstrahler an, daher ist EIRP zu berechnen. Beachte, dass ein \emph{Wirkungsgrad} gegeben ist. Kein Antennen\emph{gewinn} wie bei Frage~79.
+
+  \item
+  effektive Kabeldämpfung = $-12\cdot (25/100) = \SI{-3}{\dB}$ \\
+  daher Leistungsfaktor = $0.5$ \\
+  daher Leistung an Antenne = $\SI{100}{\watt} \cdot 0.5 = \SI{50}\watt$ \\
+  Antennengewinn als Leistungsfaktor = $\SI{50}{\percent} \Rightarrow 0.5$ \\
+  $\text{EIRP} = \SI{50}{\watt} \cdot 0.5 = \SI{25}{\watt}$ \\
+  {\footnotesize ($\text{ERP} = 25 / 1.64 = \SI{15.2}{\watt}$)}
 
   \item
   Strahlungsleistung für einzuhaltende Grenzwerte wichtig!
